@@ -1,0 +1,6 @@
+{
+  "word.enable": true,
+  "word.filetypes": ["tex", "latex", "plaintex", "markdown", "text"],
+  "coc.sources.vimtex.filetypes": ["tex", "latex", "plaintex"],
+  "coc.source.vimtex.priority": 100
+}

@@ -1,0 +1,178 @@
+%%%%%%%%%% CHICAGO STANDALONE TEMPLATE %%%%%%%%%%
+% Author: Gossie Fan
+% License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/deed.en
+% Last updated on April 15, 2026
+
+%%%%%%%%%% PREAMBLE %%%%%%%%%%
+
+%%%%%%%%%% GENERAL FORMATTING %%%%%%%%%%
+\documentclass[12pt]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{verbatim}
+\usepackage{graphicx}
+
+\usepackage{xparse}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabu}
+\usepackage{booktabs}
+
+\usepackage[margin=1in]{geometry}
+\setlength{\headheight}{15pt}
+
+\raggedright
+
+\usepackage{setspace}
+\doublespacing
+
+%%%%%%%%%% HEADERS AND FOOTERS %%%%%%%%%%
+\setlength{\headheight}{14.49998pt}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[r]{\thepage}
+
+%%%%%%%%%% LINE SPACING %%%%%%%%%%
+\usepackage{setspace}
+\doublespacing
+
+%%%%%%%%%% SECTION HEADERS %%%%%%%%%%
+\usepackage{titlesec}
+
+\titleformat{\section}
+{
+	\centering\normalsize\bfseries
+}
+{}{0em}{}
+
+\titlespacing{\section}{0em}{0em}{0em}
+
+\titleformat{\subsection}
+{
+	\centering\normalsize
+}
+{}{0em}{}
+
+\titlespacing{\subsection}{0em}{0em}{0em}
+
+\titleformat{\subsubsection}
+{
+	\normalsize\itshape
+}
+{}{0em}{}
+
+\titlespacing{\subsubsection}{0em}{0em}{0em}
+
+%%%%%%%%%% CAPTIONS %%%%%%%%%%
+\usepackage[singlelinecheck=off]{caption}
+
+\DeclareCaptionLabelFormat{ChicagoLabel}{\noindent\normalsize\normalfont\raggedright{#1 #2}}
+\DeclareCaptionTextFormat{ChicagoText}{\noindent\normalsize\normalfont\raggedright{#1}}
+\DeclareCaptionLabelSeparator{ChicagoSpace}{. }
+
+\captionsetup[figure]{
+	position=below,
+	labelformat=ChicagoLabel,
+	textformat=ChicagoText,
+	labelsep=ChicagoSpace
+}
+
+\captionsetup[table]{
+	position=above,
+	labelformat=ChicagoLabel,
+	textformat=ChicagoText,
+}
+
+\newcommand{\tablenote}[1]{\par\noindent\flushleft\normalsize\normalfont\doublespacing\textit{\notelabel.} {#1}}
+
+\def\notelabel{Source}
+
+%%%%%%%%%% REFERENCES %%%%%%%%%%
+\usepackage{biblatex-chicago}
+\addbibresource{/home/ericfan/Documents/SFU-Coursework/Zotero.bib}
+
+\newcommand{\referencelist}{
+	\pagebreak
+	\begin{center}
+		\textbf{Bibliography}
+	\end{center}
+	\printbibliography[heading=none]
+}
+
+%%%%%%%%%% TITLE PAGE %%%%%%%%%%
+\makeatletter
+\newcommand{\course}[1]{\def\@course{#1}}
+\renewcommand{\date}[1]{\def\@date{#1}}
+
+\newcommand{\settitlepage}{%
+	\thispagestyle{empty}
+	\vspace*{108pt}
+	\begin{center}
+		{\normalsize\bfseries \@title} \\
+		\vspace{96pt}
+		{\@author} \\
+		{\@course} \\
+		{\@date}
+	\end{center}
+	\pagebreak
+	\setcounter{page}{1}
+}
+\makeatother
+
+%%%%%%%%%% FIX QUOTES %%%%%%%%%%
+\usepackage{csquotes}
+\MakeOuterQuote{"}
+
+%%%%%%%%%% TODO NOTES %%%%%%%%%%
+\setlength{\marginparwidth}{2cm}
+\usepackage[textsize=scriptsize, obeyFinal, textwidth=2cm, colorinlistoftodos]{todonotes}
+\setuptodonotes{color=red!30!white} %Default (General/big picture stuff)
+\todostyle{green}{color=green!40!white} %Rewording stuff
+\todostyle{blue}{color=blue!40!white} %Adding stuff
+\todostyle{grey}{color=black!30!white} %Todos in notes sections
+
+%%%%%%%%%% DRAFT WATERMARK %%%%%%%%%%
+\usepackage[firstpageonly=true, fontsize=12pt, scale=13]{draftwatermark}
+
+%%%%%%%%%% LINKS %%%%%%%%%%
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks   = true,    % Colors links instead of ugly boxes
+	urlcolor     = black,    % Color for external hyperlinks
+	linkcolor    = black,    % Color of internal links
+	citecolor    = black      % Color of citations
+}
+
+%%%%%%%%%% BETTER TYPOGRAPHY %%%%%%%%%%
+\usepackage{microtype}
+
+%%%%%%%%%% PARAGRAPH INDENT %%%%%%%%%%
+\setlength{\parindent}{0.5in}
+\usepackage{indentfirst}
+
+%%%%%%%%%% GENERAL INFORMATION %%%%%%%%%%
+
+\title{Title}
+\author{Author}
+\course{Course}
+\date{Date}
+
+\begin{document}
+
+%%%%%%%%%% TITLE PAGE %%%%%%%%%%
+\settitlepage%
+
+%%%%%%%%%% BODY %%%%%%%%%%
+
+
+%%%%%%%%%% REFERENCES %%%%%%%%%%
+
+\referencelist%
+
+\end{document}

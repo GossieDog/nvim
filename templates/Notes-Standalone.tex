@@ -1,0 +1,106 @@
+%%%%%%%%%% NOTES TEMPLATE COMPLETE %%%%%%%%%%
+% Author: Gossie Fan
+% License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/deed.en
+% Last updated on Februrary 24, 2025
+
+%%%%%%%%%% PREAMBLE%%%%%%%%%%
+\documentclass[12pt]{report}
+
+%%%%%%%%%% ENCODING AND FONTS %%%%%%%%%%
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{newtxtext}
+% \usepackage[default]{sourcesanspro}
+
+%%%%%%%%%% GENERAL %%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{multicol}
+\usepackage{lipsum}
+
+%%%%%%%%%% PAGE SETUP %%%%%%%%%%
+\usepackage[top=1.5in, bottom=1.5in, left=1in, right=1.5in]{geometry}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead[r]{}
+\setlength{\headheight}{27.1pt}
+
+%%%%%%%%%% TITLE AND SECTION FORMATTING %%%%%%%%%%
+\usepackage[xcolor]{mdframed}
+\definecolor{lightbrown}{HTML}{F2EFE9}
+\mdfdefinestyle{mystyle}{innertopmargin=1cm, innerbottommargin=1cm, linewidth=1pt, leftline=false, rightline=false, backgroundcolor=lightbrown}
+
+\usepackage{titlesec}
+\titleformat{\chapter}{\Large\bfseries}{\thechapter}{1em}{}[\vspace{2pt}{\titlerule[0.6pt]}\vspace{2pt}]
+\titlespacing{\chapter}{0pt}{0pt}{1.5em}
+\titleformat{\section}{\normalsize\bfseries}{\thesection}{0.5em}{}
+\titleformat{\subsection}{\normalsize}{\thesubsection}{0.5em}{}
+
+%%%%%%%%%% INKSCAPE FIGURES %%%%%%%%%%
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+
+\newcommand{\incfig}[1]{%
+	\def\svgwidth{\columnwidth}
+	\import{/home/ericfan/Documents/SFU-Coursework/Figures}{#1.pdf_tex}
+}
+
+%%%%%%%%%% REFERENCES %%%%%%%%%%
+\usepackage[backend=biber]{biblatex-chicago}
+\addbibresource{/home/ericfan/Documents/SFU-Coursework/Zotero.bib}
+
+%%%%%%%%%% LINKS %%%%%%%%%%
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks   = true,    % Colors links instead of ugly boxes
+	urlcolor     = black,    % Color for external hyperlinks
+	linkcolor    = black,    % Color of internal links
+	citecolor    = black      % Color of citations
+}
+
+%%%%%%%%%% QUOTES %%%%%%%%%%
+\usepackage{csquotes}
+\MakeOuterQuote{"}
+
+%%%%%%%%%% TYPOGRAPHY %%%%%%%%%%
+\usepackage[nopatch=footnote]{microtype}
+
+%%%%%%%%%% CUSTOM COMMANDS %%%%%%%%%%
+\newcommand{\marginnote}[1]{\marginpar{\raggedright{#1}}}
+
+\begin{document}
+
+%%%%%%%%%% COVER PAGE %%%%%%%%%%
+\newgeometry{margin=1in}
+\begin{titlepage}
+	\vspace*{5em}
+	\begin{mdframed}[style=mystyle]
+		\centering
+		{\Huge\textbf{Class Reading Notes}}
+
+		\vspace{1cm}
+
+		{\large{Simon Fraser University}}
+
+		\vspace{0.5cm}
+
+		{\large{Term}}
+
+		\vspace{0.5cm}
+
+		{\large{Eric Fan}}
+	\end{mdframed}
+\end{titlepage}
+
+%%%%%%%%%% TABLE OF CONTENTS %%%%%%%%%%
+\tableofcontents
+\restoregeometry
+
+%%%%%%%%%% BODY %%%%%%%%%%
+\include{Week-2}
+
+\end{document}

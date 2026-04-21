@@ -1,0 +1,165 @@
+%%%%%%%%%% MLA STANDALONE TEMPLATE %%%%%%%%%%
+% Author: Gossie Fan
+% License: CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/deed.en
+% Last updated on April 15, 2026
+
+%%%%%%%%%% PREAMBLE %%%%%%%%%%
+\documentclass[12pt]{article}
+
+%%%%%%%%%% GENERAL FORMATTING %%%%%%%%%%
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{xparse}
+\usepackage{lipsum}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabu}
+\usepackage{booktabs}
+
+\usepackage[margin=1in]{geometry}
+\setlength{\headheight}{14.5pt}
+
+
+%%%%%%%%%% SECTION HEADERS %%%%%%%%%%
+\usepackage{titlesec}
+
+\titleformat{\section}
+{
+	\normalsize\bfseries
+}
+{}{0em}{}
+
+\titlespacing{\section}{0em}{0em}{0em}
+
+\titleformat{\subsection}
+{
+	\normalsize\itshape
+}
+{}{0em}{}
+
+\titlespacing{\subsection}{0em}{0em}{0em}
+
+\titleformat{\subsubsection}
+{
+	\centering\normalsize\bfseries
+}
+{}{0em}{}
+
+\titlespacing{\subsubsection}{0em}{0em}{0em}
+
+%%%%%%%%%% LINE SPACING %%%%%%%%%%
+\usepackage{setspace}
+\doublespacing
+
+%Set Headers and Footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot{}
+\fancyhead[L]{}
+\fancyhead[R]{Fan \thepage}
+
+%%%%%%%%%% REFERNCES %%%%%%%%%%
+\usepackage[backend=biber,
+	style=mla]{biblatex}
+\setlength{\bibhang}{0.5in}
+
+\addbibresource{/home/ericfan/Documents/SFU-Coursework/Zotero.bib}
+
+\newcommand{\referencelist}{
+	\pagebreak
+	\begin{center}
+		Works Cited
+	\end{center}
+	\printbibliography[heading=none]
+}
+
+%%%%%%%%%% TITLE PAGE %%%%%%%%%%
+\makeatletter
+\newcommand{\course}[1]{\def\@course{#1}}
+\renewcommand{\date}[1]{\def\@date{#1}}
+\newcommand{\instructor}[1]{\def\@instructor{#1}}
+
+\newcommand{\settitlepage}{%
+	\noindent \@author\\
+	\noindent\@instructor\\
+	\noindent\@course\\
+	\noindent\@date
+	\begin{center}
+		{\@title}
+	\end{center}
+}
+\makeatother
+
+%%%%%%%%%% FIX QUOTES %%%%%%%%%%
+\usepackage{csquotes}
+\MakeOuterQuote{"}
+
+%%%%%%%%%% TODO NOTES %%%%%%%%%%
+\setlength{\marginparwidth}{2cm}
+\usepackage[textsize=scriptsize, obeyFinal, textwidth=2cm, colorinlistoftodos]{todonotes}
+\setuptodonotes{color=red!30!white} %Default (General/big picture stuff)
+\todostyle{green}{color=green!40!white} %Rewording stuff
+\todostyle{blue}{color=blue!40!white} %Adding stuff
+\todostyle{grey}{color=black!30!white} %Todos in notes sections
+
+%%%%%%%%%% DRAFT WATERMARK %%%%%%%%%%
+\usepackage[firstpageonly=true, fontsize=12pt, scale=13]{draftwatermark}
+
+%%%%%%%%%% FORMAT ABSTRACT (optional) %%%%%%%%%%
+% \usepackage{changepage}
+%
+% \renewenvironment{abstract}{
+%   \begin{center}
+%     \normalsize \abstractname
+%   \end{center}
+%   \begin{adjustwidth}{0in}{0in}
+% }
+% {\end{adjustwidth}}
+
+%%%%%%%%%% LINKS %%%%%%%%%%
+\usepackage{hyperref} %comment out package to get rid of linked in-text citations
+\hypersetup{
+	colorlinks   = true,    % Colors links instead of ugly boxes
+	urlcolor     = black,    % Color for external hyperlinks
+	linkcolor    = black,    % Color of internal links
+	citecolor    = black      % Color of citations
+}
+
+%%%%%%%%%% BETTER TYPOGRAPHY %%%%%%%%%%
+\usepackage{microtype}
+
+%%%%%%%%%% PARAGRAPH INDENT %%%%%%%%%%
+\setlength\parindent{0.5in}
+\usepackage{indentfirst}
+
+%%%%%%%%%% GENERAL INFORMATION %%%%%%%%%%
+
+\title{Title}
+\author{Author}
+\instructor{Instructor}
+\course{Course}
+\date{Date}
+
+\begin{document}
+
+%%%%%%%%%% TITLE PAGE %%%%%%%%%%
+\settitlepage%
+
+%%%%%%%%%% BODY %%%%%%%%%%
+
+\section{Heading 1}
+\lipsum[1]
+\subsection{Heading 1}
+\lipsum[1]
+\subsubsection{Heading 1}
+\lipsum[1]
+
+
+%%%%%%%%%% REFERENCES %%%%%%%%%%
+
+\referencelist%
+
+\end{document}

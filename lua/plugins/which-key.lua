@@ -1,0 +1,373 @@
+return {
+	"folke/which-key.nvim",
+	event = "VeryLazy",
+	opts = {
+		preset = "modern",
+	},
+	-- keys = {
+	-- 	{
+	-- 		"<leader>?",
+	-- 		function()
+	-- 			require("which-key").show({ global = false })
+	-- 		end,
+	-- 		desc = "Buffer Local Keymaps (which-key)",
+	-- 	},
+	-- },
+	config = function(_, opts)
+		local wk = require("which-key")
+		wk.setup(opts)
+
+		wk.add({
+
+			-- SINGLE KEY --
+
+			{
+				"<leader>,",
+				"<cmd>lua Snacks.dashboard()<cr>",
+				desc = "Return to Start Screen",
+				mode = "n",
+				icon = "󰜉",
+			},
+			{ "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle NvimTree" },
+			{ "<leader>q", "<cmd>wa! | qa!<CR>", desc = "Quit", mode = "n" },
+			{ "<leader>w", "<cmd>wa!<CR>", desc = "Write", mode = "n", icon = "󰆓" },
+			{ "<leader>C", "<cmd>Telescope colorscheme<CR>", desc = "Change Colorscheme", mode = "n", icon = "" },
+			{ "<leader>c", "[s1z=`]", desc = "Fix Spelling", mode = "n", icon = "󰓆" },
+
+			-- FIND GROUP --
+
+			{ "<leader>f", group = "Find", mode = "n" },
+			{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "File" },
+			{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffer" },
+			{ "<leader>fz", "<cmd>Telescope bibtex<cr>", desc = "Citations" },
+			{ "<leader>fl", "<cmd>Telescope resume<cr>", desc = "Last Search" },
+			{ "<leader>fg", "<cmd>Telescope git_commits<cr>", desc = "Git History" },
+			{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help" },
+			{ "<leader>fk", "<cmd>Telescope keymaps<cr>", desc = "Keymaps" },
+			{ "<leader>fy", "<cmd>YankyRingHistory<cr>", desc = "Yank History" },
+			{ "<leader>fd", "<cmd>Telescope diagnostics<cr>", desc = "Diagnostics", mode = "n" },
+			{ "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent File", mode = "n" },
+			{ "<leader>fu", "<cmd>lua require('telescope').extensions.undo.undo()<cr>", desc = "Undo", mode = "n" },
+			{ "<leader>fm", "<cmd>Telescope man_pages<cr>", desc = "Man Pages", mode = "n" },
+			{
+				"<leader>fc",
+				"<cmd>Telescope find_files cwd=~/.config/nvim<cr>",
+				desc = "Config File",
+				mode = "n",
+			},
+			{ "<leader>ft", "<cmd>:e ~/Documents/SFU-Coursework/GeneralTodo.md<cr>", desc = "Todo List", mode = "n" },
+			{ "<leader>ft", "<cmd>Telescope live_grep<cr>", desc = "Text", mode = "n" },
+
+			-- GIT GROUP --
+
+			{ "<leader>g", group = "Git" },
+			{ "<leader>gg", "<cmd>lua Snacks.lazygit()<cr>", desc = "LazyGit" },
+			{ "<leader>gb", "<cmd>Telescope git_branches<CR>", desc = "Branches" },
+			{ "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "Commits" },
+			{ "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "Status" },
+			{ "<leader>gk", "<cmd>Gitsigns prev_hunk<CR>", desc = "Prev Hunk", icon = "󰮲" },
+			{ "<leader>gj", "<cmd>Gitsigns next_hunk<CR>", desc = "Next Hunk", icon = "󰮰" },
+			{ "<leader>gl", "<cmd>Gitsigns blame_line<CR>", desc = "Line Blame", icon = "󰊢" },
+			{ "<leader>gp", "<cmd>Gitsigns preview_hunk<CR>", desc = "Preview Hunk", icon = "󰆈" },
+
+			-- LSP and LINT GROUP --
+
+			{ "<leader>l", group = "LSP", icon = "󰅴" },
+			{ "<leader>lu", "<cmd>MasonUpdate<cr>", desc = "Mason Update", mode = "n" },
+			{ "<leader>lf", "<cmd>Telescope diagnostics<cr>", desc = "Telescope Diagnostics", mode = "n" },
+			{ "<leader>ln", "<cmd>lua vim.diagnostic.goto_next()<CR>", desc = "Next Diagnostic", icon = "󰮰" },
+			{ "<leader>lp", "<cmd>lua vim.diagnostic.goto_prev()<CR>", desc = "Previous Diagnostic", icon = "󰮲" },
+
+			-- BUFFER GROUP
+
+			{ "<leader>b", group = "Buffer" },
+			{ "<leader>bd", "<cmd>bdelete<cr>", desc = "Delete Buffer", mode = "n" },
+			{ "<leader>bn", "<cmd>BufferLineMoveNext<cr>", desc = "Move Buffer Right", mode = "n" },
+			{ "<leader>bp", "<cmd>BufferLineMovePrev<cr>", desc = "Move Buffer Left", mode = "n" },
+			{ "<leader>bP", "<cmd>BufferLineTogglePin<cr>", desc = "Pin Buffer", mode = "n" },
+			{ "<leader>bf", "<cmd>BufferLinePick<cr>", desc = "Pick Buffer", mode = "n" },
+			{ "<leader>br", "<cmd>BufferLineCloseRight <cr>", desc = "Close Right Buffers", mode = "n" },
+			{ "<leader>bl", "<cmd>BufferLineCloseLeft<cr>", desc = "Close Left Buffers", mode = "n" },
+
+			{ "<Tab>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer", mode = "n" },
+			{ "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", desc = "Previous Buffer", mode = "n" },
+
+			{ "<leader>bv", "<cmd>vsplit<CR>", desc = "Vertical Split", icon = "󰤼" },
+			{ "<leader>bh", "<cmd>split<CR>", desc = "Horizontal Split", icon = "󰤼" }, -- TOOLS GROUP --
+
+			{ "<leader>t", group = "Tools", icon = "" },
+			{ "<leader>ts", "<cmd>set spell!<cr>", desc = "Toggle Spell Check", mode = "n" },
+			{
+				"<leader>tc",
+				"<cmd>lua require('copilot.suggestion').toggle_auto_trigger()<cr>",
+				desc = "Toggle Copilot",
+			},
+			-- { "<leader>td", "<cmd>CocDisable<cr>", desc = "Disable CoC", mode = "n" },
+			-- { "<leader>te", "<cmd>CocEnable<cr>", desc = "Enable CoC", mode = "n" },
+			-- { "<leader>ti", "<cmd>IlluminateToggle<cr>", desc = "Toggle Illuminate", mode = "n" },
+
+			-- DIAGNOSTICS GROUP -- Move to different group later.
+
+			{ "<leader>x", group = "Diagnostics/Trouble" },
+
+			-- LATEX GROUP --
+
+			{ "<localleader>l", group = "LaTeX" },
+			{ "<localleader>la", desc = "Context Menu" },
+			{ "<localleader>lc", desc = "Vimtex Clean" },
+			{ "<localleader>lC", desc = "Vimtex Clean Full" },
+			{ "<localleader>le", desc = "Vimtex Errors" },
+			{ "<localleader>lg", desc = "Vimtex Status" },
+			{ "<localleader>lG", desc = "Vimtex Status All" },
+			{ "<localleader>li", desc = "Vimtex Info" },
+			{ "<localleader>lI", desc = "Info Full" },
+			{ "<localleader>lk", desc = "Stop" },
+			{ "<localleader>lK", desc = "Stop All" },
+			{ "<localleader>ll", desc = "Build" },
+			{ "<localleader>lL", desc = "Build Selected" },
+			{ "<localleader>lm", desc = "Maps List" },
+			{ "<localleader>lo", desc = "Build Output" },
+			{ "<localleader>lq", desc = "Log" },
+			{ "<localleader>ls", desc = "Toggle Main" },
+			{ "<localleader>lS", desc = "Build SS" },
+			-- { "<localleader>lt", desc = "Open TOC" },
+			{ "<localleader>lT", desc = "Toggle TOC" },
+			{ "<localleader>lv", desc = "View" },
+			{ "<localleader>lx", desc = "Reload" },
+			{ "<localleader>lX", desc = "Reload State" },
+			{ "<localleader>ld", "<cmd>VimtexDocPackage<cr>", desc = "Package Documentation", mode = "n" },
+			{ "<localleader>lW", "<cmd>TexCountSection<CR>", desc = "Count Words in Sections" },
+			-- { "<localleader>]]", "<Plug>(vimtex-]])", desc = "Jump to Next Section", mode = "n" },
+			-- { "<localleader>[[", "<Plug>(vimtex-[[)", desc = "Jump to Previous Section", mode = "n" },
+
+			{ "<leader>z", "<cmd>lua Snacks.zen()<cr>", desc = "Toggle Zen Mode", mode = "n" },
+
+			-- SURROUND GROUP --
+			--
+			-- { "<leader>s", group = "Surround", icon = "󰅪" },
+			-- { "<leader>s", proxy = "gs", group = "Surround", icon = "󰅪", mode = { "n", "v" } },
+			-- { "<leader>sb", proxy = "gsab", desc = "Bold", mode = { "n", "v" } },
+			-- { "<leader>si", proxy = "gsai", desc = "Italicize", mode = { "n", "v" } },
+			-- { "<leader>sE", proxy = "gsaE", desc = "Enumerate", mode = { "n", "v" } },
+			-- { "<leader>sI", proxy = "gsaI", desc = "Itemize", mode = { "n", "v" } },
+			-- { "<leader>sa", desc = "Add Surrounding", mode = { "n", "x" } },
+			-- { "<leader>sd", desc = "Delete Surrounding" },
+			-- { "<leader>sf", desc = "Find Right Surrounding" },
+			-- { "<leader>sF", desc = "Find Left Surrounding" },
+			-- { "<leader>sh", desc = "Highlight Surrounding" },
+			-- { "<leader>sr", desc = "Replace Surrounding" },
+			-- { "<leader>sn", desc = "Update n_Lines" },
+
+			-- SPLIT GROUP --
+			--
+			-- { "<leader>s", group = "Splits" },
+			-- { "<leader>sv", "<cmd>vsplit<CR>", desc = "Vertical Split", icon = "󰤼" },
+			-- { "<leader>sh", "<cmd>split<CR>", desc = "Horizontal Split", icon = "󰤼" },
+			--
+			-- SESSION GROUP --
+
+			{ "<leader>S", group = "Sessions", icon = "󰆔" },
+			{ "<leader>Sd", "<cmd>SessionManager delete_session<CR>", desc = "Delete", icon = "󰚌" },
+			{ "<leader>Sl", "<cmd>SessionManager load_session<CR>", desc = "Load", icon = "󰉖" },
+			{ "<leader>Ss", "<cmd>SessionManager save_current_session<CR>", desc = "Save", icon = "󰆓" },
+
+			-- COLORSCHEME GROUP --
+
+			-- { "<leader>c", group = "Colorscheme", icon = "􀝥 " },
+			-- { "<leader>cc", "<cmd>colorscheme catppuccin-frappe<cr>", desc = "Catppuccin", icon = "􀎑" },
+			-- { "<leader>cg", "<cmd>colorscheme gruvbox<cr>", desc = "Gruvbox", icon = "􀎑" },
+			--
+			-- { "<leader>cr", group = "Rose Pine", icon = "􀝥 " },
+			-- { "<leader>crp", "<cmd>colorscheme rose-pine<cr>", desc = "Rose Pine", icon = "􀎑" },
+			-- { "<leader>crm", "<cmd>colorscheme rose-pine-moon<cr>", desc = "Rose Pine Moon", icon = "􀎑" },
+			-- { "<leader>crd", "<cmd>colorscheme rose-pine-dawn<cr>", desc = "Rose Pine Dawn", icon = "􀎑" },
+			--
+			-- { "<leader>cn", group = "Nightfox", icon = "􀝥 " },
+			-- { "<leader>cnn", "<cmd>colorscheme nightfox<cr>", desc = "Nightfox", icon = "􀎑" },
+			-- { "<leader>cnd", "<cmd>colorscheme dayfox<cr>", desc = "Dayfox", icon = "􀎑" },
+			-- { "<leader>cnD", "<cmd>colorscheme dawnfox<cr>", desc = "Dawnfox", icon = "􀎑" },
+			-- { "<leader>cnu", "<cmd>colorscheme duskfox<cr>", desc = "Duskfox", icon = "􀎑" },
+			-- { "<leader>cno", "<cmd>colorscheme nordfox<cr>", desc = "Nordfox", icon = "􀎑" },
+			-- { "<leader>cnt", "<cmd>colorscheme terafox<cr>", desc = "Terafox", icon = "􀎑" },
+			-- { "<leader>cnc", "<cmd>colorscheme carbonfox<cr>", desc = "Carbonfox", icon = "􀎑" },
+
+			-- MAIL GROUP --
+
+			{ "<leader>h", group = "Himalaya", icon = "" },
+			{ "<leader>hh", "<cmd>Himalaya<cr>", desc = "Open Default Account" },
+			{ "<leader>ho", "<cmd>HimalayaAccounts<cr>", desc = "Open Account" },
+			{ "<leader>hw", "<cmd>HimalayaWrite<cr>", desc = "Write Email" },
+			{ "<leader>hr", "<plug>(himalaya-email-reply)", desc = "Reply" },
+			{ "<leader>hR", "<plug>(himalaya-email-reply-all)", desc = "Reply-All" },
+			{ "<leader>ha", "<plug>(himalaya-email-download-attachments)", desc = "Download Attachments" },
+			{ "<leader>hd", "<plug>(himalaya-email-delete)", desc = "Delete" },
+			{ "<leader>hf", "<plug>(himalaya-email-forward)", desc = "Foward" },
+			{ "<leader>hm", "<plug>(himalaya-email-flag-add)", desc = "Add Flag" },
+			{ "<leader>hM", "<plug>(himalaya-email-flag-remove)", desc = "Remove Flag" },
+			-- { "<leader>hA", "<plug>(himalaya-email-add-attachment)", desc = "Add Attachment" },
+
+			--
+			-- <plug>(himalaya-account-select)
+			-- <plug>(himalaya-folder-select)
+			-- <plug>(himalaya-folder-select-previous-page)
+			-- <plug>(himalaya-folder-select-next-page)
+			-- <plug>(himalaya-email-read)
+			-- <plug>(himalaya-email-write)
+			-- <plug>(himalaya-email-reply)
+			-- <plug>(himalaya-email-reply-all)
+			-- <plug>(himalaya-email-forward)
+			-- <plug>(himalaya-email-download-attachments)
+			-- <plug>(himalaya-email-copy)
+			-- <plug>(himalaya-email-move)
+			-- <plug>(himalaya-email-delete)
+			-- <plug>(himalaya-email-flag-add)
+			-- <plug>(himalaya-email-flag-remove)
+			-- <plug>(himalaya-set-list-envelopes-query)
+			--
+			-- AI GROUP --
+
+			{ "<leader>a", group = "Avante", icon = "󰚩" },
+			{ "<leader>aa", "<cmd>AvanteAsk<cr>", desc = "Ask" },
+			{ "<leader>aB", "<cmd>lua require('avante.api').add_all_buffers()<cr>", desc = "Add All Open Buffers" },
+			{ "<leader>ac", "<cmd>AvanteClear<cr>", desc = "Clear Chat History" },
+			{ "<leader>aC", "<cmd>AvanteChat<cr>", desc = "Start Chat" },
+			{ "<leader>ad", "<cmd>lua require('avante.api').toggle_debug()<cr>", desc = "Toggle Debug" },
+			{ "<leader>af", "<cmd>AvanteFocus<cr>", desc = "Focus" },
+			{ "<leader>ah", "<cmd>AvanteHistory<cr>", desc = "Select History" },
+			{ "<leader>an", "<cmd>AvanteChatNew<cr>", desc = "Create New Chat" },
+			{ "<leader>ar", "<cmd>AvanteRefresh<cr>", desc = "Refresh" },
+			{ "<leader>aR", "<cmd>AvanteShowRepoMap<cr>", desc = "Display Repo Map" },
+			-- { "<leader>as", desc = "Toggle Suggestion" },
+			{ "<leader>aS", "<cmd>AvanteStop<cr>", desc = "Stop" },
+			{ "<leader>at", "<cmd>AvanteToggle<cr>", desc = "Toggle" },
+			{ "<leader>az", "<cmd>lua require('avante.api').zen_mode()<cr>", desc = "Toggle Zen Mode" },
+			{ "<leader>a?", "<cmd>AvanteModels<cr>", desc = "Select Model" },
+			{
+				"<leader>a+",
+				function()
+					local tree_ext = require("avante.extensions.nvim_tree")
+					tree_ext.add_file()
+				end,
+				desc = "Select file in NvimTree",
+			},
+			{
+				"<leader>a-",
+				function()
+					local tree_ext = require("avante.extensions.nvim_tree")
+					tree_ext.remove_file()
+				end,
+				desc = "Deselect file in NvimTree",
+			},
+
+			-- TEMPLATE GROUP --
+
+			{ "<leader>T", group = "Templates", icon = "󰈭" },
+			{
+				"<leader>Ta",
+				"<cmd>read ~/.config/nvim/templates/APA-Paper.tex<CR>",
+				desc = "APA Paper",
+				mode = "n",
+				icon = "󰈙",
+			},
+			{
+				"<leader>TA",
+				"<cmd>read ~/.config/nvim/templates/APA-Paper-Standalone.tex<CR>",
+				desc = "APA Paper Standalone",
+				mode = "n",
+				icon = "󰈙",
+			},
+			{
+				"<leader>Tf",
+				"<cmd>read ~/.config/nvim/templates/APA-Figures-and-Tables.tex<CR>",
+				desc = "APA Figures and Tables",
+				mode = "n",
+				icon = "󰈙",
+			},
+			{
+				"<leader>Tn",
+				"<cmd>read ~/.config/nvim/templates/Notes.tex<CR>",
+				desc = "Notes.tex",
+				mode = "n",
+				icon = "󰈙",
+			},
+			{
+				"<leader>TN",
+				"<cmd>read ~/.config/nvim/templates/Notes-Standalone.tex<CR>",
+				desc = "Notes-Standalone.tex",
+				mode = "n",
+				icon = "󰈙",
+			},
+			{
+				"<leader>Tc",
+				"<cmd>read ~/.config/nvim/templates/Chicago-Paper.tex<CR>",
+				desc = "Chicago Paper",
+				mode = "n",
+				icon = "󰈙",
+			},
+			{
+				"<leader>TC",
+				"<cmd>read ~/.config/nvim/templates/Chicago-Paper-Standalone.tex<CR>",
+				desc = "Chicago Paper Standalone",
+				mode = "n",
+				icon = "󰈙",
+			},
+
+			{
+				"<leader>Tm",
+				"<cmd>read ~/.config/nvim/templates/MLA-Paper.tex<CR>",
+				desc = "MLA Paper",
+				mode = "n",
+				icon = "󰈙",
+			},
+			{
+				"<leader>TM",
+				"<cmd>read ~/.config/nvim/templates/MLA-Paper-Standalone.tex<CR>",
+				desc = "MLA Paper Standalone",
+				mode = "n",
+				icon = "󰈙",
+			},
+			{
+				"<leader>Ts",
+				"<cmd>read ~/.config/nvim/templates/Studying.tex<CR>",
+				desc = "Studying.tex",
+				mode = "n",
+				icon = "󰈙",
+			},
+			{
+				"<leader>Tb",
+				"<cmd>read ~/.config/nvim/templates/APA-Barebones.tex<CR>",
+				desc = "APA-Barebones.tex",
+				mode = "n",
+				icon = "󰈙",
+			},
+
+			-- PANDOC GROUP --
+
+			{ "<leader>p", group = "Pandoc", icon = "󰈙" },
+			{
+				"<leader>pd",
+				"<cmd>!pandoc %:p -o %:p:r.docx --citeproc --bibliography=/home/ericfan/Documents/SFU-Coursework/Zotero.bib<cr>",
+				desc = "Docx",
+				icon = "󰈭",
+			},
+			{
+				"<leader>pm",
+				"<cmd>!pandoc %:p -o %:p:r.md --citeproc --bibliography=/home/ericfan/Documents/SFU-Coursework/Zotero.bib<cr>",
+				desc = "Markdown",
+				icon = "󱀈",
+			},
+			{
+				"<leader>pt",
+				"<cmd>!pandoc %:p -o %:p:r.tex --citeproc --bibliography=/home/ericfan/Documents/SFU-Coursework/Zotero.bib<cr>",
+				desc = "LaTeX",
+				icon = "󰐺",
+			},
+			{
+				"<leader>pT",
+				"<cmd>!pandoc %:p -o %:p:r.txt --citeproc --bibliography=/home/ericfan/Documents/SFU-Coursework/Zotero.bib && espeak-ng -f %:p:r.txt --stdout | ffmpeg -i - -codec:a libmp3lame -qscale:a 2 %:p:r.mp3<cr>",
+				desc = "Text + MP3",
+				icon = "󰐺",
+			},
+		})
+	end,
+}
