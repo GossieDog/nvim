@@ -1,0 +1,11 @@
+# Compiled spell files
+spell/*.spl
+
+# Swap and backup files
+*.swp
+*.swo
+*~
+
+# Log files
+indent.log
+lua/plugins/indent.log
