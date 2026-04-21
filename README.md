@@ -2,6 +2,11 @@
 
 A comprehensive Neovim configuration optimized for academic writing, LaTeX development, and research work. This setup provides a modern IDE experience with extensive LaTeX support, AI assistance, and productivity enhancements.
 
+## 📸 Screenshot
+
+![Neovim Dashboard](screenshots/Screenshot-1.png)
+*The Snacks dashboard on startup — quick access to recent files, sessions, and commands.*
+
 ## 🎯 Primary Use Cases
 
 - **Academic Writing**: LaTeX documents, research papers, citations
