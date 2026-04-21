@@ -494,4 +494,3 @@ This configuration is designed to be modular. Key customization points:
 
 ## 📄 License
 
-This configuration is open-source and available for personal and academic use. Feel free to fork, modify, and adapt to your workflow.
