@@ -7,6 +7,8 @@
 ![Dashboard](screenshots/Screenshot-1.png)
 *Snacks dashboard — quick access to recent files, sessions, and commands on startup.*
 
+![Screenshot-2](screenshots/Screenshot-2.png) ![Screenshot-3](screenshots/Screenshot-3.png)
+
 ---
 
 ## Contents
