@@ -93,7 +93,8 @@ return {
 			{ "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", desc = "Previous Buffer", mode = "n" },
 
 			{ "<leader>bv", "<cmd>vsplit<CR>", desc = "Vertical Split", icon = "󰤼" },
-			{ "<leader>bh", "<cmd>split<CR>", desc = "Horizontal Split", icon = "󰤼" }, -- TOOLS GROUP --
+			{ "<leader>bh", "<cmd>split<CR>", desc = "Horizontal Split", icon = "󰤼" },
+			{ "<leader>bq", "<C-w>q", desc = "Close Window", icon = "" },
 
 			{ "<leader>t", group = "Tools", icon = "" },
 			{ "<leader>ts", "<cmd>set spell!<cr>", desc = "Toggle Spell Check", mode = "n" },
