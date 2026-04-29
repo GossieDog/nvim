@@ -34,6 +34,10 @@ This configuration is optimized for users who split their time between academic 
 - Converting documents across formats (DOCX, Markdown, audio)
 - General software development with LSP, linting, and formatting
 
+**Demonstrations**
+- [Writing](https://www.youtube.com/watch?v=k9DDi8dCk_s)
+- [Notes](https://www.youtube.com/watch?v=zayVF1j9gBg)
+
 ---
 
 ## Features
