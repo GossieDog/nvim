@@ -35,7 +35,7 @@ This configuration is optimized for users who split their time between academic 
 - General software development with LSP, linting, and formatting
 
 **Demonstrations**
-- [Writing](https://www.youtube.com/watch?v=k9DDi8dCk_s)
+- [Writing](https://www.youtube.com/watch?v=avbT4fAC3R4)
 - [Notes](https://www.youtube.com/watch?v=zayVF1j9gBg)
 
 ---
