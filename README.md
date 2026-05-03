@@ -5,13 +5,13 @@
 ## 📸 Screenshots
 
 ![Dashboard](screenshots/Screenshot-1.png)
-*Snacks dashboard — quick access to recent files, sessions, and commands on startup.*
+*Welcome screen featuring the Snacks dashboard with project shortcuts, recent files, and quick session access — your academic workspace starts here.*
 
 ![Screenshot-2](screenshots/Screenshot-2.png)
-*An example of the clean and organized interface for writing and editing documents, showcasing the LaTeX support and AI assistance features.*
+*Active LaTeX editing environment with VimTeX integration, showing real-time compilation feedback and document structure navigation.*
 
 ![Screenshot-3](screenshots/Screenshot-3.png)
-*Demonstration of the integrated file explorer and project management tools, enhancing productivity and navigation within your Neovim setup.*
+*Integrated file tree and buffer management in action, demonstrating the seamless workflow between project navigation and document editing.*
 
 ---
 
