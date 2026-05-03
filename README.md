@@ -7,7 +7,11 @@
 ![Dashboard](screenshots/Screenshot-1.png)
 *Snacks dashboard — quick access to recent files, sessions, and commands on startup.*
 
-![Screenshot-2](screenshots/Screenshot-2.png) ![Screenshot-3](screenshots/Screenshot-3.png)
+![Screenshot-2](screenshots/Screenshot-2.png)
+*An example of the clean and organized interface for writing and editing documents, showcasing the LaTeX support and AI assistance features.*
+
+![Screenshot-3](screenshots/Screenshot-3.png)
+*Demonstration of the integrated file explorer and project management tools, enhancing productivity and navigation within your Neovim setup.*
 
 ---
 
@@ -122,7 +126,6 @@ This configuration is optimized for users who split their time between academic 
 | `\ll` | Compile document |
 | `\lv` | View PDF |
 | `\lw` | Word count (quick) |
-| `\lW` | Word count (by section) |
 | `\le` | Show errors |
 | `\lc` | Clean auxiliary files |
 
@@ -134,7 +137,7 @@ This configuration is optimized for users who split their time between academic 
 | `<leader>Tm` | MLA paper |
 | `<leader>Tc` | Chicago paper |
 | `<leader>Tn` | Notes |
-| `<leader>Ts` | Study notes |
+| `<leader>Ts` | Studying |
 
 ### Export (Pandoc)
 
