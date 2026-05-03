@@ -11,6 +11,13 @@
 
 ---
 
+## Demonstrations
+
+- [Writing](https://www.youtube.com/watch?v=avbT4fAC3R4)
+- [Notes](https://www.youtube.com/watch?v=zayVF1j9gBg)
+
+---
+
 ## Contents
 
 - [Overview](#overview)
@@ -33,10 +40,6 @@ This configuration is optimized for users who split their time between academic 
 - Managing citations and bibliographies
 - Converting documents across formats (DOCX, Markdown, audio)
 - General software development with LSP, linting, and formatting
-
-**Demonstrations**
-- [Writing](https://www.youtube.com/watch?v=avbT4fAC3R4)
-- [Notes](https://www.youtube.com/watch?v=zayVF1j9gBg)
 
 ---
 
@@ -294,12 +297,9 @@ mkdir ~/papers/my-paper && cd ~/papers/my-paper
 nvim paper.tex
 ```
 
-1. Load a template with `<leader>T` and select a citation style (`a` for APA, `m` for MLA, `c` for Chicago)
-2. Enter Zen Mode with `<leader>z` for a distraction-free environment
-3. Enable spell checking with `<leader>ts`
-4. Search and insert citations with `<leader>fz`
+1. Load a template with `<leader>T` (`a` for APA, `m` for MLA, `c` for Chicago)
+4. Search and insert citations with the completion menus or `<leader>fz`
 5. Compile with `\ll` and preview with `\lv`
-6. Export to Word with `<leader>pd` for submission
 
 ### Working with Citations
 
@@ -342,8 +342,8 @@ Open the BibTeX picker with `<leader>fz`, then:
 
 **Copilot not working** — Run `:Copilot status`. Re-authenticate with `:Copilot auth` if needed.
 
----
+<!-- --- -->
 
-## License
-
-MIT License — see [LICENSE](LICENSE) for details.
+<!-- ## License -->
+<!---->
+<!-- MIT License — see [LICENSE](LICENSE) for details. -->
