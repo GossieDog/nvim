@@ -342,6 +342,22 @@ return {
 				icon = "󰈙",
 			},
 
+			{ "<leader>TW", group = "Work" },
+			{
+				"<leader>TWr",
+				"<cmd>read ~/.config/nvim/templates/Resume.tex<CR>",
+				desc = "Resume.tex",
+				mode = "n",
+				icon = "󰈙",
+			},
+			{
+				"<leader>TWc",
+				"<cmd>read ~/.config/nvim/templates/Cover-Letter.tex<CR>",
+				desc = "Cover-Letter.tex",
+				mode = "n",
+				icon = "󰈙",
+			},
+
 			-- PANDOC GROUP --
 
 			{ "<leader>p", group = "Pandoc", icon = "󰈙" },
