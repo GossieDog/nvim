@@ -13,7 +13,7 @@ return {
 			preset = {
 				keys = {
 					{ icon = "", key = "f", desc = "Find File", action = ":Telescope find_files" },
-					{ icon = "", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
+					{ icon = "", key = "g", desc = "Find Text", action = ":Telescope live_grep" },
 					{
 						icon = "",
 						key = "r",
