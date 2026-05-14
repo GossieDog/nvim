@@ -238,11 +238,12 @@ return {
 			{ "<leader>an", "<cmd>AvanteChatNew<cr>", desc = "Create New Chat" },
 			{ "<leader>ar", "<cmd>AvanteRefresh<cr>", desc = "Refresh" },
 			{ "<leader>aR", "<cmd>AvanteShowRepoMap<cr>", desc = "Display Repo Map" },
-			-- { "<leader>as", desc = "Toggle Suggestion" },
+			{ "<leader>as", desc = "Toggle Suggestion" },
 			{ "<leader>aS", "<cmd>AvanteStop<cr>", desc = "Stop" },
 			{ "<leader>at", "<cmd>AvanteToggle<cr>", desc = "Toggle" },
 			{ "<leader>az", "<cmd>lua require('avante.api').zen_mode()<cr>", desc = "Toggle Zen Mode" },
 			{ "<leader>a?", "<cmd>AvanteModels<cr>", desc = "Select Model" },
+			{ "<leader>am", desc = "Select ACP Mode" },
 			{
 				"<leader>a+",
 				function()
