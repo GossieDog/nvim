@@ -358,6 +358,14 @@ return {
 				mode = "n",
 				icon = "󰈙",
 			},
+			{ "<leader>TO", group = "Other" },
+			{
+				"<leader>TOr",
+				"<cmd>read ~/.config/nvim/templates/Recipe.tex<CR>",
+				desc = "Recipe.tex",
+				mode = "n",
+				icon = "󰈙",
+			},
 
 			-- PANDOC GROUP --
 
