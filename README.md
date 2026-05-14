@@ -107,6 +107,7 @@ This configuration is optimized for users who split their time between academic 
 | `<leader>,` | Return to dashboard |
 | `<leader>z` | Toggle Zen Mode |
 | `<leader>C` | Browse colorschemes |
+| `<leader>c` | Fix spelling |
 
 ### Find & Navigate
 
@@ -118,26 +119,49 @@ This configuration is optimized for users who split their time between academic 
 | `<leader>fr` | Recent files |
 | `<leader>fz` | Search citations (BibTeX) |
 | `<leader>fu` | Visual undo tree |
+| `<leader>fl` | Resume last search |
+| `<leader>fg` | Git history |
+| `<leader>fh` | Help tags |
+| `<leader>fk` | Keymaps |
+| `<leader>fy` | Yank history |
+| `<leader>fd` | Diagnostics |
+| `<leader>fm` | Man pages |
+| `<leader>fc` | Config files |
 
 ### LaTeX
 
 | Key | Action |
 |-----|--------|
-| `\ll` | Compile document |
+| `\ll` | Build document |
 | `\lv` | View PDF |
-| `\lw` | Word count (quick) |
+| `\lW` | Word count in sections |
 | `\le` | Show errors |
 | `\lc` | Clean auxiliary files |
+| `\lC` | Clean full |
+| `\lg` | VimTeX status |
+| `\li` | VimTeX info |
+| `\lk` | Stop compilation |
+| `\lT` | Toggle TOC |
+| `\ld` | Package documentation |
 
 ### Templates
 
 | Key | Template |
 |-----|----------|
 | `<leader>Ta` | APA paper |
+| `<leader>TA` | APA paper (standalone) |
 | `<leader>Tm` | MLA paper |
+| `<leader>TM` | MLA paper (standalone) |
 | `<leader>Tc` | Chicago paper |
+| `<leader>TC` | Chicago paper (standalone) |
 | `<leader>Tn` | Notes |
+| `<leader>TN` | Notes (standalone) |
 | `<leader>Ts` | Studying |
+| `<leader>Tb` | APA barebones |
+| `<leader>Tf` | APA figures and tables |
+| `<leader>TWr` | Resume |
+| `<leader>TWc` | Cover letter |
+| `<leader>TOr` | Recipe |
 
 ### Export (Pandoc)
 
@@ -153,11 +177,20 @@ This configuration is optimized for users who split their time between academic 
 | Key | Action |
 |-----|--------|
 | `<leader>aa` | Ask AI |
-| `<leader>aC` | Open chat |
+| `<leader>aC` | Start chat |
 | `<leader>at` | Toggle sidebar |
-| `<leader>a?` | Switch model |
-| `<leader>aB` | Add buffers to context |
-| `<leader>aR` | Show repo structure |
+| `<leader>a?` | Select model |
+| `<leader>aB` | Add all open buffers |
+| `<leader>aR` | Display repo map |
+| `<leader>ac` | Clear chat history |
+| `<leader>af` | Focus |
+| `<leader>ah` | Select history |
+| `<leader>an` | Create new chat |
+| `<leader>ar` | Refresh |
+| `<leader>aS` | Stop |
+| `<leader>az` | Toggle zen mode |
+| `<leader>a+` | Select file in NvimTree |
+| `<leader>a-` | Deselect file in NvimTree |
 
 ### Git
 
@@ -165,6 +198,8 @@ This configuration is optimized for users who split their time between academic 
 |-----|--------|
 | `<leader>gg` | Open LazyGit |
 | `<leader>gs` | Git status |
+| `<leader>gb` | Git branches |
+| `<leader>gc` | Git commits |
 | `<leader>gj` / `<leader>gk` | Next / previous hunk |
 | `<leader>gp` | Preview hunk |
 | `<leader>gl` | Blame current line |
@@ -175,10 +210,39 @@ This configuration is optimized for users who split their time between academic 
 |-----|--------|
 | `<Tab>` / `<S-Tab>` | Next / previous buffer |
 | `<leader>bd` | Close buffer |
+| `<leader>bn` / `<leader>bp` | Move buffer right / left |
+| `<leader>bP` | Pin buffer |
+| `<leader>bf` | Pick buffer |
+| `<leader>br` / `<leader>bl` | Close right / left buffers |
 | `<leader>bv` / `<leader>bh` | Split vertically / horizontally |
+| `<leader>bq` | Close window |
 | `<leader>Ss` | Save session |
 | `<leader>Sl` | Load session |
 | `<leader>Sd` | Delete session |
+
+### LSP & Tools
+
+| Key | Action |
+|-----|--------|
+| `<leader>lu` | Mason update |
+| `<leader>lf` | Telescope diagnostics |
+| `<leader>ln` / `<leader>lp` | Next / previous diagnostic |
+| `<leader>ts` | Toggle spell check |
+| `<leader>tc` | Toggle Copilot |
+
+### Email (Himalaya)
+
+| Key | Action |
+|-----|--------|
+| `<leader>hh` | Open default account |
+| `<leader>ho` | Open account |
+| `<leader>hw` | Write email |
+| `<leader>hr` | Reply |
+| `<leader>hR` | Reply all |
+| `<leader>ha` | Download attachments |
+| `<leader>hd` | Delete |
+| `<leader>hf` | Forward |
+| `<leader>hm` / `<leader>hM` | Add / remove flag |
 
 ---
 
