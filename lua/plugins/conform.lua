@@ -11,6 +11,7 @@ return {
 				-- Conform will run the first available formatter
 				javascript = { "prettierd", "prettier", stop_after_first = true },
 				tex = { "latexindent" },
+				markdown = { "markdownlint-cli2", "markdown-toc", "prettier" },
 			},
 			format_on_save = {
 				-- These options will be passed to conform.format()
