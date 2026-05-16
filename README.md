@@ -5,13 +5,13 @@
 ## 📸 Screenshots
 
 ![Dashboard](screenshots/Screenshot-1.png)
-*Welcome screen featuring the Snacks dashboard with project shortcuts, recent files, and quick session access — your academic workspace starts here.*
+_Welcome screen featuring the Snacks dashboard with project shortcuts, recent files, and quick session access — your academic workspace starts here._
 
 ![Screenshot-2](screenshots/Screenshot-2.png)
-*Active LaTeX editing environment with VimTeX integration, showing real-time compilation feedback and document structure navigation.*
+_Active LaTeX editing environment with VimTeX integration, showing real-time compilation feedback and document structure navigation._
 
 ![Screenshot-3](screenshots/Screenshot-3.png)
-*Integrated file tree and buffer management in action, demonstrating the seamless workflow between project navigation and document editing.*
+_Integrated file tree and buffer management in action, demonstrating the seamless workflow between project navigation and document editing._
 
 ---
 
@@ -40,6 +40,7 @@
 This configuration is optimized for users who split their time between academic writing and software development. It provides first-class LaTeX support via VimTeX, citation management through Zotero/BibTeX, AI-powered assistance via Avante and GitHub Copilot, and a full LSP-backed development environment — all within a carefully organized, modular structure.
 
 **Primary use cases:**
+
 - Writing and compiling LaTeX documents (research papers, theses, reports)
 - Managing citations and bibliographies
 - Converting documents across formats (DOCX, Markdown, audio)
@@ -50,6 +51,7 @@ This configuration is optimized for users who split their time between academic 
 ## Features
 
 ### Academic & LaTeX
+
 - **VimTeX** — Full LaTeX build system integration with Zathura PDF viewer and forward/inverse search
 - **Bibliography management** — Zotero integration via Telescope-BibTeX for inline citation search and insertion
 - **Template system** — Pre-configured APA, MLA, and Chicago paper templates with proper document structure
@@ -58,10 +60,12 @@ This configuration is optimized for users who split their time between academic 
 - **Pandoc integration** — One-command export to DOCX, Markdown, plain text, and MP3 audio
 
 ### AI Assistance
+
 - **Avante** — Conversational AI assistant supporting Claude Sonnet, DeepSeek, and Moonshot; context-aware with buffer and repository awareness
 - **GitHub Copilot** — Inline code completion in manual trigger mode
 
 ### Development
+
 - **LSP** — TeXLab for LaTeX; extensible to any language via Mason
 - **Blink.cmp** — Fast completion engine with fuzzy matching and dictionary/thesaurus sources
 - **Treesitter** — Accurate syntax highlighting and structural navigation
@@ -69,6 +73,7 @@ This configuration is optimized for users who split their time between academic 
 - **ChkTeX** — Real-time LaTeX linting
 
 ### Interface & Productivity
+
 - **Gruvbox** — Dark-optimized primary colorscheme (alternatives: Catppuccin, Rose Pine, Vague)
 - **Which-Key** — Discoverable keymap guide with organized command groups
 - **Snacks dashboard** — Custom start screen with project and session shortcuts
@@ -79,17 +84,17 @@ This configuration is optimized for users who split their time between academic 
 
 ## Plugin Ecosystem
 
-| Category | Plugins |
-|----------|---------|
-| **Plugin manager** | lazy.nvim |
-| **UI & dashboard** | snacks.nvim, lualine.nvim, which-key.nvim |
-| **Completion** | blink.cmp, LuaSnip, friendly-snippets |
-| **LaTeX** | VimTeX, telescope-bibtex.nvim, ChkTeX |
-| **LSP & tooling** | nvim-lspconfig, mason.nvim, conform.nvim, nvim-treesitter |
-| **AI** | avante.nvim, copilot.lua |
-| **Navigation** | telescope.nvim, nvim-tree.lua, flash.nvim |
-| **Git** | gitsigns.nvim, lazygit |
-| **Utilities** | mini.nvim, yanky.nvim, undotree, session-manager |
+| Category           | Plugins                                                   |
+| ------------------ | --------------------------------------------------------- |
+| **Plugin manager** | lazy.nvim                                                 |
+| **UI & dashboard** | snacks.nvim, lualine.nvim, which-key.nvim                 |
+| **Completion**     | blink.cmp, LuaSnip, friendly-snippets                     |
+| **LaTeX**          | VimTeX, telescope-bibtex.nvim, ChkTeX                     |
+| **LSP & tooling**  | nvim-lspconfig, mason.nvim, conform.nvim, nvim-treesitter |
+| **AI**             | avante.nvim, copilot.lua                                  |
+| **Navigation**     | telescope.nvim, nvim-tree.lua, flash.nvim                 |
+| **Git**            | gitsigns.nvim, lazygit                                    |
+| **Utilities**      | mini.nvim, yanky.nvim, undotree, session-manager          |
 
 ---
 
@@ -99,150 +104,150 @@ This configuration is optimized for users who split their time between academic 
 
 ### Core
 
-| Key | Action |
-|-----|--------|
+| Key         | Action               |
+| ----------- | -------------------- |
 | `<leader>e` | Toggle file explorer |
-| `<leader>w` | Save all buffers |
-| `<leader>q` | Quit |
-| `<leader>,` | Return to dashboard |
-| `<leader>z` | Toggle Zen Mode |
-| `<leader>C` | Browse colorschemes |
-| `<leader>c` | Fix spelling |
+| `<leader>w` | Save all buffers     |
+| `<leader>q` | Quit                 |
+| `<leader>,` | Return to dashboard  |
+| `<leader>z` | Toggle Zen Mode      |
+| `<leader>C` | Browse colorschemes  |
+| `<leader>c` | Fix spelling         |
 
 ### Find & Navigate
 
-| Key | Action |
-|-----|--------|
-| `<leader>ff` | Find files |
-| `<leader>ft` | Live grep |
-| `<leader>fb` | Search buffers |
-| `<leader>fr` | Recent files |
+| Key          | Action                    |
+| ------------ | ------------------------- |
+| `<leader>ff` | Find files                |
+| `<leader>ft` | Live grep                 |
+| `<leader>fb` | Search buffers            |
+| `<leader>fr` | Recent files              |
 | `<leader>fz` | Search citations (BibTeX) |
-| `<leader>fu` | Visual undo tree |
-| `<leader>fl` | Resume last search |
-| `<leader>fg` | Git history |
-| `<leader>fh` | Help tags |
-| `<leader>fk` | Keymaps |
-| `<leader>fy` | Yank history |
-| `<leader>fd` | Diagnostics |
-| `<leader>fm` | Man pages |
-| `<leader>fc` | Config files |
+| `<leader>fu` | Visual undo tree          |
+| `<leader>fl` | Resume last search        |
+| `<leader>fg` | Git history               |
+| `<leader>fh` | Help tags                 |
+| `<leader>fk` | Keymaps                   |
+| `<leader>fy` | Yank history              |
+| `<leader>fd` | Diagnostics               |
+| `<leader>fm` | Man pages                 |
+| `<leader>fc` | Config files              |
 
 ### LaTeX
 
-| Key | Action |
-|-----|--------|
-| `\ll` | Build document |
-| `\lv` | View PDF |
+| Key   | Action                 |
+| ----- | ---------------------- |
+| `\ll` | Build document         |
+| `\lv` | View PDF               |
 | `\lW` | Word count in sections |
-| `\le` | Show errors |
-| `\lc` | Clean auxiliary files |
-| `\lC` | Clean full |
-| `\lg` | VimTeX status |
-| `\li` | VimTeX info |
-| `\lk` | Stop compilation |
-| `\lT` | Toggle TOC |
-| `\ld` | Package documentation |
+| `\le` | Show errors            |
+| `\lc` | Clean auxiliary files  |
+| `\lC` | Clean full             |
+| `\lg` | VimTeX status          |
+| `\li` | VimTeX info            |
+| `\lk` | Stop compilation       |
+| `\lT` | Toggle TOC             |
+| `\ld` | Package documentation  |
 
 ### Templates
 
-| Key | Template |
-|-----|----------|
-| `<leader>Ta` | APA paper |
-| `<leader>TA` | APA paper (standalone) |
-| `<leader>Tm` | MLA paper |
-| `<leader>TM` | MLA paper (standalone) |
-| `<leader>Tc` | Chicago paper |
-| `<leader>TC` | Chicago paper (standalone) |
-| `<leader>Tn` | Notes |
-| `<leader>TN` | Notes (standalone) |
-| `<leader>Ts` | Studying |
-| `<leader>Tb` | APA barebones |
-| `<leader>Tf` | APA figures and tables |
-| `<leader>TWr` | Resume |
-| `<leader>TWc` | Cover letter |
-| `<leader>TOr` | Recipe |
+| Key           | Template                   |
+| ------------- | -------------------------- |
+| `<leader>Ta`  | APA paper                  |
+| `<leader>TA`  | APA paper (standalone)     |
+| `<leader>Tm`  | MLA paper                  |
+| `<leader>TM`  | MLA paper (standalone)     |
+| `<leader>Tc`  | Chicago paper              |
+| `<leader>TC`  | Chicago paper (standalone) |
+| `<leader>Tn`  | Notes                      |
+| `<leader>TN`  | Notes (standalone)         |
+| `<leader>Ts`  | Studying                   |
+| `<leader>Tb`  | APA barebones              |
+| `<leader>Tf`  | APA figures and tables     |
+| `<leader>TWr` | Resume                     |
+| `<leader>TWc` | Cover letter               |
+| `<leader>TOr` | Recipe                     |
 
 ### Export (Pandoc)
 
-| Key | Format |
-|-----|--------|
-| `<leader>pd` | Word (.docx) |
-| `<leader>pm` | Markdown |
-| `<leader>pt` | LaTeX |
+| Key          | Format                 |
+| ------------ | ---------------------- |
+| `<leader>pd` | Word (.docx)           |
+| `<leader>pm` | Markdown               |
+| `<leader>pt` | LaTeX                  |
 | `<leader>pT` | Plain text + MP3 audio |
 
 ### AI (Avante)
 
-| Key | Action |
-|-----|--------|
-| `<leader>aa` | Ask AI |
-| `<leader>aC` | Start chat |
-| `<leader>at` | Toggle sidebar |
-| `<leader>a?` | Select model |
-| `<leader>aB` | Add all open buffers |
-| `<leader>aR` | Display repo map |
-| `<leader>ac` | Clear chat history |
-| `<leader>af` | Focus |
-| `<leader>ah` | Select history |
-| `<leader>an` | Create new chat |
-| `<leader>ar` | Refresh |
-| `<leader>aS` | Stop |
-| `<leader>az` | Toggle zen mode |
-| `<leader>a+` | Select file in NvimTree |
+| Key          | Action                    |
+| ------------ | ------------------------- |
+| `<leader>aa` | Ask AI                    |
+| `<leader>aC` | Start chat                |
+| `<leader>at` | Toggle sidebar            |
+| `<leader>a?` | Select model              |
+| `<leader>aB` | Add all open buffers      |
+| `<leader>aR` | Display repo map          |
+| `<leader>ac` | Clear chat history        |
+| `<leader>af` | Focus                     |
+| `<leader>ah` | Select history            |
+| `<leader>an` | Create new chat           |
+| `<leader>ar` | Refresh                   |
+| `<leader>aS` | Stop                      |
+| `<leader>az` | Toggle zen mode           |
+| `<leader>a+` | Select file in NvimTree   |
 | `<leader>a-` | Deselect file in NvimTree |
 
 ### Git
 
-| Key | Action |
-|-----|--------|
-| `<leader>gg` | Open LazyGit |
-| `<leader>gs` | Git status |
-| `<leader>gb` | Git branches |
-| `<leader>gc` | Git commits |
+| Key                         | Action               |
+| --------------------------- | -------------------- |
+| `<leader>gg`                | Open LazyGit         |
+| `<leader>gs`                | Git status           |
+| `<leader>gb`                | Git branches         |
+| `<leader>gc`                | Git commits          |
 | `<leader>gj` / `<leader>gk` | Next / previous hunk |
-| `<leader>gp` | Preview hunk |
-| `<leader>gl` | Blame current line |
+| `<leader>gp`                | Preview hunk         |
+| `<leader>gl`                | Blame current line   |
 
 ### Buffers & Sessions
 
-| Key | Action |
-|-----|--------|
-| `<Tab>` / `<S-Tab>` | Next / previous buffer |
-| `<leader>bd` | Close buffer |
-| `<leader>bn` / `<leader>bp` | Move buffer right / left |
-| `<leader>bP` | Pin buffer |
-| `<leader>bf` | Pick buffer |
-| `<leader>br` / `<leader>bl` | Close right / left buffers |
+| Key                         | Action                          |
+| --------------------------- | ------------------------------- |
+| `<Tab>` / `<S-Tab>`         | Next / previous buffer          |
+| `<leader>bd`                | Close buffer                    |
+| `<leader>bn` / `<leader>bp` | Move buffer right / left        |
+| `<leader>bP`                | Pin buffer                      |
+| `<leader>bf`                | Pick buffer                     |
+| `<leader>br` / `<leader>bl` | Close right / left buffers      |
 | `<leader>bv` / `<leader>bh` | Split vertically / horizontally |
-| `<leader>bq` | Close window |
-| `<leader>Ss` | Save session |
-| `<leader>Sl` | Load session |
-| `<leader>Sd` | Delete session |
+| `<leader>bq`                | Close window                    |
+| `<leader>Ss`                | Save session                    |
+| `<leader>Sl`                | Load session                    |
+| `<leader>Sd`                | Delete session                  |
 
 ### LSP & Tools
 
-| Key | Action |
-|-----|--------|
-| `<leader>lu` | Mason update |
-| `<leader>lf` | Telescope diagnostics |
+| Key                         | Action                     |
+| --------------------------- | -------------------------- |
+| `<leader>lu`                | Mason update               |
+| `<leader>lf`                | Telescope diagnostics      |
 | `<leader>ln` / `<leader>lp` | Next / previous diagnostic |
-| `<leader>ts` | Toggle spell check |
-| `<leader>tc` | Toggle Copilot |
+| `<leader>ts`                | Toggle spell check         |
+| `<leader>tc`                | Toggle Copilot             |
 
 ### Email (Himalaya)
 
-| Key | Action |
-|-----|--------|
-| `<leader>hh` | Open default account |
-| `<leader>ho` | Open account |
-| `<leader>hw` | Write email |
-| `<leader>hr` | Reply |
-| `<leader>hR` | Reply all |
-| `<leader>ha` | Download attachments |
-| `<leader>hd` | Delete |
-| `<leader>hf` | Forward |
-| `<leader>hm` / `<leader>hM` | Add / remove flag |
+| Key                         | Action               |
+| --------------------------- | -------------------- |
+| `<leader>hh`                | Open default account |
+| `<leader>ho`                | Open account         |
+| `<leader>hw`                | Write email          |
+| `<leader>hr`                | Reply                |
+| `<leader>hR`                | Reply all            |
+| `<leader>ha`                | Download attachments |
+| `<leader>hd`                | Delete               |
+| `<leader>hf`                | Forward              |
+| `<leader>hm` / `<leader>hM` | Add / remove flag    |
 
 ---
 
@@ -250,35 +255,40 @@ This configuration is optimized for users who split their time between academic 
 
 ### Prerequisites
 
-| Dependency | Purpose |
-|------------|---------|
-| Neovim 0.9+ | Required |
-| Git | Plugin management |
-| Node.js | LSP server support |
-| TeX Live (recommended) | LaTeX compilation |
-| Zathura | PDF preview |
-| Pandoc | Document conversion |
-| ripgrep, fd | Telescope search backends |
+| Dependency             | Purpose                   |
+| ---------------------- | ------------------------- |
+| Neovim 0.9+            | Required                  |
+| Git                    | Plugin management         |
+| Node.js                | LSP server support        |
+| TeX Live (recommended) | LaTeX compilation         |
+| Zathura                | PDF preview               |
+| Pandoc                 | Document conversion       |
+| ripgrep, fd            | Telescope search backends |
 
 ### Steps
 
 **1. Back up your existing configuration:**
+
 ```bash
 mv ~/.config/nvim ~/.config/nvim.backup
 ```
 
 **2. Clone this repository:**
+
 ```bash
 git clone <repository-url> ~/.config/nvim
 ```
 
 **3. Launch Neovim:**
+
 ```bash
 nvim
 ```
+
 Lazy.nvim will automatically bootstrap and install all plugins on first launch.
 
 **4. Install LSP servers via Mason (optional):**
+
 ```vim
 :Mason
 ```
@@ -330,28 +340,28 @@ nvim/
 
 ### Key Settings
 
-| Setting | Value |
-|---------|-------|
-| Leader key | `<Space>` |
-| Local leader | `\` |
-| PDF viewer | Zathura |
-| Primary colorscheme | Gruvbox (dark) |
-| Primary AI model | Claude Sonnet (via Avante) |
-| Copilot mode | Manual trigger |
+| Setting             | Value                      |
+| ------------------- | -------------------------- |
+| Leader key          | `<Space>`                  |
+| Local leader        | `\`                        |
+| PDF viewer          | Zathura                    |
+| Primary colorscheme | Gruvbox (dark)             |
+| Primary AI model    | Claude Sonnet (via Avante) |
+| Copilot mode        | Manual trigger             |
 
 ### LaTeX-Specific Surround Shortcuts
 
 Using `gsa` + key in Mini.surround:
 
-| Key | Output |
-|-----|--------|
-| `e` | `\begin{equation}...\end{equation}` |
-| `A` | `\begin{align}...\end{align}` |
-| `I` | `\begin{itemize}...\end{itemize}` |
+| Key | Output                                |
+| --- | ------------------------------------- |
+| `e` | `\begin{equation}...\end{equation}`   |
+| `A` | `\begin{align}...\end{align}`         |
+| `I` | `\begin{itemize}...\end{itemize}`     |
 | `E` | `\begin{enumerate}...\end{enumerate}` |
-| `b` | `\textbf{...}` |
-| `i` | `\textit{...}` |
-| `$` | `$...$` |
+| `b` | `\textbf{...}`                        |
+| `i` | `\textit{...}`                        |
+| `$` | `$...$`                               |
 
 ---
 
@@ -365,18 +375,18 @@ nvim paper.tex
 ```
 
 1. Load a template with `<leader>T` (`a` for APA, `m` for MLA, `c` for Chicago)
-4. Search and insert citations with the completion menus or `<leader>fz`
-5. Compile with `\ll` and preview with `\lv`
+2. Search and insert citations with the completion menus or `<leader>fz`
+3. Compile with `\ll` and preview with `\lv`
 
 ### Working with Citations
 
 Open the BibTeX picker with `<leader>fz`, then:
 
-| Key | Action |
-|-----|--------|
+| Key       | Action                                    |
+| --------- | ----------------------------------------- |
 | `<Enter>` | Insert citation key — `\cite{author2023}` |
-| `<C-e>` | Insert full bibliography entry |
-| `<C-c>` | Insert formatted inline citation |
+| `<C-e>`   | Insert full bibliography entry            |
+| `<C-c>`   | Insert formatted inline citation          |
 
 ### Using AI Assistance
 
@@ -389,13 +399,13 @@ Open the BibTeX picker with `<leader>fz`, then:
 
 ## Customization
 
-| What to change | Where |
-|----------------|-------|
-| Add or configure plugins | `lua/plugins/` |
-| Modify keymaps | `lua/plugins/which-key.lua` |
-| Add LaTeX templates | `templates/` |
-| Add snippets | `lua/snippets/` |
-| Change core settings | `lua/config/options.lua` |
+| What to change           | Where                       |
+| ------------------------ | --------------------------- |
+| Add or configure plugins | `lua/plugins/`              |
+| Modify keymaps           | `lua/plugins/which-key.lua` |
+| Add LaTeX templates      | `templates/`                |
+| Add snippets             | `lua/snippets/`             |
+| Change core settings     | `lua/config/options.lua`    |
 
 ---
 
