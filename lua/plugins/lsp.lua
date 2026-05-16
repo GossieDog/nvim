@@ -26,6 +26,16 @@ vim.lsp.config("lua_ls", {
 })
 
 vim.lsp.enable("lua_ls")
+
+vim.lsp.config("marksman", {
+	cmd = { vim.fn.stdpath("data") .. "/mason/bin/marksman", "server" },
+	filetypes = { "markdown", "markdown.mdx" },
+	root_markers = { ".marksman.toml", ".git" },
+	capabilities = require("blink.cmp").get_lsp_capabilities(),
+})
+
+vim.lsp.enable("marksman")
+
 -- local bib_path = "/home/ericfan/Documents/SFU-Coursework/Zotero.bib"
 -- local last_mtime = 0
 -- vim.loop.new_timer():start(
