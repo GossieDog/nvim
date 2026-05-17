@@ -46,6 +46,7 @@ vim.lsp.config("ltex", {
 			language = "en-US",
 			enabled = { "tex", "plaintex" },
 			diagnosticSeverity = "information",
+			checkFrequency = "save",
 			additionalRules = {
 				enablePickyRules = false,
 			},
