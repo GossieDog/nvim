@@ -59,6 +59,24 @@ vim.lsp.config("ltex", {
 
 vim.lsp.enable("ltex")
 
+vim.lsp.config("sqls", {
+	cmd = { vim.fn.stdpath("data") .. "/mason/bin/sqls" },
+	filetypes = { "sql" },
+	root_markers = { ".git" },
+	capabilities = require("blink.cmp").get_lsp_capabilities(),
+	settings = {
+		sqls = {
+			connections = {
+				{
+					driver = "sqlite3",
+					dataSourceName = "/home/ericfan/Documents/Spending/Spending.sqlite3",
+				},
+			},
+		},
+	},
+})
+vim.lsp.enable("sqls")
+
 -- local bib_path = "/home/ericfan/Documents/SFU-Coursework/Zotero.bib"
 -- local last_mtime = 0
 -- vim.loop.new_timer():start(
