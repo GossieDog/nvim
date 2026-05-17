@@ -36,6 +36,28 @@ vim.lsp.config("marksman", {
 
 vim.lsp.enable("marksman")
 
+vim.lsp.config("ltex", {
+	cmd = { vim.fn.stdpath("data") .. "/mason/bin/ltex-ls" },
+	filetypes = { "tex", "plaintex" },
+	root_markers = { ".git", ".ltex" },
+	capabilities = require("blink.cmp").get_lsp_capabilities(),
+	settings = {
+		ltex = {
+			language = "en-US",
+			enabled = { "tex", "plaintex" },
+			diagnosticSeverity = "information",
+			additionalRules = {
+				enablePickyRules = false,
+			},
+			disabledRules = {
+				["en-US"] = { "MORFOLOGIK_RULE_EN_US" }, -- disables spell check, texlab handles that better
+			},
+		},
+	},
+})
+
+vim.lsp.enable("ltex")
+
 -- local bib_path = "/home/ericfan/Documents/SFU-Coursework/Zotero.bib"
 -- local last_mtime = 0
 -- vim.loop.new_timer():start(
