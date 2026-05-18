@@ -79,6 +79,7 @@ This configuration is optimized for users who split their time between academic 
 - **Snacks dashboard** — Custom start screen with project and session shortcuts
 - **Lualine** — Status line with VimTeX word count and real-time clock
 - **Zen Mode** — Distraction-free writing environment
+- **Cloak** — Hide sensitive information in specific files (e.g., environment variables, personal notes)
 
 ---
 
@@ -94,7 +95,7 @@ This configuration is optimized for users who split their time between academic 
 | **AI**             | avante.nvim, copilot.lua                                  |
 | **Navigation**     | telescope.nvim, nvim-tree.lua, flash.nvim                 |
 | **Git**            | gitsigns.nvim, lazygit                                    |
-| **Utilities**      | mini.nvim, yanky.nvim, undotree, session-manager          |
+| **Utilities**      | mini.nvim, yanky.nvim, undotree, session-manager, cloak.nvim |
 
 ---
 
@@ -234,6 +235,7 @@ This configuration is optimized for users who split their time between academic 
 | `<leader>ln` / `<leader>lp` | Next / previous diagnostic |
 | `<leader>ts`                | Toggle spell check         |
 | `<leader>tc`                | Toggle Copilot             |
+| `<leader>tC`                | Toggle Cloak               |
 
 ### Email (Himalaya)
 
@@ -394,6 +396,14 @@ Open the BibTeX picker with `<leader>fz`, then:
 - **Open persistent chat**: `<leader>aC`
 - **Add open buffers as context**: `<leader>aB`
 - **Switch models**: `<leader>a?` (Claude, DeepSeek, Moonshot)
+
+### Privacy & Security with Cloak
+
+Cloak automatically hides sensitive content in specified files. Use `<leader>tC` to toggle visibility:
+
+- **Practice journals** — Configured to hide content in `Practice-Journal.tex`
+- **Environment files** — Hides export statements in `.zshrc`
+- **Custom patterns** — Add your own file patterns and cloak rules in `lua/plugins/cloak.lua`
 
 ---
 
