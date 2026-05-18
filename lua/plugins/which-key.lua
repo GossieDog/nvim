@@ -103,6 +103,8 @@ return {
 				"<cmd>lua require('copilot.suggestion').toggle_auto_trigger()<cr>",
 				desc = "Toggle Copilot",
 			},
+			{ "<leader>tC", "<cmd>CloakToggle<cr>", desc = "Toggle Cloak", mode = "n" },
+
 			-- { "<leader>td", "<cmd>CocDisable<cr>", desc = "Disable CoC", mode = "n" },
 			-- { "<leader>te", "<cmd>CocEnable<cr>", desc = "Enable CoC", mode = "n" },
 			-- { "<leader>ti", "<cmd>IlluminateToggle<cr>", desc = "Toggle Illuminate", mode = "n" },
