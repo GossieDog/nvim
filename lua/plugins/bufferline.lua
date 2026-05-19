@@ -5,6 +5,7 @@ return {
 	opts = {
 		options = {
 			always_show_bufferline = false,
+			separator_style = "slant",
 			offsets = {
 				{
 					filetype = "NvimTree",
