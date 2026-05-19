@@ -524,6 +524,13 @@ ls.add_snippets("tex", {
 		t({ "", "" }),
 		t("\\end{mdframed}"),
 	}),
+	s("mdlearn", {
+		t("\\begin{mdframed}[frametitle=Learning Objectives]"),
+		t({ "", "\t" }),
+		i(1, "text"),
+		t({ "", "" }),
+		t("\\end{mdframed}"),
+	}),
 	s("mdread", {
 		t("\\begin{mdframed}[frametitle=Reading Assignment]"),
 		t({ "", "\t" }),
