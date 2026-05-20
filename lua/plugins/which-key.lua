@@ -360,6 +360,13 @@ return {
 				mode = "n",
 				icon = "󰈙",
 			},
+			{
+				"<leader>TWR",
+				"<cmd>read ~/.config/nvim/templates/References.tex<CR>",
+				desc = "References.tex",
+				mode = "n",
+				icon = "󰈙",
+			},
 			{ "<leader>TO", group = "Other" },
 			{
 				"<leader>TOr",
