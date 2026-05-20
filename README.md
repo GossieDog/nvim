@@ -85,16 +85,16 @@ This configuration is optimized for users who split their time between academic 
 
 ## Plugin Ecosystem
 
-| Category           | Plugins                                                   |
-| ------------------ | --------------------------------------------------------- |
-| **Plugin manager** | lazy.nvim                                                 |
-| **UI & dashboard** | snacks.nvim, lualine.nvim, which-key.nvim                 |
-| **Completion**     | blink.cmp, LuaSnip, friendly-snippets                     |
-| **LaTeX**          | VimTeX, telescope-bibtex.nvim, ChkTeX                     |
-| **LSP & tooling**  | nvim-lspconfig, mason.nvim, conform.nvim, nvim-treesitter |
-| **AI**             | avante.nvim, copilot.lua                                  |
-| **Navigation**     | telescope.nvim, nvim-tree.lua, flash.nvim                 |
-| **Git**            | gitsigns.nvim, lazygit                                    |
+| Category           | Plugins                                                      |
+| ------------------ | ------------------------------------------------------------ |
+| **Plugin manager** | lazy.nvim                                                    |
+| **UI & dashboard** | snacks.nvim, lualine.nvim, which-key.nvim                    |
+| **Completion**     | blink.cmp, LuaSnip, friendly-snippets                        |
+| **LaTeX**          | VimTeX, telescope-bibtex.nvim, ChkTeX                        |
+| **LSP & tooling**  | nvim-lspconfig, mason.nvim, conform.nvim, nvim-treesitter    |
+| **AI**             | avante.nvim, copilot.lua                                     |
+| **Navigation**     | telescope.nvim, nvim-tree.lua, flash.nvim                    |
+| **Git**            | gitsigns.nvim, lazygit                                       |
 | **Utilities**      | mini.nvim, yanky.nvim, undotree, session-manager, cloak.nvim |
 
 ---
