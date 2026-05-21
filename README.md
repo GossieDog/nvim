@@ -1,51 +1,35 @@
-# Neovim Academic Configuration
+# nvim
 
-> A modern Neovim setup built for academic writing, LaTeX development, and research — combining a full IDE experience with AI assistance and scholarly productivity tools.
+Neovim configuration for academic writing and research. Built around LaTeX with VimTeX, citation management via Zotero/BibTeX, AI assistance through Avante and Copilot, and a full LSP development environment — organized as a modular plugin setup using lazy.nvim.
 
-## Screenshots
+```
+nvim 0.10+  ·  lazy.nvim  ·  VimTeX  ·  Avante  ·  Gruvbox
+```
 
-![Dashboard](screenshots/Screenshot-1.png)
-_Welcome screen featuring the Snacks dashboard with project shortcuts, recent files, and quick session access._
-
-![LaTeX Editing](screenshots/Screenshot-2.png)
-_Active LaTeX editing environment with VimTeX integration, showing real-time compilation feedback and document structure navigation._
-
-![File Tree](screenshots/Screenshot-3.png)
-_Integrated file tree and buffer management, demonstrating seamless workflow between project navigation and document editing._
+**[Writing Workflow](https://www.youtube.com/watch?v=avbT4fAC3R4) · [Note-Taking](https://www.youtube.com/watch?v=zayVF1j9gBg)**
 
 ---
 
-## Demonstrations
+![Dashboard](screenshots/Screenshot-1.png)
+_Snacks dashboard — project shortcuts, recent files, and session access._
 
-- [Writing Workflow](https://www.youtube.com/watch?v=avbT4fAC3R4)
-- [Note-Taking](https://www.youtube.com/watch?v=zayVF1j9gBg)
+![LaTeX Editing](screenshots/Screenshot-2.png)
+_LaTeX editing with VimTeX — real-time compilation feedback and document structure navigation._
+
+![File Tree](screenshots/Screenshot-3.png)
+_File tree and buffer management._
 
 ---
 
 ## Contents
 
-- [Overview](#overview)
 - [Features](#features)
 - [Plugin Ecosystem](#plugin-ecosystem)
 - [Key Mappings](#key-mappings)
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Usage](#usage)
 - [Customization](#customization)
 - [Troubleshooting](#troubleshooting)
-
----
-
-## Overview
-
-This configuration is optimized for users who split their time between academic writing and software development. It provides first-class LaTeX support via VimTeX, citation management through Zotero/BibTeX, AI-powered assistance via Avante and GitHub Copilot, and a full LSP-backed development environment — all within a carefully organized, modular structure.
-
-**Primary use cases:**
-
-- Writing and compiling LaTeX documents (research papers, theses, reports)
-- Managing citations and bibliographies
-- Converting documents across formats (DOCX, Markdown, audio)
-- General software development with LSP, linting, and formatting
 
 ---
 
@@ -498,46 +482,6 @@ Using `gsa` + key in Mini.surround:
 | `b` | `\textbf{...}`                        |
 | `i` | `\textit{...}`                        |
 | `$` | `$...$`                               |
-
----
-
-## Usage
-
-### Writing an Academic Paper
-
-```bash
-mkdir ~/papers/my-paper && cd ~/papers/my-paper
-nvim paper.tex
-```
-
-1. Load a template with `<leader>T` — `a` for APA, `m` for MLA, `c` for Chicago
-2. Search and insert citations with `<leader>fz` or the completion menus
-3. Compile with `\ll` and preview with `\lv`
-
-### Working with Citations
-
-Open the BibTeX picker with `<leader>fz`, then:
-
-| Key       | Action                                    |
-| --------- | ----------------------------------------- |
-| `<Enter>` | Insert citation key — `\cite{author2023}` |
-| `<C-e>`   | Insert full bibliography entry            |
-| `<C-c>`   | Insert formatted inline citation          |
-
-### Using AI Assistance
-
-- **Ask about selected text** — Visual-select, then `<leader>aa`
-- **Open persistent chat** — `<leader>aC`
-- **Add open buffers as context** — `<leader>aB`
-- **Switch models** — `<leader>a?` (Claude, DeepSeek, Moonshot)
-
-### Privacy & Security with Cloak
-
-Cloak automatically hides sensitive content in specified files. Toggle visibility with `<leader>tC`:
-
-- **Practice journals** — Configured to hide content in `Practice-Journal.tex`
-- **Environment files** — Hides export statements in `.zshrc`
-- **Custom patterns** — Add your own file patterns and cloak rules in `lua/plugins/cloak.lua`
 
 ---
 
