@@ -367,6 +367,13 @@ return {
 				mode = "n",
 				icon = "󰈙",
 			},
+			{
+				"<leader>TWt",
+				"<cmd>read ~/.config/nvim/templates/Thank-You.tex<CR>",
+				desc = "Thank-You.tex",
+				mode = "n",
+				icon = "󰈙",
+			},
 			{ "<leader>TO", group = "Other" },
 			{
 				"<leader>TOr",
