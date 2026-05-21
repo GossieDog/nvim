@@ -195,12 +195,6 @@ return {
 		opts_extend = { "sources.default" },
 		config = function(_, opts)
 			require("blink.cmp").setup(opts)
-			vim.api.nvim_set_hl(0, "SnippetTabstop", {})
-			vim.api.nvim_create_autocmd("ColorScheme", {
-				callback = function()
-					vim.api.nvim_set_hl(0, "SnippetTabstop", {})
-				end,
-			})
 			vim.api.nvim_create_autocmd("User", {
 				pattern = "BlinkCmpMenuOpen",
 				callback = function()
