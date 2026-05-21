@@ -257,15 +257,19 @@ This configuration is optimized for users who split their time between academic 
 
 ### Prerequisites
 
-| Dependency             | Purpose                   |
-| ---------------------- | ------------------------- |
-| Neovim 0.9+            | Required                  |
-| Git                    | Plugin management         |
-| Node.js                | LSP server support        |
-| TeX Live (recommended) | LaTeX compilation         |
-| Zathura                | PDF preview               |
-| Pandoc                 | Document conversion       |
-| ripgrep, fd            | Telescope search backends |
+| Dependency             | Purpose                          |
+| ---------------------- | -------------------------------- |
+| Neovim 0.10+           | Required                         |
+| Git                    | Plugin management                |
+| Node.js 18+            | LSP server support               |
+| Build tools (make/gcc) | Compiling native plugins         |
+| Rust (optional)        | Better performance for some plugins |
+| Python 3.8+            | Code formatting tools            |
+| Java 17+               | LTeX grammar checking server     |
+| TeX Live (recommended) | LaTeX compilation                |
+| Zathura                | PDF preview                      |
+| Pandoc                 | Document conversion              |
+| ripgrep, fd            | Fast file searching              |
 
 ### Steps
 
@@ -298,27 +302,49 @@ Lazy.nvim will automatically bootstrap and install all plugins on first launch.
 ### System Dependencies
 
 ```bash
-# LaTeX
-sudo apt install texlive-full latexmk zathura
+# LaTeX and document processing
+sudo apt install texlive-full latexmk zathura chktex
 
 # Search tools
 sudo apt install ripgrep fd-find pandoc
 
-# Spell checking
+# Spell checking and grammar
 sudo apt install aspell aspell-en
 
 # Text-to-speech export
 sudo apt install espeak-ng ffmpeg
+
+# Build tools (for Avante AI plugin and telescope-fzf-native)
+sudo apt install build-essential make gcc
+
+# Programming language support
+sudo apt install nodejs npm python3 python3-pip
+
+# Optional: Rust for better performance
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# Email client (optional - for Himalaya)
+# Follow installation instructions at: https://pimalaya.org/himalaya/cli/installation.html
+curl -sSL https://raw.githubusercontent.com/pimalaya/himalaya/master/install.sh | sh
+
+# Database tools (optional - for vim-dadbod)
+sudo apt install sqlite3 mysql-client postgresql-client
+
+# Java (for LTeX language server)
+sudo apt install openjdk-17-jdk
 ```
 
 ### Post-Install Checklist
 
 - [ ] Open Neovim and wait for Lazy.nvim to finish installing plugins
-- [ ] Run `:Mason` and confirm TeXLab is installed
+- [ ] Run `:Mason` and confirm TeXLab, LTeX, Lua LS, Marksman, and SQLS are installed
 - [ ] Create a `.tex` file and compile with `\ll`
 - [ ] Update the bibliography path in the Telescope-BibTeX configuration
 - [ ] Run `:Copilot auth` if using GitHub Copilot
+- [ ] Set up API keys for Avante (ANTHROPIC_API_KEY, DEEPSEEK_API_KEY, MOONSHOT_API_KEY)
 - [ ] Verify Avante is working with `<leader>aa`
+- [ ] Configure Himalaya email accounts if using email features
+- [ ] Test database connections if using vim-dadbod
 
 ---
 
