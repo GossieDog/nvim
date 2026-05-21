@@ -329,15 +329,39 @@ sudo apt install espeak-ng ffmpeg
 ```
 nvim/
 ├── init.lua                    # Entry point
+├── lazy-lock.json             # Plugin version lock file
+├── lazyvim.json               # LazyVim configuration
 ├── lua/
 │   ├── config/
 │   │   ├── lazy.lua            # Plugin manager bootstrap
 │   │   └── options.lua         # Core Neovim settings
 │   ├── plugins/                # Per-plugin configuration files
+│   │   ├── ai.lua              # AI plugins (Avante, Copilot)
+│   │   ├── colorscheme.lua     # Color scheme configurations
+│   │   ├── editing.lua         # Text editing enhancements
+│   │   ├── keymaps.lua         # Custom key mappings
+│   │   ├── lsp.lua             # LSP and language server setup
+│   │   ├── misc.lua            # Miscellaneous plugins
+│   │   ├── ui.lua              # UI plugins and dashboard
+│   │   └── utils.lua           # Utility plugins
 │   └── snippets/               # Custom LuaSnip snippets
-├── templates/                  # LaTeX document templates
-├── after/ftplugin/             # Filetype-specific overrides
-└── spell/                      # Custom spell dictionaries
+│       └── tex.lua             # LaTeX-specific snippets
+├── screenshots/                # Documentation screenshots
+├── spell/                      # Custom spell dictionaries
+│   ├── en.utf-8.add           # Custom word additions
+│   └── en.utf-8.add.spl       # Compiled spell file
+└── templates/                  # LaTeX document templates
+    ├── APA-*.tex              # APA format templates
+    ├── MLA-*.tex              # MLA format templates
+    ├── Chicago-*.tex          # Chicago format templates
+    ├── Notes*.tex             # Note-taking templates
+    ├── Resume.tex             # Resume template
+    ├── Cover-Letter.tex       # Cover letter template
+    ├── Letter.tex             # General letter template
+    ├── Recipe.tex             # Recipe template
+    ├── References.tex         # References template
+    ├── Studying.tex           # Study notes template
+    └── Thank-You.tex          # Thank you letter template
 ```
 
 ### Key Settings
