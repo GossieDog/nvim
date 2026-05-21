@@ -75,6 +75,7 @@ vim.lsp.config("sqls", {
 		},
 	},
 })
+
 vim.lsp.enable("sqls")
 
 -- local bib_path = "/home/ericfan/Documents/SFU-Coursework/Zotero.bib"
