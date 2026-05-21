@@ -4,11 +4,11 @@
 
 _My Neovim setup for academic writing and research on Fedora_
 
-![Editor](https://img.shields.io/badge/editor-neovim-57A143?logo=neovim&logoColor=white)
-![Plugin Manager](https://img.shields.io/badge/plugins-lazy.nvim-blue)
-![LaTeX](https://img.shields.io/badge/latex-vimtex-008080)
-![AI](https://img.shields.io/badge/ai-avante-blueviolet)
-![Colorscheme](https://img.shields.io/badge/theme-gruvbox-B16286)
+![Editor](https://img.shields.io/badge/EDITOR-NEOVIM-57A143?style=flat-square&logo=neovim&logoColor=white&labelColor=1a1a1a)
+![OS](https://img.shields.io/badge/OS-FEDORA-51A2DA?style=flat-square&logo=fedora&logoColor=white&labelColor=1a1a1a)
+![LaTeX](https://img.shields.io/badge/LATEX-VIMTEX-008080?style=flat-square&logo=latex&logoColor=white&labelColor=1a1a1a)
+![AI](https://img.shields.io/badge/AI-AVANTE-7C3AED?style=flat-square&logo=anthropic&logoColor=white&labelColor=1a1a1a)
+![Theme](https://img.shields.io/badge/THEME-GRUVBOX-B16286?style=flat-square&logo=vim&logoColor=white&labelColor=1a1a1a)
 
 ---
 
