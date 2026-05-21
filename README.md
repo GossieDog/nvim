@@ -1,23 +1,31 @@
 # nvim
 
-Neovim configuration for academic writing and research. Built around LaTeX with VimTeX, citation management via Zotero/BibTeX, AI assistance through Avante and Copilot, and a full LSP development environment — organized as a modular plugin setup using lazy.nvim.
+![Dashboard](screenshots/Screenshot-1.png)
 
-```
-nvim 0.10+  ·  lazy.nvim  ·  VimTeX  ·  Avante  ·  Gruvbox
-```
+_My Neovim setup for academic writing and research on Fedora_
 
-**[Writing Workflow](https://www.youtube.com/watch?v=avbT4fAC3R4) · [Note-Taking](https://www.youtube.com/watch?v=zayVF1j9gBg)**
+![Editor](https://img.shields.io/badge/editor-neovim-57A143?logo=neovim&logoColor=white)
+![Plugin Manager](https://img.shields.io/badge/plugins-lazy.nvim-blue)
+![LaTeX](https://img.shields.io/badge/latex-vimtex-008080)
+![AI](https://img.shields.io/badge/ai-avante-blueviolet)
+![Colorscheme](https://img.shields.io/badge/theme-gruvbox-B16286)
 
 ---
 
-![Dashboard](screenshots/Screenshot-1.png)
-_Snacks dashboard — project shortcuts, recent files, and session access._
+<details>
+<summary>📸 Screenshots</summary>
+
+<br>
 
 ![LaTeX Editing](screenshots/Screenshot-2.png)
-_LaTeX editing with VimTeX — real-time compilation feedback and document structure navigation._
+_LaTeX editing with VimTeX — real-time compilation and document structure navigation_
 
 ![File Tree](screenshots/Screenshot-3.png)
-_File tree and buffer management._
+_File tree and buffer management_
+
+</details>
+
+**[Writing Workflow](https://www.youtube.com/watch?v=avbT4fAC3R4) · [Note-Taking](https://www.youtube.com/watch?v=zayVF1j9gBg)**
 
 ---
 
