@@ -382,6 +382,13 @@ return {
 				mode = "n",
 				icon = "󰈙",
 			},
+			{
+				"<leader>TOl",
+				"<cmd>read ~/.config/nvim/templates/Letter.tex<CR>",
+				desc = "Letter.tex",
+				mode = "n",
+				icon = "󰈙",
+			},
 
 			-- PANDOC GROUP --
 
