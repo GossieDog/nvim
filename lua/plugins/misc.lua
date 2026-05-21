@@ -1,5 +1,26 @@
 return {
 	{
+		"Shatur/neovim-session-manager",
+		event = "VeryLazy",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		},
+		config = function()
+			local config = require("session_manager.config")
+			require("session_manager").setup({
+				autoload_mode = config.AutoloadMode.Disabled,
+			})
+		end,
+	},
+	{
+		"mfussenegger/nvim-lint",
+		config = function()
+			require("lint").linters_by_ft = {
+				tex = { "chktex" },
+			}
+		end,
+	},
+	{
 		"laytan/cloak.nvim",
 		config = function()
 			require("cloak").setup({
@@ -39,5 +60,16 @@ return {
 				},
 			})
 		end,
+	},
+	{
+		"pimalaya/himalaya-vim",
+	},
+	{
+		"tpope/vim-dadbod",
+		dependencies = {
+			"kristijanhusak/vim-dadbod-ui",
+			"kristijanhusak/vim-dadbod-completion",
+		},
+		cmd = { "DB", "DBUI" },
 	},
 }

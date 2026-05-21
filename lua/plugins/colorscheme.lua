@@ -13,4 +13,17 @@ return {
 			-- vim.api.nvim_set_hl(0, "BufferLineFill", { bg = "#282828" })
 		end,
 	},
+	{
+		"catppuccin/nvim",
+		name = "catppuccin",
+		priority = 1000,
+	},
+	{
+		"rose-pine/neovim",
+		name = "rose-pine",
+	},
+	{
+		"vague-theme/vague.nvim",
+		lazy = false, -- make sure we load this during startup if it is your main colorscheme
+	},
 }
