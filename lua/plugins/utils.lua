@@ -15,6 +15,9 @@ return {
 				pickers = {
 					find_files = {
 						theme = "dropdown",
+						layout_config = {
+							width = 0.8,
+						},
 					},
 					-- buffers = {
 					-- 	theme = "dropdown",
