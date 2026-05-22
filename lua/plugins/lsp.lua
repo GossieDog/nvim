@@ -1,47 +1,33 @@
 return {
 	{
 		"mason-org/mason.nvim",
+		dependencies = { "saghen/blink.cmp" },
 		cmd = "Mason",
 		keys = { { "<leader>lm", "<cmd>Mason<cr>", desc = "Mason" } },
 		build = ":MasonUpdate",
 		opts_extend = { "ensure_installed" },
 		opts = {
 			ensure_installed = {
-				"stylua",
+				"markdown-toc",
+				"json-lsp",
+				"ltex-ls",
+				"lua-language-server",
+				"markdownlint-cli2",
+				"marksman",
+				"nomad",
+				"prettier",
 				"shfmt",
+				"sqls",
+				"stylua",
+				"texlab",
+				"tree-sitter-cli",
 			},
 		},
 		---@param opts MasonSettings | {ensure_installed: string[]}
 		config = function(_, opts)
 			require("mason").setup(opts)
-			local mr = require("mason-registry")
-			mr:on("package:install:success", function()
-				vim.defer_fn(function()
-					-- trigger FileType event to possibly load this newly installed LSP server
-					require("lazy.core.handler.event").trigger({
-						event = "FileType",
-						buf = vim.api.nvim_get_current_buf(),
-					})
-				end, 100)
-			end)
 
-			mr.refresh(function()
-				for _, tool in ipairs(opts.ensure_installed) do
-					local p = mr.get_package(tool)
-					if not p:is_installed() then
-						p:install()
-					end
-				end
-			end)
-		end,
-	},
-	{
-		"mason-org/mason-lspconfig.nvim",
-		dependencies = {
-			{ "mason-org/mason.nvim", opts = {} },
-			"saghen/blink.cmp",
-		},
-		config = function()
+			-- Enable LSPs
 			local caps = require("blink.cmp").get_lsp_capabilities()
 
 			vim.lsp.config("texlab", {
@@ -51,7 +37,6 @@ return {
 				capabilities = caps,
 			})
 			vim.lsp.enable("texlab")
-
 			vim.lsp.config("lua_ls", {
 				cmd = { vim.fn.stdpath("data") .. "/mason/bin/lua-language-server" },
 				filetypes = { "lua" },
@@ -68,7 +53,6 @@ return {
 				},
 			})
 			vim.lsp.enable("lua_ls")
-
 			vim.lsp.config("marksman", {
 				cmd = { vim.fn.stdpath("data") .. "/mason/bin/marksman", "server" },
 				filetypes = { "markdown", "markdown.mdx" },
@@ -76,7 +60,6 @@ return {
 				capabilities = caps,
 			})
 			vim.lsp.enable("marksman")
-
 			vim.lsp.config("ltex", {
 				cmd = { vim.fn.stdpath("data") .. "/mason/bin/ltex-ls" },
 				filetypes = { "tex", "plaintex" },
@@ -98,7 +81,6 @@ return {
 				},
 			})
 			vim.lsp.enable("ltex")
-
 			vim.lsp.config("sqls", {
 				cmd = { vim.fn.stdpath("data") .. "/mason/bin/sqls" },
 				filetypes = { "sql" },
@@ -116,16 +98,24 @@ return {
 				},
 			})
 			vim.lsp.enable("sqls")
-
-			require("mason-lspconfig").setup({
-				ensure_installed = {
-					"texlab",
-					"lua_ls",
-					"marksman",
-					"ltex",
-					"sqls",
-				},
-			})
+			-- Default Mason stuff below
+			local mr = require("mason-registry")
+			mr:on("package:install:success", function()
+				vim.defer_fn(function()
+					require("lazy.core.handler.event").trigger({
+						event = "FileType",
+						buf = vim.api.nvim_get_current_buf(),
+					})
+				end, 100)
+			end)
+			mr.refresh(function()
+				for _, tool in ipairs(opts.ensure_installed) do
+					local p = mr.get_package(tool)
+					if not p:is_installed() then
+						p:install()
+					end
+				end
+			end)
 		end,
 	},
 }
