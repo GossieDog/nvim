@@ -44,8 +44,6 @@ return {
 		config = function()
 			local caps = require("blink.cmp").get_lsp_capabilities()
 
-			vim.diagnostic.config({ virtual_text = true })
-
 			vim.lsp.config("texlab", {
 				cmd = { "texlab" },
 				filetypes = { "tex", "plaintex", "bib" },

@@ -63,27 +63,14 @@ opt.breakindent = true
 opt.textwidth = 0
 opt.sessionoptions:append("globals")
 
+-- CTRL l spell correction keymap
 vim.keymap.set("i", "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", { noremap = true })
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
 
--- Inline diagnostics
-
--- vim.keymap.set("n", "<Up>", "<Nop>")
--- vim.keymap.set("n", "<Down>", "<Nop>")
--- vim.keymap.set("n", "<Left>", "<Nop>")
--- vim.keymap.set("n", "<Right>", "<Nop>")
---
--- vim.keymap.set("i", "<Up>", "<Nop>")
--- vim.keymap.set("i", "<Down>", "<Nop>")
--- vim.keymap.set("i", "<Left>", "<Nop>")
--- vim.keymap.set("i", "<Right>", "<Nop>")
---
--- vim.keymap.set("i", "<CR>", function() --Autocommand for coc completion with CR
--- 	if vim.fn["coc#pum#visible"]() == 1 then
--- 		return vim.fn["coc#pum#confirm"]()
--- 	else
--- 		return "<CR>"
--- 	end
--- end, { silent = true, expr = true })
+vim.diagnostic.config({
+	virtual_text = false,
+	virtual_lines = true,
+	signs = true,
+})
