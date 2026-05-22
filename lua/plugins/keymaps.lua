@@ -46,7 +46,7 @@ return {
 				{ "<leader>f", group = "Find", mode = "n" },
 				{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "File" },
 				{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Buffer" },
-				{ "<leader>fz", "<cmd>Telescope bibtex<cr>", desc = "Citations" },
+				{ "<leader>fz", "<cmd>Telescope bibtex theme=dropdown<cr>", desc = "Citations" },
 				{ "<leader>fl", "<cmd>Telescope resume<cr>", desc = "Last Search" },
 				{ "<leader>fg", "<cmd>Telescope git_commits<cr>", desc = "Git History" },
 				{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help" },

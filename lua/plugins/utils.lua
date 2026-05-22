@@ -12,6 +12,32 @@ return {
 			local bibtex_actions = require("telescope-bibtex.actions")
 			require("telescope").setup({
 				defaults = {},
+				pickers = {
+					find_files = {
+						theme = "dropdown",
+					},
+					-- buffers = {
+					-- 	theme = "dropdown",
+					-- },
+					-- resume = {
+					-- 	theme = "dropdown",
+					-- },
+					-- git_commits = {
+					-- 	theme = "dropdown",
+					-- },
+					-- help_tags = {
+					-- 	theme = "dropdown",
+					-- },
+					-- YankyRingHistory = {
+					-- 	theme = "dropdown",
+					-- },
+					-- diagnostics = {
+					-- 	theme = "dropdown",
+					-- },
+					-- oldfiles = {
+					-- 	theme = "dropdown",
+					-- },
+				},
 				extensions = {
 					bibtex = {
 						-- Depth for the *.bib file
