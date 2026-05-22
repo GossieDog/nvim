@@ -325,12 +325,15 @@ return {
 								-- vim.diagnostic.severity.HINT,
 							},
 						},
-						-- preview = {
-						-- 	type = "split",
-						-- 	relative = "win",
-						-- 	position = "right",
-						-- 	size = 0.3,
-						-- },
+						preview = {
+							type = "split",
+							relative = "editor",
+							position = "right",
+							size = 0.3,
+							wo = {
+								wrap = true,
+							},
+						},
 					},
 				},
 			})
