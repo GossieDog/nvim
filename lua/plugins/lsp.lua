@@ -2,7 +2,7 @@ return {
 	{
 		"mason-org/mason.nvim",
 		dependencies = { "saghen/blink.cmp" },
-		cmd = "Mason",
+		lazy = false,
 		keys = { { "<leader>lm", "<cmd>Mason<cr>", desc = "Mason" } },
 		build = ":MasonUpdate",
 		opts_extend = { "ensure_installed" },
