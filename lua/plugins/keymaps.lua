@@ -87,13 +87,13 @@ return {
 				{ "<leader>l", group = "LSP", icon = "󰅴" },
 				{ "<leader>lu", "<cmd>MasonUpdate<cr>", desc = "Mason Update", mode = "n" },
 				{ "<leader>lf", "<cmd>Telescope diagnostics<cr>", desc = "Telescope Diagnostics", mode = "n" },
-				{ "<leader>ln", "<cmd>lua vim.diagnostic.goto_next()<CR>", desc = "Next Diagnostic", icon = "󰮰" },
-				{
-					"<leader>lp",
-					"<cmd>lua vim.diagnostic.goto_prev()<CR>",
-					desc = "Previous Diagnostic",
-					icon = "󰮲",
-				},
+				-- { "<leader>ln", "<cmd>lua vim.diagnostic.goto_next()<CR>", desc = "Next Diagnostic", icon = "󰮰" },
+				-- {
+				-- 	"<leader>lp",
+				-- 	"<cmd>lua vim.diagnostic.goto_prev()<CR>",
+				-- 	desc = "Previous Diagnostic",
+				-- 	icon = "󰮲",
+				-- },
 
 				-- BUFFER GROUP
 
@@ -129,9 +129,9 @@ return {
 				-- DIAGNOSTICS GROUP -- Move to different group later.
 
 				{ "<leader>d", group = "Diagnostics" },
-				-- { "<leader>dt", "<cmd>Trouble diagnostics toggle<cr>", desc = "Project Diagnostics" },
+				{ "<leader>dp", "<cmd>Trouble diagnostics toggle<cr>", desc = "Project Diagnostics" },
 				{ "<leader>db", "<cmd>Trouble diagnostics toggle filter.buf=0<cr>", desc = "Buffer Diagnostics" },
-				-- { "<leader>ds", "<cmd>Trouble symbols toggle focus=false<cr>", desc = "Symbols (Trouble)" },
+				{ "<leader>ds", "<cmd>Trouble symbols toggle focus=false<cr>", desc = "Symbols (Trouble)" },
 				{ "<leader>dq", "<cmd>Trouble qflist toggle<cr>", desc = "Quickfix List (Trouble)" },
 
 				-- LATEX GROUP --
