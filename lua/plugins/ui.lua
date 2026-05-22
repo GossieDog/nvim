@@ -312,6 +312,28 @@ return {
 	{
 		"folke/trouble.nvim",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-		opts = {},
+		config = function()
+			require("trouble").setup({
+				modes = {
+					diagnostics = {
+						mode = "diagnostics",
+						filter = {
+							severity = {
+								vim.diagnostic.severity.ERROR,
+								vim.diagnostic.severity.WARN,
+								vim.diagnostic.severity.INFO,
+								-- vim.diagnostic.severity.HINT,
+							},
+						},
+						-- preview = {
+						-- 	type = "split",
+						-- 	relative = "win",
+						-- 	position = "right",
+						-- 	size = 0.3,
+						-- },
+					},
+				},
+			})
+		end,
 	},
 }
