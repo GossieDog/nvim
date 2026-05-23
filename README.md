@@ -318,7 +318,7 @@ nvim
 
 Lazy.nvim will automatically bootstrap and install all plugins on first launch.
 
-Mason will automatically install lsp servers
+Mason will automatically install lsp servers.
 
 ### Post-Install Checklist
 
