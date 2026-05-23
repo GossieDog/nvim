@@ -53,6 +53,10 @@ return {
 						replace = nil,
 					},
 					{
+						file_pattern = "Practice-Diary.tex",
+						cloak_pattern = ".+",
+					},
+					{
 						file_pattern = ".zshrc",
 						cloak_pattern = "export .+",
 						replace = "export ",
