@@ -90,7 +90,6 @@ return {
 
 				{ "<leader>l", group = "LSP", icon = "󰅴" },
 				{ "<leader>lu", "<cmd>MasonUpdate<cr>", desc = "Mason Update", mode = "n" },
-				{ "<leader>lf", "<cmd>Telescope diagnostics<cr>", desc = "Telescope Diagnostics", mode = "n" },
 				-- { "<leader>ln", "<cmd>lua vim.diagnostic.goto_next()<CR>", desc = "Next Diagnostic", icon = "󰮰" },
 				-- {
 				-- 	"<leader>lp",
