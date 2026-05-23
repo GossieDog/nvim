@@ -1,8 +1,8 @@
-# nvim
+# Neovim
 
 ![Dashboard](screenshots/Screenshot-1.png)
 
-_My Neovim setup for academic writing and research on Fedora_
+_My Neovim setup for academic writing_
 
 ![Editor](https://img.shields.io/badge/EDITOR-NEOVIM-57A143?style=flat-square&logo=neovim&logoColor=white&labelColor=1a1a1a)
 ![OS](https://img.shields.io/badge/OS-FEDORA-51A2DA?style=flat-square&logo=fedora&logoColor=white&labelColor=1a1a1a)
@@ -26,18 +26,6 @@ _File tree and buffer management_
 </details>
 
 **[Writing Workflow](https://www.youtube.com/watch?v=avbT4fAC3R4) · [Note-Taking](https://www.youtube.com/watch?v=zayVF1j9gBg)**
-
----
-
-## Contents
-
-- [Features](#features)
-- [Plugin Ecosystem](#plugin-ecosystem)
-- [Key Mappings](#key-mappings)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Customization](#customization)
-- [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -81,7 +69,7 @@ _File tree and buffer management_
 | Category           | Plugins                                                      |
 | ------------------ | ------------------------------------------------------------ |
 | **Plugin manager** | lazy.nvim                                                    |
-| **UI & dashboard** | snacks.nvim, lualine.nvim, which-key.nvim                    |
+| **UI & dashboard** | snacks.nvim, lualine.nvim, which-key.nvim, trouble.nvim      |
 | **Completion**     | blink.cmp, LuaSnip, friendly-snippets                        |
 | **LaTeX**          | VimTeX, telescope-bibtex.nvim, ChkTeX                        |
 | **LSP & tooling**  | nvim-lspconfig, mason.nvim, conform.nvim, nvim-treesitter    |
@@ -248,21 +236,65 @@ _File tree and buffer management_
 
 ## Installation
 
+### Directory Structure
+
+```
+nvim/
+├── init.lua                    # Entry point
+├── lua/
+│   ├── config/
+│   │   ├── lazy.lua            # Plugin manager bootstrap
+│   │   └── options.lua         # Core Neovim settings
+│   ├── plugins/                # Per-plugin configuration files
+│   │   ├── ai.lua
+│   │   ├── colorscheme.lua
+│   │   ├── editing.lua
+│   │   ├── keymaps.lua
+│   │   ├── lsp.lua
+│   │   ├── misc.lua
+│   │   ├── ui.lua
+│   │   └── utils.lua
+│   └── snippets/               # Custom LuaSnip snippets
+│       ├── tex.lua
+        └── lua.lua
+├── screenshots/                # Documentation screenshots
+├── spell/                      # Custom spell dictionaries
+│   ├── en.utf-8.add
+│   └── en.utf-8.add.spl
+└── templates/                  # LaTeX document templates
+    ├── APA-*.tex
+    ├── MLA-*.tex
+    ├── Chicago-*.tex
+    ├── Notes*.tex
+    ├── Resume.tex
+    ├── Resume.tex
+    ├── Cover-Letter.tex
+    ├── Letter.tex
+    ├── Recipe.tex
+    ├── References.tex
+    ├── Studying.tex
+    └── Thank-You.tex
+```
+
 ### Prerequisites
 
-| Dependency             | Purpose                             |
-| ---------------------- | ----------------------------------- |
-| Neovim 0.10+           | Required                            |
-| Git                    | Plugin management                   |
-| Node.js 18+            | LSP server support                  |
-| Build tools (make/gcc) | Compiling native plugins            |
-| Rust (optional)        | Better performance for some plugins |
-| Python 3.8+            | Code formatting tools               |
-| Java 17+               | LTeX grammar checking server        |
-| TeX Live (recommended) | LaTeX compilation                   |
-| Zathura                | PDF preview                         |
-| Pandoc                 | Document conversion                 |
-| ripgrep, fd            | Fast file searching                 |
+| Dependency                    | Purpose                             |
+| ----------------------------- | ----------------------------------- |
+| Neovim 0.12+                  | Required                            |
+| Git                           | Plugin management                   |
+| Node.js 18+                   | LSP server support                  |
+| Build tools (make/gcc)        | Compiling native plugins            |
+| Rust (optional)               | Better performance for some plugins |
+| Python 3.8+                   | Code formatting tools               |
+| Java 17+                      | LTeX grammar checking server        |
+| TeX Live                      | LaTeX compilation                   |
+| Zotero + Better BibTeX plugin | Citations                           |
+| Zathura                       | PDF preview                         |
+| Pandoc                        | Document conversion                 |
+| ripgrep, fd                   | Fast file searching                 |
+| aspeell                       | Spell check                         |
+| espeak-ng and ffmpeg          | Mp3 conversion                      |
+| Himalaya (optional)           | Email integration                   |
 
 ### Steps
 
@@ -275,7 +307,7 @@ mv ~/.config/nvim ~/.config/nvim.backup
 **2. Clone this repository:**
 
 ```bash
-git clone <repository-url> ~/.config/nvim
+git clone https://github.com/GossieDog/nvim.git ~/.config/nvim
 ```
 
 **3. Launch Neovim:**
@@ -286,235 +318,17 @@ nvim
 
 Lazy.nvim will automatically bootstrap and install all plugins on first launch.
 
-**4. Install LSP servers via Mason (optional):**
-
-```vim
-:Mason
-```
-
-### System Dependencies — Fedora
-
-Fedora uses `dnf` as its package manager. Some packages (notably Neovim itself and certain tools) are best installed via alternative sources to get up-to-date versions.
-
-#### Neovim
-
-The version of Neovim in the default Fedora repos is often behind. Install the latest stable release via the official Neovim COPR:
-
-```bash
-sudo dnf copr enable agriffis/neovim-nightly
-sudo dnf install neovim
-```
-
-Alternatively, download the latest AppImage from the [Neovim releases page](https://github.com/neovim/neovim/releases).
-
-#### LaTeX and Document Processing
-
-```bash
-# Full TeX Live distribution (large download, recommended for academic use)
-sudo dnf install texlive-scheme-full latexmk zathura zathura-pdf-mupdf chktex
-
-# Pandoc for document conversion
-sudo dnf install pandoc
-```
-
-> **Note:** `texlive-scheme-full` is several gigabytes. If you prefer a lighter install, use `texlive-scheme-medium` and add packages on demand via `tlmgr`.
-
-#### Search and Navigation Tools
-
-```bash
-sudo dnf install ripgrep fd-find
-```
-
-#### Spell Checking and Grammar
-
-```bash
-sudo dnf install aspell aspell-en
-```
-
-#### Text-to-Speech and Audio Export
-
-```bash
-sudo dnf install espeak-ng ffmpeg
-```
-
-> **Note:** `ffmpeg` is not available in the default Fedora repositories due to codec licensing. Install it from RPM Fusion:
->
-> ```bash
-> sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-> sudo dnf install ffmpeg
-> ```
-
-#### Build Tools
-
-Required for compiling native plugins (Avante, telescope-fzf-native, etc.):
-
-```bash
-sudo dnf install gcc make cmake
-```
-
-#### Programming Language Runtimes
-
-```bash
-# Node.js (for LSP servers via Mason)
-sudo dnf install nodejs npm
-
-# Python
-sudo dnf install python3 python3-pip
-
-# Java 17 (for LTeX grammar server)
-sudo dnf install java-17-openjdk
-```
-
-#### Rust (Optional)
-
-Improves performance for certain plugins:
-
-```bash
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-source "$HOME/.cargo/env"
-```
-
-#### Email Client — Himalaya (Optional)
-
-```bash
-curl -sSL https://raw.githubusercontent.com/pimalaya/himalaya/master/install.sh | sh
-```
-
-Full setup instructions: [pimalaya.org/himalaya](https://pimalaya.org/himalaya/cli/installation.html)
-
-#### Database Tools (Optional)
-
-```bash
-sudo dnf install sqlite mysql postgresql
-```
-
-#### All-in-One Install
-
-For convenience, here is a single command covering all required and commonly used dependencies (excluding optional extras and RPM Fusion packages):
-
-```bash
-sudo dnf install \
-  gcc make cmake \
-  nodejs npm python3 python3-pip \
-  java-17-openjdk \
-  texlive-scheme-full latexmk \
-  zathura zathura-pdf-mupdf chktex \
-  pandoc ripgrep fd-find \
-  aspell aspell-en espeak-ng
-```
-
-Then enable RPM Fusion and install `ffmpeg` separately if you need audio export:
-
-```bash
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-sudo dnf install ffmpeg
-```
+Mason will automatically install lsp servers
 
 ### Post-Install Checklist
 
 - [ ] Open Neovim and wait for Lazy.nvim to finish installing plugins
 - [ ] Run `:Mason` and confirm TeXLab, LTeX, Lua LS, Marksman, and SQLS are installed
 - [ ] Create a `.tex` file and compile with `\ll`
+- [ ] Start a keep updated auto-export for your whole Zotero libaray using the BetterBibTeX for Zotero plugin.
 - [ ] Update the bibliography path in the Telescope-BibTeX configuration
 - [ ] Run `:Copilot auth` if using GitHub Copilot
 - [ ] Set up API keys for Avante (`ANTHROPIC_API_KEY`, `DEEPSEEK_API_KEY`, `MOONSHOT_API_KEY`)
 - [ ] Verify Avante is working with `<leader>aa`
 - [ ] Configure Himalaya email accounts if using email features
 - [ ] Test database connections if using vim-dadbod
-
----
-
-## Configuration
-
-### Directory Structure
-
-```
-nvim/
-├── init.lua                    # Entry point
-├── lazy-lock.json              # Plugin version lock file
-├── lazyvim.json                # LazyVim configuration
-├── lua/
-│   ├── config/
-│   │   ├── lazy.lua            # Plugin manager bootstrap
-│   │   └── options.lua         # Core Neovim settings
-│   ├── plugins/                # Per-plugin configuration files
-│   │   ├── ai.lua              # AI plugins (Avante, Copilot)
-│   │   ├── colorscheme.lua     # Color scheme configurations
-│   │   ├── editing.lua         # Text editing enhancements
-│   │   ├── keymaps.lua         # Custom key mappings
-│   │   ├── lsp.lua             # LSP and language server setup
-│   │   ├── misc.lua            # Miscellaneous plugins
-│   │   ├── ui.lua              # UI plugins and dashboard
-│   │   └── utils.lua           # Utility plugins
-│   └── snippets/               # Custom LuaSnip snippets
-│       └── tex.lua             # LaTeX-specific snippets
-├── screenshots/                # Documentation screenshots
-├── spell/                      # Custom spell dictionaries
-│   ├── en.utf-8.add            # Custom word additions
-│   └── en.utf-8.add.spl        # Compiled spell file
-└── templates/                  # LaTeX document templates
-    ├── APA-*.tex               # APA format templates
-    ├── MLA-*.tex               # MLA format templates
-    ├── Chicago-*.tex           # Chicago format templates
-    ├── Notes*.tex              # Note-taking templates
-    ├── Resume.tex              # Resume template
-    ├── Cover-Letter.tex        # Cover letter template
-    ├── Letter.tex              # General letter template
-    ├── Recipe.tex              # Recipe template
-    ├── References.tex          # References template
-    ├── Studying.tex            # Study notes template
-    └── Thank-You.tex           # Thank you letter template
-```
-
-### Key Settings
-
-| Setting             | Value                      |
-| ------------------- | -------------------------- |
-| Leader key          | `<Space>`                  |
-| Local leader        | `\`                        |
-| PDF viewer          | Zathura                    |
-| Primary colorscheme | Gruvbox (dark)             |
-| Primary AI model    | Claude Sonnet (via Avante) |
-| Copilot mode        | Manual trigger             |
-
-### LaTeX-Specific Surround Shortcuts
-
-Using `gsa` + key in Mini.surround:
-
-| Key | Output                                |
-| --- | ------------------------------------- |
-| `e` | `\begin{equation}...\end{equation}`   |
-| `A` | `\begin{align}...\end{align}`         |
-| `I` | `\begin{itemize}...\end{itemize}`     |
-| `E` | `\begin{enumerate}...\end{enumerate}` |
-| `b` | `\textbf{...}`                        |
-| `i` | `\textit{...}`                        |
-| `$` | `$...$`                               |
-
----
-
-## Customization
-
-| What to change           | Where                       |
-| ------------------------ | --------------------------- |
-| Add or configure plugins | `lua/plugins/`              |
-| Modify keymaps           | `lua/plugins/which-key.lua` |
-| Add LaTeX templates      | `templates/`                |
-| Add snippets             | `lua/snippets/`             |
-| Change core settings     | `lua/config/options.lua`    |
-
----
-
-## Troubleshooting
-
-**PDF not updating after compile** — Run `\le` to check for compilation errors. Clean auxiliary files with `\lc` and recompile.
-
-**Completions not appearing** — Run `:LspInfo` to confirm the language server is active. For dictionary completions, ensure `aspell` and `aspell-en` are installed.
-
-**Avante not responding** — Verify your API key is set correctly in your shell environment. Check your internet connection.
-
-**Copilot not working** — Run `:Copilot status`. Re-authenticate with `:Copilot auth` if needed.
-
-**`ffmpeg` not found** — Fedora does not ship `ffmpeg` in its default repos. Enable RPM Fusion (see [System Dependencies](#system-dependencies--fedora)) and install it from there.
-
-**Neovim version too old** — If `:version` reports below 0.10, install via the COPR or AppImage as described in the [installation section](#neovim).
