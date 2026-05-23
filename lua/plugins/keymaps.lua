@@ -371,9 +371,16 @@ return {
 
 				{ "<leader>TW", group = "Work" },
 				{
-					"<leader>TWr",
+					"<leader>TWR",
 					"<cmd>read ~/.config/nvim/templates/Resume.tex<CR>",
 					desc = "Resume.tex",
+					mode = "n",
+					icon = "󰈙",
+				},
+				{
+					"<leader>TWr",
+					"<cmd>read ~/Documents/Co-Op/Resume/Resume.tex<CR>",
+					desc = "Resume-Complete.tex",
 					mode = "n",
 					icon = "󰈙",
 				},
@@ -385,7 +392,7 @@ return {
 					icon = "󰈙",
 				},
 				{
-					"<leader>TWR",
+					"<leader>TWl",
 					"<cmd>read ~/.config/nvim/templates/References.tex<CR>",
 					desc = "References.tex",
 					mode = "n",
