@@ -76,8 +76,8 @@ vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -10<CR>")
 vim.g.markdown_recommended_style = 0
 
 vim.diagnostic.config({
-	virtual_text = false,
-	virtual_lines = true,
+	virtual_text = true,
+	virtual_lines = false,
 	signs = {
 		text = {
 			[vim.diagnostic.severity.ERROR] = "",
