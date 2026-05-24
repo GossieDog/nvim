@@ -19,6 +19,7 @@ return {
 				"shfmt",
 				"sqls",
 				"stylua",
+				"luacheck",
 				"texlab",
 				"tree-sitter-cli",
 			},
