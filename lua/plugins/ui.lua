@@ -77,6 +77,8 @@ return {
 		dependencies = "nvim-tree/nvim-web-devicons",
 		opts = {
 			options = {
+				show_buffer_close_icons = false,
+				show_close_icon = false,
 				always_show_bufferline = false,
 				separator_style = "slant",
 				offsets = {
@@ -236,7 +238,10 @@ return {
 			indent = { enabled = true },
 			input = { enabled = true },
 			picker = { enabled = true },
-			notifier = { enabled = true },
+			notifier = {
+				enabled = true,
+				timeout = 3000,
+			},
 			quickfile = { enabled = true },
 			-- scope = { enabled = true },
 			scroll = { enabled = true },
