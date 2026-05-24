@@ -176,10 +176,6 @@ return {
 			require("mini.pairs").setup({
 				-- empty setup, using defaults
 			})
-
-			require("mini.icons").setup({
-				-- empty setup, using defaults
-			})
 		end,
 	},
 	{
