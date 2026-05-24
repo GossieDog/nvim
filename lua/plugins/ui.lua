@@ -1,3 +1,5 @@
+local diagnostic_icons = require("config.icons")
+
 return {
 	{
 		"nvim-lualine/lualine.nvim",
@@ -50,10 +52,10 @@ return {
 						{
 							"diagnostics",
 							symbols = {
-								error = " ",
-								warn = " ",
-								info = " ",
-								hint = " ",
+								error = diagnostic_icons.error,
+								warn = diagnostic_icons.warn,
+								info = diagnostic_icons.info,
+								hint = diagnostic_icons.hint,
 							},
 						},
 					},

@@ -1,5 +1,7 @@
 local opt = vim.opt
 
+local diagnostic_icons = require("config.icons")
+
 opt.autowrite = true -- Enable auto write
 -- only set clipboard if not in ssh, to make sure the OSC 52
 -- integration works automatically.
@@ -80,10 +82,10 @@ vim.diagnostic.config({
 	virtual_lines = false,
 	signs = {
 		text = {
-			[vim.diagnostic.severity.ERROR] = "",
-			[vim.diagnostic.severity.WARN] = "",
-			[vim.diagnostic.severity.INFO] = "",
-			[vim.diagnostic.severity.HINT] = "",
+			[vim.diagnostic.severity.ERROR] = diagnostic_icons.error,
+			[vim.diagnostic.severity.WARN] = diagnostic_icons.warn,
+			[vim.diagnostic.severity.INFO] = diagnostic_icons.info,
+			[vim.diagnostic.severity.HINT] = diagnostic_icons.hint,
 		},
 	},
 })
