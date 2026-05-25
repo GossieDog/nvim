@@ -27,6 +27,7 @@ return {
 			vim.lsp.config("ltex", {
 				settings = {
 					ltex = {
+						checkFrequency = "save",
 						disabledRules = {
 							["en-US"] = { "MORFOLOGIK_RULE_EN_US" },
 						},
