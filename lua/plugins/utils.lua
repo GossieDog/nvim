@@ -151,7 +151,20 @@ return {
 					auto_show_delay_ms = 500,
 				},
 			},
-
+			cmdline = {
+				keymap = {
+					-- recommended, as the default keymap will only show and select the next item
+					["<Tab>"] = { "show", "accept" },
+					["<Up>"] = { "select_prev", "fallback" },
+					["<Down>"] = { "select_next", "fallback" },
+				},
+				completion = {
+					menu = {
+						auto_show = true,
+					},
+					ghost_text = { enabled = false },
+				},
+			},
 			-- Default list of enabled providers defined so that you can extend it
 			-- elsewhere in your config, without redefining it, due to `opts_extend`
 			snippets = { preset = "luasnip" },
