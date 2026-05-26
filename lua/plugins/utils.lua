@@ -52,9 +52,9 @@ return {
 						format = "",
 						-- Path to global bibliographies (placed outside of the project)
 						global_files = {
-							vim.fn.expand(vim.env.ZOTERO_BIB or "~/Zotero.bib"),
+							"/home/ericfan/Documents/SFU-Coursework/Zotero.bib",
 						},
-						bibtex_file = vim.fn.expand(vim.env.ZOTERO_BIB or "~/Zotero.bib"),
+						bibtex_file = "/home/ericfan/Documents/SFU-Coursework/Zotero.bib",
 						-- Define the search keys to use in the picker
 						search_keys = { "author", "year", "title" },
 						-- Template for the formatted citation
