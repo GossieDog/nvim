@@ -28,8 +28,8 @@ return {
 					always_show_tabline = true,
 					refresh = {
 						statusline = 1000,
-						tabline = 1000,
-						winbar = 1000,
+						-- tabline = 1000,
+						-- winbar = 1000,
 						refresh_time = 16, -- ~60fps
 						events = {
 							"WinEnter",
