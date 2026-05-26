@@ -379,7 +379,7 @@ return {
 				},
 				{
 					"<leader>TWr",
-					"<cmd>read ~/Documents/Co-Op/Resume/Resume-Complete.tex<CR>",
+					"<cmd>read ~/Documents/Co-Op/Resume/EricFan-Resume.tex<CR>",
 					desc = "Resume-Complete.tex",
 					mode = "n",
 					icon = "󰈙",
