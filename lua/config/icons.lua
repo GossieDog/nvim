@@ -3,4 +3,7 @@ return {
 	warn = " ",
 	info = " ",
 	hint = " ",
+	added = " ",
+	modified = "󰏬 ",
+	removed = " ",
 }

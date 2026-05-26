@@ -1,4 +1,4 @@
-local diagnostic_icons = require("config.icons")
+local icons = require("config.icons")
 
 return {
 	{
@@ -52,15 +52,26 @@ return {
 						{
 							"diagnostics",
 							symbols = {
-								error = diagnostic_icons.error,
-								warn = diagnostic_icons.warn,
-								info = diagnostic_icons.info,
-								hint = diagnostic_icons.hint,
+								error = icons.error,
+								warn = icons.warn,
+								info = icons.info,
+								hint = icons.hint,
 							},
 						},
 					},
 					lualine_c = { { "filename", path = 1 } },
-					lualine_x = { "encoding", "filetype", "diff" },
+					lualine_x = {
+						"encoding",
+						"filetype",
+						{
+							"diff",
+							symbols = {
+								added = icons.added,
+								modified = icons.modified,
+								removed = icons.removed,
+							},
+						},
+					},
 					lualine_y = { "progress" },
 					lualine_z = {
 						function()
