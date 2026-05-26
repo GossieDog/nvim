@@ -11,7 +11,7 @@ return {
 			require("mason-lspconfig").setup({
 				ensure_installed = {
 					"jsonls",
-					"ltex",
+					"ltex_plus",
 					"lua_ls",
 					"marksman",
 					"sqls",
@@ -24,7 +24,7 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			vim.lsp.config("jsonls", {})
-			vim.lsp.config("ltex", {
+			vim.lsp.config("ltex_plus", {
 				settings = {
 					ltex = {
 						checkFrequency = "save",
@@ -54,7 +54,7 @@ return {
 
 			vim.lsp.enable({
 				"jsonls",
-				"ltex",
+				"ltex_plus",
 				"lua_ls",
 				"marksman",
 				"sqls",
