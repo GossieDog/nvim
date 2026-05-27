@@ -220,15 +220,15 @@ return {
                                                                          ]],
 					keys = {
 						{ icon = "", key = "f", desc = "Find File", action = ":Telescope find_files" },
-						{ icon = "", key = "g", desc = "Find Text", action = ":Telescope live_grep" },
+						{ icon = "󰦨", key = "g", desc = "Find Text", action = ":Telescope live_grep" },
 						{
-							icon = "",
+							icon = "",
 							key = "r",
 							desc = "Recent Files",
 							action = ":Telescope oldfiles",
 						},
 						{
-							icon = "",
+							icon = "",
 							key = "c",
 							desc = "Config",
 							action = ":Telescope find_files cwd=~/.config/nvim",
@@ -240,13 +240,13 @@ return {
 							action = ":e ~/Documents/SFU-Coursework/GeneralTodo.md",
 						},
 						{
-							icon = "󰉖",
+							icon = "",
 							key = "l",
 							desc = "Load Session",
 							action = ":SessionManager load_session",
 						},
 						{
-							icon = "",
+							icon = "󰑓",
 							key = "s",
 							desc = "Restore Session",
 							action = ":SessionManager load_last_session",
@@ -259,7 +259,7 @@ return {
 							enabled = package.loaded.lazy ~= nil,
 						},
 						{ icon = "", key = "h", desc = "Check Health", action = ":checkhealth" },
-						{ icon = "", key = "q", desc = "Quit", action = ":qa" },
+						{ icon = "󰈆", key = "q", desc = "Quit", action = ":qa" },
 					},
 				},
 			},
