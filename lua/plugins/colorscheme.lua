@@ -16,20 +16,19 @@ return {
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
-		priority = 1000,
+		lazy = true,
 	},
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
+		lazy = true,
 	},
 	{
 		"vague-theme/vague.nvim",
-		lazy = false, -- make sure we load this during startup if it is your main colorscheme
+		lazy = true,
 	},
 	{
-		"craftzdog/solarized-osaka.nvim",
-		lazy = false,
-		priority = 1000,
-		opts = {},
+		"folke/tokyonight.nvim",
+		lazy = true, -- make sure we load this during startup if it is your main colorscheme
 	},
 }
