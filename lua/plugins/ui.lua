@@ -3,6 +3,7 @@ local icons = require("config.icons")
 return {
 	{
 		"nvim-lualine/lualine.nvim",
+		event = "VeryLazy",
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("lualine").setup({
@@ -338,6 +339,7 @@ return {
 	},
 	{
 		"folke/trouble.nvim",
+		cmd = { "Trouble" },
 		dependencies = { "nvim-tree/nvim-web-devicons" },
 		config = function()
 			require("trouble").setup({
