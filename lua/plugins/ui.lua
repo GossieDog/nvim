@@ -46,9 +46,14 @@ return {
 					},
 				},
 				sections = {
-					lualine_a = { "mode" },
+					lualine_a = {
+						"mode",
+					},
 					lualine_b = {
-						"branch",
+						{
+							"branch",
+							icon = icons.git,
+						},
 						{
 							"diagnostics",
 							symbols = {

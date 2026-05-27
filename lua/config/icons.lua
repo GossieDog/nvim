@@ -6,4 +6,6 @@ return {
 	added = " ",
 	modified = "󰏬 ",
 	removed = " ",
+	git = "",
+	vim = "",
 }
