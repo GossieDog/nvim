@@ -89,13 +89,13 @@ return {
 	},
 	{
 		"saghen/blink.cmp",
-		event = { "InsertEnter", "CmdlineEnter" },
 		-- optional: provides snippets for the snippet source
 		dependencies = {
 			{ "L3MON4D3/LuaSnip", version = "v2.*" },
 			"rafamadriz/friendly-snippets",
 			"archie-judd/blink-cmp-words",
 		},
+		event = { "InsertEnter", "CmdlineEnter" },
 
 		-- use a release tag to download pre-built binaries
 		version = "1.*",
