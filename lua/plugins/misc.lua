@@ -67,6 +67,7 @@ return {
 	},
 	{
 		"pimalaya/himalaya-vim",
+		lazy = true,
 	},
 	{
 		"tpope/vim-dadbod",
