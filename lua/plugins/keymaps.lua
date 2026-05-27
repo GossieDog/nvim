@@ -66,12 +66,6 @@ return {
 					desc = "Config File",
 					mode = "n",
 				},
-				{
-					"<leader>ft",
-					"<cmd>:e ~/Documents/SFU-Coursework/GeneralTodo.md<cr>",
-					desc = "Todo List",
-					mode = "n",
-				},
 				{ "<leader>ft", "<cmd>Telescope live_grep<cr>", desc = "Text", mode = "n" },
 
 				-- GIT GROUP --
