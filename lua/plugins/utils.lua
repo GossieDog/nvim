@@ -89,6 +89,7 @@ return {
 	},
 	{
 		"saghen/blink.cmp",
+		event = { "InsertEnter", "CmdlineEnter" },
 		-- optional: provides snippets for the snippet source
 		dependencies = {
 			{ "L3MON4D3/LuaSnip", version = "v2.*" },
