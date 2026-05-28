@@ -156,46 +156,6 @@ return {
 		end,
 	},
 	{
-		"nvim-tree/nvim-tree.lua",
-		dependencies = {
-			"nvim-tree/nvim-web-devicons",
-		},
-		init = function()
-			-- disable netrw at the very start of your init.lua
-			vim.g.loaded_netrw = 1
-			vim.g.loaded_netrwPlugin = 1
-			-- optionally enable 24-bit colour
-			vim.opt.termguicolors = true
-		end,
-		config = function()
-			require("nvim-tree").setup({
-				git = {
-					enable = true,
-					ignore = true,
-					timeout = 500,
-				},
-				sort = {
-					sorter = "case_sensitive",
-				},
-				view = {
-					width = 30,
-				},
-				renderer = {
-					group_empty = true,
-				},
-				filters = {
-					dotfiles = true,
-				},
-				sync_root_with_cwd = true,
-				respect_buf_cwd = true,
-				update_focused_file = {
-					enable = true,
-					update_cwd = true,
-				},
-			})
-		end,
-	},
-	{
 		"folke/snacks.nvim",
 		priority = 1000,
 		lazy = false,
@@ -294,78 +254,5 @@ return {
 			},
 			lazygit = { enabled = true },
 		},
-	},
-	{
-		"mbbill/undotree",
-		cmd = "UndotreeToggle",
-		keys = {
-			{ "<leader>u", "<cmd>UndotreeToggle<cr>", desc = "Toggle Undotree" },
-		},
-		config = function()
-			-- Optional: Persistent undo even after closing Neovim
-			vim.opt.undofile = true
-		end,
-	},
-	{
-		"lewis6991/gitsigns.nvim",
-		opts = {
-			signs = {
-				add = { text = "▎" },
-				change = { text = "▎" },
-				delete = { text = "▎" },
-				topdelete = { text = "▎" },
-				changedelete = { text = "▎" },
-			},
-			-- ... other options
-		},
-	},
-	{
-		"christoomey/vim-tmux-navigator",
-		cmd = {
-			"TmuxNavigateLeft",
-			"TmuxNavigateDown",
-			"TmuxNavigateUp",
-			"TmuxNavigateRight",
-			"TmuxNavigatePrevious",
-			"TmuxNavigatorProcessList",
-		},
-		keys = {
-			{ "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
-			{ "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
-			{ "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
-			{ "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
-			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
-		},
-	},
-	{
-		"folke/trouble.nvim",
-		cmd = { "Trouble" },
-		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			require("trouble").setup({
-				modes = {
-					diagnostics = {
-						mode = "diagnostics",
-						filter = {
-							severity = {
-								vim.diagnostic.severity.ERROR,
-								vim.diagnostic.severity.WARN,
-								vim.diagnostic.severity.INFO,
-								-- vim.diagnostic.severity.HINT,
-							},
-						},
-						-- preview = {
-						-- 	type = "split",
-						-- 	relative = "editor",
-						-- 	position = "right",
-						-- 	size = 0.3,
-						-- 	wo = {
-						-- 		wrap = true,
-						-- 	},
-						-- },
-					},
-				},
-			})
-		end,
 	},
 }

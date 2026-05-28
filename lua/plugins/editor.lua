@@ -136,6 +136,37 @@ return {
 		end,
 	},
 	{
+		"folke/trouble.nvim",
+		cmd = { "Trouble" },
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("trouble").setup({
+				modes = {
+					diagnostics = {
+						mode = "diagnostics",
+						filter = {
+							severity = {
+								vim.diagnostic.severity.ERROR,
+								vim.diagnostic.severity.WARN,
+								vim.diagnostic.severity.INFO,
+								-- vim.diagnostic.severity.HINT,
+							},
+						},
+						-- preview = {
+						-- 	type = "split",
+						-- 	relative = "editor",
+						-- 	position = "right",
+						-- 	size = 0.3,
+						-- 	wo = {
+						-- 		wrap = true,
+						-- 	},
+						-- },
+					},
+				},
+			})
+		end,
+	},
+	{
 		"nvim-mini/mini.nvim",
 		version = false,
 		dependencies = {
@@ -177,6 +208,19 @@ return {
 				-- empty setup, using defaults
 			})
 		end,
+	},
+	{
+		"lewis6991/gitsigns.nvim",
+		opts = {
+			signs = {
+				add = { text = "▎" },
+				change = { text = "▎" },
+				delete = { text = "▎" },
+				topdelete = { text = "▎" },
+				changedelete = { text = "▎" },
+			},
+			-- ... other options
+		},
 	},
 	{
 		"gbprod/yanky.nvim",
