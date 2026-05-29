@@ -44,6 +44,8 @@ return {
 					javascript = { "prettierd", "prettier", stop_after_first = true },
 					tex = { "latexindent" },
 					markdown = { "markdownlint-cli2", "markdown-toc", "prettier" },
+					html = { "prettier" },
+					css = { "prettier" },
 				},
 				format_on_save = {
 					-- These options will be passed to conform.format()
