@@ -16,6 +16,9 @@ return {
 					"marksman",
 					"sqls",
 					"texlab",
+					"html",
+					"cssls",
+					"vtsls",
 				},
 			})
 		end,
@@ -59,6 +62,9 @@ return {
 				"marksman",
 				"sqls",
 				"texlab",
+				"html",
+				"cssls",
+				"vtsls",
 			})
 		end,
 	},
