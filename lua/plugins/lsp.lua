@@ -7,6 +7,9 @@ return {
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",
+		dependencies = {
+			"WhoIsSethDaniel/mason-tool-installer.nvim",
+		},
 		config = function()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
@@ -19,6 +22,21 @@ return {
 					"html",
 					"cssls",
 					"vtsls",
+				},
+			})
+
+			require("mason-tool-installer").setup({
+				ensure_installed = {
+					"prettier",
+					"eslint_d",
+					"htmlhint",
+					"luacheck",
+					"markdown-toc",
+					"markdownlint-cli2",
+					"stylelint",
+					"shfmt",
+					"stylua",
+					"tree-sitter-cli",
 				},
 			})
 		end,
