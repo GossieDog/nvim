@@ -111,6 +111,7 @@ return {
 				show_close_icon = false,
 				always_show_bufferline = false,
 				separator_style = "slant",
+				sort_by = "directory",
 				offsets = {
 					{
 						filetype = "NvimTree",
