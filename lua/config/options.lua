@@ -67,7 +67,7 @@ opt.breakindent = true
 opt.textwidth = 0
 opt.sessionoptions:append("globals")
 
--- CTRL l spell correction keymap (From Giles Castel's setup)
+-- CTRL l spell correction keymap (From Gilles Castel's setup)
 vim.keymap.set("i", "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", { noremap = true })
 
 -- CTRL arrows for window resizing

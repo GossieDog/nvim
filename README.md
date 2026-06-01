@@ -240,7 +240,7 @@ nvim/
 ├── lua/
 │   ├── config/
 │   │   ├── lazy.lua            # Plugin manager bootstrap
-│   │   ├── options.lua         # Core Neovim settings
+│   │   ├── options.lua         # Core Neovim settings (Used LazyVim deafults and Gilles Castel's spell check keymap)
 │   │   └── icons.lua           # Icons
 │   ├── plugins/                # Plugin configuration files
 │   │   ├── ai.lua
