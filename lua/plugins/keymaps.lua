@@ -118,6 +118,18 @@ return {
 					desc = "Toggle Copilot",
 				},
 				{ "<leader>tC", "<cmd>CloakToggle<cr>", desc = "Toggle Cloak", mode = "n" },
+				{
+					"<leader>tf",
+					function()
+						require("conform").format({
+							lsp_fallback = true,
+							async = false,
+							timeout_ms = 500,
+						})
+					end,
+					desc = "Format",
+					mode = "n",
+				},
 
 				-- { "<leader>td", "<cmd>CocDisable<cr>", desc = "Disable CoC", mode = "n" },
 				-- { "<leader>te", "<cmd>CocEnable<cr>", desc = "Enable CoC", mode = "n" },
