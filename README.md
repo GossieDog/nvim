@@ -1,6 +1,7 @@
 # Neovim
 
 ![Dashboard](screenshots/Neovim.png)
+![Editor](screenshots/Neovim-Editor.png)
 
 _My Neovim setup for academic writing_
 
