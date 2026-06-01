@@ -151,7 +151,7 @@ return {
 				{ "<localleader>lq", desc = "Log" },
 				{ "<localleader>ls", desc = "Toggle Main" },
 				{ "<localleader>lS", desc = "Build SS" },
-				-- { "<localleader>lt", desc = "Open TOC" },
+				{ "<localleader>lt", desc = "Open TOC" },
 				{ "<localleader>lT", desc = "Toggle TOC" },
 				{ "<localleader>lv", desc = "View" },
 				{ "<localleader>lx", desc = "Reload" },
