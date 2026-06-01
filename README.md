@@ -325,4 +325,5 @@ Mason will automatically install lsp servers and tools.
 - [ ] Update the bibliography path in the Telescope-BibTeX configuration
 - [ ] Run `:Copilot auth` if using GitHub Copilot
 - [ ] Set up API keys for Avante (`ANTHROPIC_API_KEY`, `DEEPSEEK_API_KEY`, `MOONSHOT_API_KEY`)
+- [ ] Install vim-tmux-navigator in tmux with tpm (or manually)
 - [ ] Configure Himalaya email accounts if using email features
