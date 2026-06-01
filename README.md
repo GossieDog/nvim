@@ -1,6 +1,6 @@
 # Neovim
 
-![Dashboard](screenshots/Screenshot-1.png)
+![Dashboard](screenshots/Neovim.png)
 
 _My Neovim setup for academic writing_
 
