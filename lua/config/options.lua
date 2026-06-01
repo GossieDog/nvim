@@ -1,3 +1,5 @@
+-- Using LazyVim default options
+
 local opt = vim.opt
 
 local diagnostic_icons = require("config.icons")
@@ -65,7 +67,7 @@ opt.breakindent = true
 opt.textwidth = 0
 opt.sessionoptions:append("globals")
 
--- CTRL l spell correction keymap
+-- CTRL l spell correction keymap (From Giles Castel's setup)
 vim.keymap.set("i", "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", { noremap = true })
 
 -- CTRL arrows for window resizing
@@ -77,6 +79,7 @@ vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -10<CR>")
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
 
+-- Diagnostics
 vim.diagnostic.config({
 	virtual_text = true,
 	virtual_lines = false,
