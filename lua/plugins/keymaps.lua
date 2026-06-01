@@ -90,8 +90,8 @@ return {
 				{ "<Tab>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer", mode = "n" },
 				{ "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", desc = "Previous Buffer", mode = "n" },
 
-				{ "<leader>bv", "<cmd>vsplit<CR>", desc = "Vertical Split", icon = "󰤼" },
-				{ "<leader>bh", "<cmd>split<CR>", desc = "Horizontal Split", icon = "󰤼" },
+				{ "<leader>b\\", "<cmd>vsplit<CR>", desc = "Vertical Split", icon = "󰤼" },
+				{ "<leader>b-", "<cmd>split<CR>", desc = "Horizontal Split", icon = "󰤼" },
 				{ "<leader>bq", "<C-w>q", desc = "Close Window", icon = "" },
 
 				{ "<leader>t", group = "Tools", icon = "" },
