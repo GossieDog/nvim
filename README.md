@@ -47,11 +47,11 @@ _File tree and buffer management_
 
 ### Development
 
-- **LSP** — TeXLab for LaTeX; extensible to any language via Mason
+- **LSP** — Comprehensive language server support via Mason: TeXLab (LaTeX), LTeX+ (grammar), Lua LS (Lua), Marksman (Markdown), SQLS (SQL), JSON LS, HTML LS, CSS LS, VTSLS (TypeScript/JavaScript)
 - **Blink.cmp** — Fast completion engine with fuzzy matching and dictionary/thesaurus sources
 - **Treesitter** — Accurate syntax highlighting and structural navigation
-- **Conform.nvim** — Format-on-save for all supported filetypes
-- **ChkTeX** — Real-time LaTeX linting
+- **Conform.nvim** — Format-on-save with multiple formatters: Stylua (Lua), Prettier (HTML/CSS/JS), LaTeXIndent (LaTeX), Black/isort (Python), Rustfmt (Rust), MarkdownLint (Markdown)
+- **Linting** — Real-time linting with ChkTeX (LaTeX), ESLint (JavaScript), HTMLHint (HTML), Stylelint (CSS), Luacheck (Lua), MarkdownLint (Markdown)
 
 ### Interface & Productivity
 
@@ -146,9 +146,13 @@ _File tree and buffer management_
 | `<leader>Ts`  | Studying                   |
 | `<leader>Tb`  | APA barebones              |
 | `<leader>Tf`  | APA figures and tables     |
-| `<leader>TWr` | Resume                     |
+| `<leader>TWR` | Resume                     |
+| `<leader>TWr` | Resume (complete)          |
 | `<leader>TWc` | Cover letter               |
+| `<leader>TWl` | References                 |
+| `<leader>TWt` | Thank you letter           |
 | `<leader>TOr` | Recipe                     |
+| `<leader>TOl` | Letter                     |
 
 ### Export (Pandoc)
 
@@ -170,10 +174,13 @@ _File tree and buffer management_
 | `<leader>aB` | Add all open buffers      |
 | `<leader>aR` | Display repo map          |
 | `<leader>ac` | Clear chat history        |
+| `<leader>ad` | Toggle debug              |
 | `<leader>af` | Focus                     |
 | `<leader>ah` | Select history            |
+| `<leader>am` | Select ACP Mode           |
 | `<leader>an` | Create new chat           |
 | `<leader>ar` | Refresh                   |
+| `<leader>as` | Toggle suggestion         |
 | `<leader>aS` | Stop                      |
 | `<leader>az` | Toggle Zen Mode           |
 | `<leader>a+` | Select file in NvimTree   |
@@ -193,30 +200,39 @@ _File tree and buffer management_
 
 ### Buffers & Sessions
 
-| Key                         | Action                          |
-| --------------------------- | ------------------------------- |
-| `<Tab>` / `<S-Tab>`         | Next / previous buffer          |
-| `<leader>bd`                | Close buffer                    |
-| `<leader>bn` / `<leader>bp` | Move buffer right / left        |
-| `<leader>bP`                | Pin buffer                      |
-| `<leader>bf`                | Pick buffer                     |
-| `<leader>br` / `<leader>bl` | Close right / left buffers      |
-| `<leader>bv` / `<leader>bh` | Split vertically / horizontally |
-| `<leader>bq`                | Close window                    |
-| `<leader>Ss`                | Save session                    |
-| `<leader>Sl`                | Load session                    |
-| `<leader>Sd`                | Delete session                  |
+| Key                          | Action                          |
+| ---------------------------- | ------------------------------- |
+| `<Tab>` / `<S-Tab>`          | Next / previous buffer          |
+| `<leader>bd`                 | Close buffer                    |
+| `<leader>bn` / `<leader>bp`  | Move buffer right / left        |
+| `<leader>bP`                 | Pin buffer                      |
+| `<leader>bf`                 | Pick buffer                     |
+| `<leader>br` / `<leader>bl`  | Close right / left buffers      |
+| `<leader>b\\` / `<leader>b-` | Split vertically / horizontally |
+| `<leader>bq`                 | Close window                    |
+| `<leader>Ss`                 | Save session                    |
+| `<leader>Sl`                 | Load session                    |
+| `<leader>Sd`                 | Delete session                  |
 
 ### LSP & Tools
 
-| Key                         | Action                     |
-| --------------------------- | -------------------------- |
-| `<leader>lu`                | Mason update               |
-| `<leader>lf`                | Telescope diagnostics      |
-| `<leader>ln` / `<leader>lp` | Next / previous diagnostic |
-| `<leader>ts`                | Toggle spell check         |
-| `<leader>tc`                | Toggle Copilot             |
-| `<leader>tC`                | Toggle Cloak               |
+| Key          | Action             |
+| ------------ | ------------------ |
+| `<leader>lu` | Mason update       |
+| `<leader>ts` | Toggle spell check |
+| `<leader>tc` | Toggle Copilot     |
+| `<leader>tC` | Toggle Cloak       |
+| `<leader>tf` | Format             |
+| `<leader>tl` | Lint               |
+
+### Diagnostics
+
+| Key          | Action                  |
+| ------------ | ----------------------- |
+| `<leader>dp` | Project Diagnostics     |
+| `<leader>db` | Buffer Diagnostics      |
+| `<leader>ds` | Symbols (Trouble)       |
+| `<leader>dq` | Quickfix List (Trouble) |
 
 ### Email (Himalaya)
 
@@ -245,7 +261,7 @@ nvim/
 │   ├── config/
 │   │   ├── lazy.lua            # Plugin manager bootstrap
 │   │   └── options.lua         # Core Neovim settings
-│   ├── plugins/                # Per-plugin configuration files
+│   ├── plugins/                # Plugin configuration files
 │   │   ├── ai.lua
 │   │   ├── colorscheme.lua
 │   │   ├── editing.lua
@@ -323,12 +339,12 @@ Mason will automatically install lsp servers.
 ### Post-Install Checklist
 
 - [ ] Open Neovim and wait for Lazy.nvim to finish installing plugins
-- [ ] Run `:Mason` and confirm TeXLab, LTeX, Lua LS, Marksman, and SQLS are installed
+- [ ] Run `:Mason` and confirm TeXLab, LTeX+, Lua LS, Marksman, SQLS, JSON LS, HTML LS, CSS LS, and VTSLS are installed
 - [ ] Create a `.tex` file and compile with `\ll`
 - [ ] Start a keep updated auto-export for your whole Zotero libaray using the BetterBibTeX for Zotero plugin.
 - [ ] Update the bibliography path in the Telescope-BibTeX configuration
 - [ ] Run `:Copilot auth` if using GitHub Copilot
 - [ ] Set up API keys for Avante (`ANTHROPIC_API_KEY`, `DEEPSEEK_API_KEY`, `MOONSHOT_API_KEY`)
-- [ ] Verify Avante is working with `<leader>aa`
+- [ ] Verify Avante is working with `<leader>aC`
 - [ ] Configure Himalaya email accounts if using email features
 - [ ] Test database connections if using vim-dadbod
