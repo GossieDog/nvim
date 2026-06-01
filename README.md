@@ -4,27 +4,6 @@
 
 _My Neovim setup for academic writing_
 
-![Editor](https://img.shields.io/badge/EDITOR-NEOVIM-57A143?style=flat-square&logo=neovim&logoColor=white&labelColor=1a1a1a)
-![OS](https://img.shields.io/badge/OS-FEDORA-51A2DA?style=flat-square&logo=fedora&logoColor=white&labelColor=1a1a1a)
-![LaTeX](https://img.shields.io/badge/LATEX-VIMTEX-008080?style=flat-square&logo=latex&logoColor=white&labelColor=1a1a1a)
-![AI](https://img.shields.io/badge/AI-AVANTE-7C3AED?style=flat-square&logo=anthropic&logoColor=white&labelColor=1a1a1a)
-![Theme](https://img.shields.io/badge/THEME-GRUVBOX-B16286?style=flat-square&logo=vim&logoColor=white&labelColor=1a1a1a)
-
----
-
-<details>
-<summary>📸 Screenshots</summary>
-
-<br>
-
-![LaTeX Editing](screenshots/Screenshot-2.png)
-_LaTeX editing with VimTeX — real-time compilation and document structure navigation_
-
-![File Tree](screenshots/Screenshot-3.png)
-_File tree and buffer management_
-
-</details>
-
 **[Writing Workflow](https://www.youtube.com/watch?v=avbT4fAC3R4) · [Note-Taking](https://www.youtube.com/watch?v=zayVF1j9gBg)**
 
 ---
@@ -48,35 +27,35 @@ _File tree and buffer management_
 ### Development
 
 - **LSP** — Comprehensive language server support via Mason: TeXLab (LaTeX), LTeX+ (grammar), Lua LS (Lua), Marksman (Markdown), SQLS (SQL), JSON LS, HTML LS, CSS LS, VTSLS (TypeScript/JavaScript)
-- **Blink.cmp** — Fast completion engine with fuzzy matching and dictionary/thesaurus sources
+- **Blink.cmp** — Fast completion engine with fuzzy matching and dictionary/thesaurus, lsp, and snippet sources
 - **Treesitter** — Accurate syntax highlighting and structural navigation
 - **Conform.nvim** — Format-on-save with multiple formatters: Stylua (Lua), Prettier (HTML/CSS/JS), LaTeXIndent (LaTeX), Black/isort (Python), Rustfmt (Rust), MarkdownLint (Markdown)
 - **Linting** — Real-time linting with ChkTeX (LaTeX), ESLint (JavaScript), HTMLHint (HTML), Stylelint (CSS), Luacheck (Lua), MarkdownLint (Markdown)
 
 ### Interface & Productivity
 
-- **Gruvbox** — Dark-optimized primary colorscheme (alternatives: Catppuccin, Rose Pine, Vague)
+- **Gruvbox** — Primary colorscheme
 - **Which-Key** — Discoverable keymap guide with organized command groups
-- **Snacks dashboard** — Custom start screen with project and session shortcuts
-- **Lualine** — Status line with VimTeX word count and real-time clock
+- **Snacks dashboard** — Custom start screen with session shortcuts
+- **Lualine** — Status line
+- **Bufferline** - Shows open buffers
 - **Zen Mode** — Distraction-free writing environment
-- **Cloak** — Hide sensitive information in specific files (e.g., environment variables, personal notes)
 
 ---
 
 ## Plugin Ecosystem
 
-| Category           | Plugins                                                                         |
-| ------------------ | ------------------------------------------------------------------------------- |
-| **Plugin manager** | lazy.nvim                                                                       |
-| **UI & dashboard** | snacks.nvim, lualine.nvim, which-key.nvim, trouble.nvim                         |
-| **Completion**     | blink.cmp, LuaSnip, friendly-snippets                                           |
-| **LaTeX**          | VimTeX, telescope-bibtex.nvim, ChkTeX                                           |
-| **LSP & tooling**  | nvim-lspconfig, mason.nvim, mason-lspconfig.nvim, conform.nvim, nvim-treesitter |
-| **AI**             | avante.nvim, copilot.lua                                                        |
-| **Navigation**     | telescope.nvim, nvim-tree.lua, flash.nvim                                       |
-| **Git**            | gitsigns.nvim, lazygit                                                          |
-| **Utilities**      | mini.nvim, yanky.nvim, undotree, session-manager, cloak.nvim                    |
+| Category           | Plugins                                                                                 |
+| ------------------ | --------------------------------------------------------------------------------------- |
+| **Plugin manager** | lazy.nvim                                                                               |
+| AI                 | avante, copilot                                                                         |
+| Colorscheme        | gruvbox, catppuccin, rose-pine, vague, tokyonight                                       |
+| Editor             | flash, conform, vimtex, trouble, mini-nvim, nvim-ts-autotag, gitsigns, yanky            |
+| Keymaps            | which key                                                                               |
+| LSP                | mason, mason-lsp-config, mason-tool-installer, nvim-lspconfig                           |
+| UI                 | lualine, bufferline, noice, snacks                                                      |
+| Util               | telescope, blink-cmp, luasnip, nvim-tree, nvim-treesitter, vim-tmux-navigator, undotree |
+| Misc               | neovim-session-manager, nvim-lint, cloak, himalaya-vim, vim-dadbod                      |
 
 ---
 
@@ -200,19 +179,19 @@ _File tree and buffer management_
 
 ### Buffers & Sessions
 
-| Key                          | Action                          |
-| ---------------------------- | ------------------------------- |
-| `<Tab>` / `<S-Tab>`          | Next / previous buffer          |
-| `<leader>bd`                 | Close buffer                    |
-| `<leader>bn` / `<leader>bp`  | Move buffer right / left        |
-| `<leader>bP`                 | Pin buffer                      |
-| `<leader>bf`                 | Pick buffer                     |
-| `<leader>br` / `<leader>bl`  | Close right / left buffers      |
-| `<leader>b\\` / `<leader>b-` | Split vertically / horizontally |
-| `<leader>bq`                 | Close window                    |
-| `<leader>Ss`                 | Save session                    |
-| `<leader>Sl`                 | Load session                    |
-| `<leader>Sd`                 | Delete session                  |
+| Key                         | Action                          |
+| --------------------------- | ------------------------------- |
+| `<Tab>` / `<S-Tab>`         | Next / previous buffer          |
+| `<leader>bd`                | Close buffer                    |
+| `<leader>bn` / `<leader>bp` | Move buffer right / left        |
+| `<leader>bP`                | Pin buffer                      |
+| `<leader>bf`                | Pick buffer                     |
+| `<leader>br` / `<leader>bl` | Close right / left buffers      |
+| `<leader>b\` / `<leader>b-` | Split vertically / horizontally |
+| `<leader>bq`                | Close window                    |
+| `<leader>Ss`                | Save session                    |
+| `<leader>Sl`                | Load session                    |
+| `<leader>Sd`                | Delete session                  |
 
 ### LSP & Tools
 
@@ -260,7 +239,8 @@ nvim/
 ├── lua/
 │   ├── config/
 │   │   ├── lazy.lua            # Plugin manager bootstrap
-│   │   └── options.lua         # Core Neovim settings
+│   │   ├── options.lua         # Core Neovim settings
+│   │   └── icons.lua           # Icons
 │   ├── plugins/                # Plugin configuration files
 │   │   ├── ai.lua
 │   │   ├── colorscheme.lua
@@ -334,17 +314,15 @@ nvim
 
 Lazy.nvim will automatically bootstrap and install all plugins on first launch.
 
-Mason will automatically install lsp servers.
+Mason will automatically install lsp servers and tools.
 
 ### Post-Install Checklist
 
 - [ ] Open Neovim and wait for Lazy.nvim to finish installing plugins
-- [ ] Run `:Mason` and confirm TeXLab, LTeX+, Lua LS, Marksman, SQLS, JSON LS, HTML LS, CSS LS, and VTSLS are installed
-- [ ] Create a `.tex` file and compile with `\ll`
+- [ ] Run `:Mason` and confirm everything is installed.
+- [ ] Run checkhealth
 - [ ] Start a keep updated auto-export for your whole Zotero libaray using the BetterBibTeX for Zotero plugin.
 - [ ] Update the bibliography path in the Telescope-BibTeX configuration
 - [ ] Run `:Copilot auth` if using GitHub Copilot
 - [ ] Set up API keys for Avante (`ANTHROPIC_API_KEY`, `DEEPSEEK_API_KEY`, `MOONSHOT_API_KEY`)
-- [ ] Verify Avante is working with `<leader>aC`
 - [ ] Configure Himalaya email accounts if using email features
-- [ ] Test database connections if using vim-dadbod
