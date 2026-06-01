@@ -5,15 +5,6 @@ return {
 		opts = {
 			preset = "modern",
 		},
-		-- keys = {
-		-- 	{
-		-- 		"<leader>?",
-		-- 		function()
-		-- 			require("which-key").show({ global = false })
-		-- 		end,
-		-- 		desc = "Buffer Local Keymaps (which-key)",
-		-- 	},
-		-- },
 		config = function(_, opts)
 			local wk = require("which-key")
 			wk.setup(opts)
@@ -80,17 +71,10 @@ return {
 				{ "<leader>gl", "<cmd>Gitsigns blame_line<CR>", desc = "Line Blame", icon = "󰊢" },
 				{ "<leader>gp", "<cmd>Gitsigns preview_hunk<CR>", desc = "Preview Hunk", icon = "󰆈" },
 
-				-- LSP and LINT GROUP --
+				-- LSP GROUP --
 
 				{ "<leader>l", group = "LSP", icon = "󰅴" },
 				{ "<leader>lu", "<cmd>MasonUpdate<cr>", desc = "Mason Update", mode = "n" },
-				-- { "<leader>ln", "<cmd>lua vim.diagnostic.goto_next()<CR>", desc = "Next Diagnostic", icon = "󰮰" },
-				-- {
-				-- 	"<leader>lp",
-				-- 	"<cmd>lua vim.diagnostic.goto_prev()<CR>",
-				-- 	desc = "Previous Diagnostic",
-				-- 	icon = "󰮲",
-				-- },
 
 				-- BUFFER GROUP
 
@@ -139,11 +123,7 @@ return {
 					mode = "n",
 				},
 
-				-- { "<leader>td", "<cmd>CocDisable<cr>", desc = "Disable CoC", mode = "n" },
-				-- { "<leader>te", "<cmd>CocEnable<cr>", desc = "Enable CoC", mode = "n" },
-				-- { "<leader>ti", "<cmd>IlluminateToggle<cr>", desc = "Toggle Illuminate", mode = "n" },
-
-				-- DIAGNOSTICS GROUP -- Move to different group later.
+				-- DIAGNOSTICS GROUP --
 
 				{ "<leader>d", group = "Diagnostics" },
 				{ "<leader>dp", "<cmd>Trouble diagnostics toggle<cr>", desc = "Project Diagnostics" },
@@ -178,59 +158,15 @@ return {
 				{ "<localleader>lX", desc = "Reload State" },
 				{ "<localleader>ld", "<cmd>VimtexDocPackage<cr>", desc = "Package Documentation", mode = "n" },
 				{ "<localleader>lW", "<cmd>TexCountSection<CR>", desc = "Count Words in Sections" },
-				-- { "<localleader>]]", "<Plug>(vimtex-]])", desc = "Jump to Next Section", mode = "n" },
-				-- { "<localleader>[[", "<Plug>(vimtex-[[)", desc = "Jump to Previous Section", mode = "n" },
 
 				{ "<leader>z", "<cmd>lua Snacks.zen()<cr>", desc = "Toggle Zen Mode", mode = "n" },
 
-				-- SURROUND GROUP --
-				--
-				-- { "<leader>s", group = "Surround", icon = "󰅪" },
-				-- { "<leader>s", proxy = "gs", group = "Surround", icon = "󰅪", mode = { "n", "v" } },
-				-- { "<leader>sb", proxy = "gsab", desc = "Bold", mode = { "n", "v" } },
-				-- { "<leader>si", proxy = "gsai", desc = "Italicize", mode = { "n", "v" } },
-				-- { "<leader>sE", proxy = "gsaE", desc = "Enumerate", mode = { "n", "v" } },
-				-- { "<leader>sI", proxy = "gsaI", desc = "Itemize", mode = { "n", "v" } },
-				-- { "<leader>sa", desc = "Add Surrounding", mode = { "n", "x" } },
-				-- { "<leader>sd", desc = "Delete Surrounding" },
-				-- { "<leader>sf", desc = "Find Right Surrounding" },
-				-- { "<leader>sF", desc = "Find Left Surrounding" },
-				-- { "<leader>sh", desc = "Highlight Surrounding" },
-				-- { "<leader>sr", desc = "Replace Surrounding" },
-				-- { "<leader>sn", desc = "Update n_Lines" },
-
-				-- SPLIT GROUP --
-				--
-				-- { "<leader>s", group = "Splits" },
-				-- { "<leader>sv", "<cmd>vsplit<CR>", desc = "Vertical Split", icon = "󰤼" },
-				-- { "<leader>sh", "<cmd>split<CR>", desc = "Horizontal Split", icon = "󰤼" },
-				--
 				-- SESSION GROUP --
 
 				{ "<leader>S", group = "Sessions", icon = "󰆔" },
 				{ "<leader>Sd", "<cmd>SessionManager delete_session<CR>", desc = "Delete", icon = "󰚌" },
 				{ "<leader>Sl", "<cmd>SessionManager load_session<CR>", desc = "Load", icon = "󰉖" },
 				{ "<leader>Ss", "<cmd>SessionManager save_current_session<CR>", desc = "Save", icon = "󰆓" },
-
-				-- COLORSCHEME GROUP --
-
-				-- { "<leader>c", group = "Colorscheme", icon = "􀝥 " },
-				-- { "<leader>cc", "<cmd>colorscheme catppuccin-frappe<cr>", desc = "Catppuccin", icon = "􀎑" },
-				-- { "<leader>cg", "<cmd>colorscheme gruvbox<cr>", desc = "Gruvbox", icon = "􀎑" },
-				--
-				-- { "<leader>cr", group = "Rose Pine", icon = "􀝥 " },
-				-- { "<leader>crp", "<cmd>colorscheme rose-pine<cr>", desc = "Rose Pine", icon = "􀎑" },
-				-- { "<leader>crm", "<cmd>colorscheme rose-pine-moon<cr>", desc = "Rose Pine Moon", icon = "􀎑" },
-				-- { "<leader>crd", "<cmd>colorscheme rose-pine-dawn<cr>", desc = "Rose Pine Dawn", icon = "􀎑" },
-				--
-				-- { "<leader>cn", group = "Nightfox", icon = "􀝥 " },
-				-- { "<leader>cnn", "<cmd>colorscheme nightfox<cr>", desc = "Nightfox", icon = "􀎑" },
-				-- { "<leader>cnd", "<cmd>colorscheme dayfox<cr>", desc = "Dayfox", icon = "􀎑" },
-				-- { "<leader>cnD", "<cmd>colorscheme dawnfox<cr>", desc = "Dawnfox", icon = "􀎑" },
-				-- { "<leader>cnu", "<cmd>colorscheme duskfox<cr>", desc = "Duskfox", icon = "􀎑" },
-				-- { "<leader>cno", "<cmd>colorscheme nordfox<cr>", desc = "Nordfox", icon = "􀎑" },
-				-- { "<leader>cnt", "<cmd>colorscheme terafox<cr>", desc = "Terafox", icon = "􀎑" },
-				-- { "<leader>cnc", "<cmd>colorscheme carbonfox<cr>", desc = "Carbonfox", icon = "􀎑" },
 
 				-- MAIL GROUP --
 
