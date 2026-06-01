@@ -274,23 +274,24 @@ nvim/
 
 ### Prerequisites
 
-| Dependency                    | Purpose                             |
-| ----------------------------- | ----------------------------------- |
-| Neovim 0.12+                  | Required                            |
-| Git                           | Plugin management                   |
-| Node.js 18+                   | LSP server support                  |
-| Build tools (make/gcc)        | Compiling native plugins            |
-| Rust (optional)               | Better performance for some plugins |
-| Python 3.8+                   | Code formatting tools               |
-| Java 17+                      | LTeX grammar checking server        |
-| TeX Live                      | LaTeX compilation                   |
-| Zotero + Better BibTeX plugin | Citations                           |
-| Zathura                       | PDF preview                         |
-| Pandoc                        | Document conversion                 |
-| ripgrep, fd                   | Fast file searching                 |
-| aspeell                       | Spell check                         |
-| espeak-ng and ffmpeg          | Mp3 conversion                      |
-| Himalaya (optional)           | Email integration                   |
+| Dependency                                    | Purpose                             |
+| --------------------------------------------- | ----------------------------------- |
+| Neovim 0.12+                                  | Required                            |
+| Git                                           | Plugin management                   |
+| Hack Nerd Font                                | Icons                               |
+| Kitty, Wezterm, Alacritty, Ghostty, or iTerm2 | For image support                   |
+| Node.js 18+                                   | LSP server support                  |
+| Python 3.8+                                   | Code formatting tools               |
+| Java 17+                                      | LTeX grammar checking server        |
+| Texlive                                       | LaTeX compilation                   |
+| Zotero + Better BibTeX plugin                 | Citations                           |
+| Zathura                                       | PDF preview                         |
+| Pandoc                                        | Document conversion                 |
+| ripgrep, fd                                   | Fast file searching                 |
+| aspell                                        | Word suggestions                    |
+| espeak-ng and ffmpeg (optional)               | Mp3 conversion                      |
+| Himalaya (optional)                           | Email integration                   |
+| Rust (optional)                               | Better performance for some plugins |
 
 ### Steps
 
@@ -327,3 +328,5 @@ Mason will automatically install lsp servers and tools.
 - [ ] Set up API keys for Avante (`ANTHROPIC_API_KEY`, `DEEPSEEK_API_KEY`, `MOONSHOT_API_KEY`)
 - [ ] Install vim-tmux-navigator in tmux with tpm (or manually)
 - [ ] Configure Himalaya email accounts if using email features
+
+- [ ] Add any additional plugins in the plugins directory.
