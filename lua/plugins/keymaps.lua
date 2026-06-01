@@ -130,6 +130,14 @@ return {
 					desc = "Format",
 					mode = "n",
 				},
+				{
+					"<leader>tl",
+					function()
+						require("lint").try_lint()
+					end,
+					desc = "Lint",
+					mode = "n",
+				},
 
 				-- { "<leader>td", "<cmd>CocDisable<cr>", desc = "Disable CoC", mode = "n" },
 				-- { "<leader>te", "<cmd>CocEnable<cr>", desc = "Enable CoC", mode = "n" },
