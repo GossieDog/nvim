@@ -66,17 +66,17 @@ _File tree and buffer management_
 
 ## Plugin Ecosystem
 
-| Category           | Plugins                                                      |
-| ------------------ | ------------------------------------------------------------ |
-| **Plugin manager** | lazy.nvim                                                    |
-| **UI & dashboard** | snacks.nvim, lualine.nvim, which-key.nvim, trouble.nvim      |
-| **Completion**     | blink.cmp, LuaSnip, friendly-snippets                        |
-| **LaTeX**          | VimTeX, telescope-bibtex.nvim, ChkTeX                        |
-| **LSP & tooling**  | nvim-lspconfig, mason.nvim, mason-lspconfig.nvim, conform.nvim, nvim-treesitter    |
-| **AI**             | avante.nvim, copilot.lua                                     |
-| **Navigation**     | telescope.nvim, nvim-tree.lua, flash.nvim                    |
-| **Git**            | gitsigns.nvim, lazygit                                       |
-| **Utilities**      | mini.nvim, yanky.nvim, undotree, session-manager, cloak.nvim |
+| Category           | Plugins                                                                         |
+| ------------------ | ------------------------------------------------------------------------------- |
+| **Plugin manager** | lazy.nvim                                                                       |
+| **UI & dashboard** | snacks.nvim, lualine.nvim, which-key.nvim, trouble.nvim                         |
+| **Completion**     | blink.cmp, LuaSnip, friendly-snippets                                           |
+| **LaTeX**          | VimTeX, telescope-bibtex.nvim, ChkTeX                                           |
+| **LSP & tooling**  | nvim-lspconfig, mason.nvim, mason-lspconfig.nvim, conform.nvim, nvim-treesitter |
+| **AI**             | avante.nvim, copilot.lua                                                        |
+| **Navigation**     | telescope.nvim, nvim-tree.lua, flash.nvim                                       |
+| **Git**            | gitsigns.nvim, lazygit                                                          |
+| **Utilities**      | mini.nvim, yanky.nvim, undotree, session-manager, cloak.nvim                    |
 
 ---
 
