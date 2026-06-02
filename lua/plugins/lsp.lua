@@ -22,6 +22,7 @@ return {
 					"html",
 					"cssls",
 					"vtsls",
+					"emmet_language_server",
 				},
 			})
 
@@ -83,6 +84,7 @@ return {
 				"html",
 				"cssls",
 				"vtsls",
+				"emmet_language_server",
 			})
 		end,
 	},
