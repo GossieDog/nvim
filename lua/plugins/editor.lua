@@ -43,7 +43,7 @@ return {
 					-- Conform will run the first available formatter
 					javascript = { "prettierd", "prettier", stop_after_first = true },
 					tex = { "latexindent" },
-					markdown = { "markdownlint-cli2", "markdown-toc", "prettier" },
+					markdown = { "markdownlint-cli2", "markdown-toc" },
 					html = { "prettier" },
 					css = { "prettier" },
 				},
