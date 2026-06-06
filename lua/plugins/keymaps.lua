@@ -58,6 +58,7 @@ return {
 					mode = "n",
 				},
 				{ "<leader>ft", "<cmd>Telescope live_grep<cr>", desc = "Text", mode = "n" },
+				{ "<leader>fs", "<cmd>Telescope lsp_document_symbols<cr>", desc = "Symbols", mode = "n" },
 
 				-- GIT GROUP --
 
