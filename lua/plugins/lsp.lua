@@ -35,6 +35,7 @@ return {
 					"markdown-toc",
 					"markdownlint-cli2",
 					"stylelint",
+					-- run in each project: npm init -y and npm create stylelint@latest
 					"shfmt",
 					"stylua",
 					"tree-sitter-cli",
