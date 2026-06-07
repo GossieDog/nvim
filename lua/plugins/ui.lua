@@ -234,7 +234,13 @@ return {
 			},
 			quickfile = { enabled = true },
 			scroll = { enabled = true },
-			statuscolumn = { enabled = true },
+			statuscolumn = {
+				enabled = true,
+				folds = {
+					open = true, -- show open fold icons
+					git_hl = true, -- use Git Signs hl for fold icons
+				},
+			},
 			zen = {
 				enabled = true,
 				toggles = {
