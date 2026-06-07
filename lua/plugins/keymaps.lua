@@ -22,7 +22,7 @@ return {
 				},
 				{ "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle NvimTree" },
 				{ "<leader>q", "<cmd>wa! | qa!<CR>", desc = "Quit", mode = "n" },
-				{ "<leader>w", "<cmd>wa!<CR>", desc = "Write", mode = "n", icon = "󰆓" },
+				-- { "<leader>w", "<cmd>wa!<CR>", desc = "Write", mode = "n", icon = "󰆓" },
 				{
 					"<leader>C",
 					"<cmd>Telescope colorscheme<CR>",
