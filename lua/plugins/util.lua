@@ -311,6 +311,19 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		lazy = false,
 		build = ":TSUpdate",
+		config = function()
+			local ensure_installed = {
+				"html",
+				"javascript",
+				"css",
+				"gitignore",
+				"json",
+				"bash",
+				"vim",
+				"vimdoc",
+			}
+			require("nvim-treesitter").install(ensure_installed)
+		end,
 	},
 	{
 		"christoomey/vim-tmux-navigator",
