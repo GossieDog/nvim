@@ -321,6 +321,7 @@ return {
 				"bash",
 				"vim",
 				"vimdoc",
+				"lua",
 			}
 			require("nvim-treesitter").install(ensure_installed)
 		end,
