@@ -91,4 +91,9 @@ vim.diagnostic.config({
 			[vim.diagnostic.severity.HINT] = diagnostic_icons.hint,
 		},
 	},
+	float = {
+		style = "minimal",
+		border = "rounded",
+		source = true,
+	},
 })
