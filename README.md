@@ -2,7 +2,7 @@
 
 ![Dashboard](screenshots/Neovim.png)
 ![Editor](screenshots/Neovim-Editor.png)
-![Which-Key](screenshots/Neovim-Keymaps.png)
+![Which-Key](screenshots/Neovim-Which-Key.png)
 
 _My Neovim setup for academic writing_
 
