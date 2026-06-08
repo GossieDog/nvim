@@ -60,7 +60,13 @@ return {
 			vim.g.vimtex_view_method = "zathura"
 			vim.g.vimtex_view_general_viewer = "zathura"
 			vim.g.vimtex_context_pdf_viewer = "zathura"
+
 			vim.g.vimtex_fold_enabled = 1
+			vim.g.vimtex_fold_types = {
+				envs = { enabled = 0 },
+				items = { enabled = 0 },
+			}
+
 			vim.g.vimtex_bibliography_file_handler = function(file)
 				vim.fn.jobstart({ "open", file }, { detach = true })
 			end
