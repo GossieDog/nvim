@@ -322,6 +322,9 @@ return {
 				"vim",
 				"vimdoc",
 				"lua",
+				"scss",
+				"regex",
+				"yaml",
 			}
 			require("nvim-treesitter").install(ensure_installed)
 		end,
