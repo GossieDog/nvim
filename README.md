@@ -30,7 +30,7 @@ _My Neovim setup for academic writing_
 - **LSP** — Comprehensive language server support via Mason: TeXLab (LaTeX), LTeX+ (grammar), Lua LS (Lua), Marksman (Markdown), SQLS (SQL), JSON LS, HTML LS, CSS LS, VTSLS (TypeScript/JavaScript)
 - **Blink.cmp** — Fast completion engine with fuzzy matching and dictionary/thesaurus, lsp, and snippet sources
 - **Treesitter** — Accurate syntax highlighting and structural navigation
-- **Conform.nvim** — Format-on-save with multiple formatters: Stylua (Lua), Prettier (HTML/CSS/JS), LaTeXIndent (LaTeX), Black/isort (Python), Rustfmt (Rust), MarkdownLint (Markdown)
+- **Conform.nvim** — Format-on-save with multiple formatters: Stylua (Lua), Prettier/Prettierd (HTML/CSS/JS), LaTeXIndent (LaTeX), MarkdownLint-CLI2 + Markdown-TOC (Markdown)
 - **Linting** — Real-time linting with ChkTeX (LaTeX), ESLint (JavaScript), HTMLHint (HTML), Stylelint (CSS), Luacheck (Lua), MarkdownLint (Markdown)
 
 ### Interface & Productivity
@@ -69,7 +69,6 @@ _My Neovim setup for academic writing_
 | Key         | Action               |
 | ----------- | -------------------- |
 | `<leader>e` | Toggle file explorer |
-| `<leader>w` | Save all buffers     |
 | `<leader>q` | Quit                 |
 | `<leader>,` | Return to dashboard  |
 | `<leader>z` | Toggle Zen Mode      |
@@ -94,6 +93,7 @@ _My Neovim setup for academic writing_
 | `<leader>fd` | Diagnostics               |
 | `<leader>fm` | Man pages                 |
 | `<leader>fc` | Config files              |
+| `<leader>fs` | Symbols                   |
 
 ### LaTeX
 
@@ -196,14 +196,15 @@ _My Neovim setup for academic writing_
 
 ### LSP & Tools
 
-| Key          | Action             |
-| ------------ | ------------------ |
-| `<leader>lu` | Mason update       |
-| `<leader>ts` | Toggle spell check |
-| `<leader>tc` | Toggle Copilot     |
-| `<leader>tC` | Toggle Cloak       |
-| `<leader>tf` | Format             |
-| `<leader>tl` | Lint               |
+| Key          | Action                    |
+| ------------ | ------------------------- |
+| `<leader>lu` | Mason update              |
+| `<leader>ts` | Toggle spell check        |
+| `<leader>tc` | Toggle Copilot            |
+| `<leader>tC` | Toggle Cloak              |
+| `<leader>tf` | Format                    |
+| `<leader>tl` | Lint                      |
+| `<leader>td` | Toggle LSP virtual text   |
 
 ### Diagnostics
 
@@ -213,6 +214,7 @@ _My Neovim setup for academic writing_
 | `<leader>db` | Buffer Diagnostics      |
 | `<leader>ds` | Symbols (Trouble)       |
 | `<leader>dq` | Quickfix List (Trouble) |
+| `<leader>dd` | Open diagnostic under cursor |
 
 ### Email (Himalaya)
 
@@ -245,12 +247,12 @@ nvim/
 │   ├── plugins/                # Plugin configuration files
 │   │   ├── ai.lua
 │   │   ├── colorscheme.lua
-│   │   ├── editing.lua
+│   │   ├── editor.lua
 │   │   ├── keymaps.lua
 │   │   ├── lsp.lua
 │   │   ├── misc.lua
 │   │   ├── ui.lua
-│   │   └── utils.lua
+│   │   └── util.lua
 │   └── snippets/               # Custom LuaSnip snippets
 │       ├── tex.lua
         └── lua.lua
@@ -316,7 +318,7 @@ nvim
 
 Lazy.nvim will automatically bootstrap and install all plugins on first launch.
 
-Mason will automatically install lsp servers and tools.
+Mason will automatically install lsp servers and tools. Treesitter will automatically install parsers.
 
 ### Post-Install Checklist
 
