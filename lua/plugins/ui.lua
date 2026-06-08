@@ -15,7 +15,7 @@ return {
 					disabled_filetypes = {
 						statusline = {
 							"snacks_dashboard",
-							"neo-tree",
+							"snacks_picker_input",
 							"NvimTree",
 							"Avante",
 							"AvanteInput",
