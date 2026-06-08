@@ -100,17 +100,17 @@ _My Neovim setup for academic writing_
 
 | Key   | Action                |
 | ----- | --------------------- |
-| `\ll` | Build document        |
-| `\lv` | View PDF              |
-| `\lW` | Word count by section |
-| `\le` | Show errors           |
-| `\lc` | Clean auxiliary files |
-| `\lC` | Clean full            |
-| `\lg` | VimTeX status         |
-| `\li` | VimTeX info           |
-| `\lk` | Stop compilation      |
-| `\lT` | Toggle TOC            |
-| `\ld` | Package documentation |
+| `<localleader>ll` | Build document        |
+| `<localleader>lv` | View PDF              |
+| `<localleader>lW` | Word count by section |
+| `<localleader>le` | Show errors           |
+| `<localleader>lc` | Clean auxiliary files |
+| `<localleader>lC` | Clean full            |
+| `<localleader>lg` | VimTeX status         |
+| `<localleader>li` | VimTeX info           |
+| `<localleader>lk` | Stop compilation      |
+| `<localleader>lT` | Toggle TOC            |
+| `<localleader>ld` | Package documentation |
 
 ### Templates
 
