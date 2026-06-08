@@ -81,10 +81,6 @@ return {
 		end,
 	},
 	{
-		"pimalaya/himalaya-vim",
-		lazy = true,
-	},
-	{
 		"tpope/vim-dadbod",
 		dependencies = {
 			"kristijanhusak/vim-dadbod-ui",

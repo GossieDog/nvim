@@ -178,39 +178,6 @@ return {
 				{ "<leader>Sl", "<cmd>SessionManager load_session<CR>", desc = "Load", icon = "󰉖" },
 				{ "<leader>Ss", "<cmd>SessionManager save_current_session<CR>", desc = "Save", icon = "󰆓" },
 
-				-- MAIL GROUP --
-
-				{ "<leader>h", group = "Himalaya", icon = "" },
-				{ "<leader>hh", "<cmd>Himalaya<cr>", desc = "Open Default Account" },
-				{ "<leader>ho", "<cmd>HimalayaAccounts<cr>", desc = "Open Account" },
-				{ "<leader>hw", "<cmd>HimalayaWrite<cr>", desc = "Write Email" },
-				{ "<leader>hr", "<plug>(himalaya-email-reply)", desc = "Reply" },
-				{ "<leader>hR", "<plug>(himalaya-email-reply-all)", desc = "Reply-All" },
-				{ "<leader>ha", "<plug>(himalaya-email-download-attachments)", desc = "Download Attachments" },
-				{ "<leader>hd", "<plug>(himalaya-email-delete)", desc = "Delete" },
-				{ "<leader>hf", "<plug>(himalaya-email-forward)", desc = "Foward" },
-				{ "<leader>hm", "<plug>(himalaya-email-flag-add)", desc = "Add Flag" },
-				{ "<leader>hM", "<plug>(himalaya-email-flag-remove)", desc = "Remove Flag" },
-				-- { "<leader>hA", "<plug>(himalaya-email-add-attachment)", desc = "Add Attachment" },
-
-				--
-				-- <plug>(himalaya-account-select)
-				-- <plug>(himalaya-folder-select)
-				-- <plug>(himalaya-folder-select-previous-page)
-				-- <plug>(himalaya-folder-select-next-page)
-				-- <plug>(himalaya-email-read)
-				-- <plug>(himalaya-email-write)
-				-- <plug>(himalaya-email-reply)
-				-- <plug>(himalaya-email-reply-all)
-				-- <plug>(himalaya-email-forward)
-				-- <plug>(himalaya-email-download-attachments)
-				-- <plug>(himalaya-email-copy)
-				-- <plug>(himalaya-email-move)
-				-- <plug>(himalaya-email-delete)
-				-- <plug>(himalaya-email-flag-add)
-				-- <plug>(himalaya-email-flag-remove)
-				-- <plug>(himalaya-set-list-envelopes-query)
-				--
 				-- AI GROUP --
 
 				{ "<leader>a", group = "Avante", icon = "󰚩" },
