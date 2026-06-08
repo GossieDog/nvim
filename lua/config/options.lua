@@ -22,7 +22,7 @@ opt.fillchars = {
 	eob = " ",
 }
 opt.foldlevel = 99
-opt.foldmethod = "indent"
+opt.foldmethod = "expr"
 opt.foldtext = ""
 opt.formatoptions = "jcroqlnt" -- tcqj
 opt.grepformat = "%f:%l:%c:%m"
