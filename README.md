@@ -57,7 +57,7 @@ _My Neovim setup for academic writing_
 | LSP                | mason, mason-lsp-config, mason-tool-installer, nvim-lspconfig                           |
 | UI                 | lualine, bufferline, noice, snacks                                                      |
 | Util               | telescope, blink-cmp, luasnip, nvim-tree, nvim-treesitter, vim-tmux-navigator, undotree |
-| Misc               | neovim-session-manager, nvim-lint, cloak, himalaya-vim, vim-dadbod                      |
+| Misc               | neovim-session-manager, nvim-lint, cloak, vim-dadbod                                    |
 
 ---
 
@@ -217,20 +217,6 @@ _My Neovim setup for academic writing_
 | `<leader>dq` | Quickfix List (Trouble) |
 | `<leader>dd` | Open diagnostic under cursor |
 
-### Email (Himalaya)
-
-| Key                         | Action               |
-| --------------------------- | -------------------- |
-| `<leader>hh`                | Open default account |
-| `<leader>ho`                | Open account         |
-| `<leader>hw`                | Write email          |
-| `<leader>hr`                | Reply                |
-| `<leader>hR`                | Reply all            |
-| `<leader>ha`                | Download attachments |
-| `<leader>hd`                | Delete               |
-| `<leader>hf`                | Forward              |
-| `<leader>hm` / `<leader>hM` | Add / remove flag    |
-
 ---
 
 ## Installation
@@ -294,7 +280,6 @@ nvim/
 | ripgrep, fd                                   | Fast file searching                 |
 | aspell                                        | Word suggestions                    |
 | espeak-ng and ffmpeg (optional)               | Mp3 conversion                      |
-| Himalaya (optional)                           | Email integration                   |
 | Rust (optional)                               | Better performance for some plugins |
 
 ### Steps
@@ -331,6 +316,5 @@ Mason will automatically install lsp servers and tools. Treesitter will automati
 - [ ] Run `:Copilot auth` if using GitHub Copilot
 - [ ] Set up API keys for Avante (`ANTHROPIC_API_KEY`, `DEEPSEEK_API_KEY`, `MOONSHOT_API_KEY`)
 - [ ] Install vim-tmux-navigator in tmux with tpm (or manually)
-- [ ] Configure Himalaya email accounts if using email features
 
 - [ ] Add any additional plugins in the plugins directory.
