@@ -32,6 +32,7 @@ _My Neovim setup for academic writing_
 - **Blink.cmp** — Fast completion engine with fuzzy matching and dictionary/thesaurus, lsp, and snippet sources
 - **Treesitter** — Accurate syntax highlighting and structural navigation
 - **Conform.nvim** — Format-on-save with multiple formatters: Stylua (Lua), Prettier/Prettierd (HTML/CSS/JS), LaTeXIndent (LaTeX), MarkdownLint-CLI2 + Markdown-TOC (Markdown)
+- **Trouble** — Pretty list for showing diagnostics, references, telescope results, quickfix and location lists
 - **Linting** — Real-time linting with ChkTeX (LaTeX), ESLint (JavaScript), HTMLHint (HTML), Stylelint (CSS), Luacheck (Lua), MarkdownLint (Markdown)
 
 ### Interface & Productivity
