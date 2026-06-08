@@ -2,6 +2,7 @@
 
 ![Dashboard](screenshots/Neovim.png)
 ![Editor](screenshots/Neovim-Editor.png)
+![Which-Key](screenshots/Neovim-Keymaps.png)
 
 _My Neovim setup for academic writing_
 
@@ -52,7 +53,7 @@ _My Neovim setup for academic writing_
 | AI                 | avante, copilot                                                                         |
 | Colorscheme        | gruvbox, catppuccin, rose-pine, vague, tokyonight                                       |
 | Editor             | flash, conform, vimtex, trouble, mini-nvim, nvim-ts-autotag, gitsigns, yanky            |
-| Keymaps            | which key                                                                               |
+| Keymaps            | which-key                                                                               |
 | LSP                | mason, mason-lsp-config, mason-tool-installer, nvim-lspconfig                           |
 | UI                 | lualine, bufferline, noice, snacks                                                      |
 | Util               | telescope, blink-cmp, luasnip, nvim-tree, nvim-treesitter, vim-tmux-navigator, undotree |
