@@ -14,9 +14,9 @@ return {
 				-- SINGLE KEY --
 
 				{
-					"<leader>,",
-					"<cmd>lua Snacks.dashboard()<cr>",
-					desc = "Return to Start Screen",
+					"<leader>r",
+					"<cmd>restart<cr>",
+					desc = "Restart",
 					mode = "n",
 					icon = "󰜉",
 				},
