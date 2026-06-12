@@ -70,6 +70,7 @@ _My Neovim setup for academic writing_
 
 | Key         | Action               |
 | ----------- | -------------------- |
+| `<leader>r` | Restart              |
 | `<leader>e` | Toggle file explorer |
 | `<leader>q` | Quit                 |
 | `<leader>,` | Return to dashboard  |
