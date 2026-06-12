@@ -22,7 +22,6 @@ return {
 				},
 				{ "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle NvimTree" },
 				{ "<leader>q", "<cmd>wa! | qa!<CR>", desc = "Quit", mode = "n" },
-				-- { "<leader>w", "<cmd>wa!<CR>", desc = "Write", mode = "n", icon = "󰆓" },
 				{
 					"<leader>C",
 					"<cmd>Telescope colorscheme<CR>",
@@ -31,6 +30,7 @@ return {
 					icon = "",
 				},
 				{ "<leader>c", "[s1z=`]", desc = "Fix Spelling", mode = "n", icon = "󰓆" },
+				{ "<leader>z", "<cmd>lua Snacks.zen()<cr>", desc = "Toggle Zen Mode", mode = "n" },
 
 				-- FIND GROUP --
 
@@ -145,7 +145,7 @@ return {
 
 				-- LATEX GROUP --
 
-				{ "<localleader>l", group = "LaTeX" },
+				{ "<localleader>l", group = "LaTeX", icon = "" },
 				{ "<localleader>la", desc = "Context Menu" },
 				{ "<localleader>lc", desc = "Vimtex Clean" },
 				{ "<localleader>lC", desc = "Vimtex Clean Full" },
@@ -163,15 +163,13 @@ return {
 				{ "<localleader>lq", desc = "Log" },
 				{ "<localleader>ls", desc = "Toggle Main" },
 				{ "<localleader>lS", desc = "Build SS" },
-				{ "<localleader>lt", desc = "Open TOC" },
+				{ "<localleader>lt", "<cmd>lua Snacks.picker.vimtex_toc()<cr>", desc = "Open TOC" },
 				{ "<localleader>lT", desc = "Toggle TOC" },
 				{ "<localleader>lv", desc = "View" },
 				{ "<localleader>lx", desc = "Reload" },
 				{ "<localleader>lX", desc = "Reload State" },
 				{ "<localleader>ld", "<cmd>VimtexDocPackage<cr>", desc = "Package Documentation", mode = "n" },
-				{ "<localleader>lW", "<cmd>TexCountSection<CR>", desc = "Count Words in Sections" },
-
-				{ "<leader>z", "<cmd>lua Snacks.zen()<cr>", desc = "Toggle Zen Mode", mode = "n" },
+				{ "<localleader>lw", "<cmd>VimtexCountWords!<CR>", desc = "Word Count" },
 
 				-- SESSION GROUP --
 
