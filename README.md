@@ -104,13 +104,14 @@ _My Neovim setup for academic writing_
 | ----- | --------------------- |
 | `<localleader>ll` | Build document        |
 | `<localleader>lv` | View PDF              |
-| `<localleader>lW` | Word count by section |
+| `<localleader>lw` | Word count            |
 | `<localleader>le` | Show errors           |
 | `<localleader>lc` | Clean auxiliary files |
 | `<localleader>lC` | Clean full            |
 | `<localleader>lg` | VimTeX status         |
 | `<localleader>li` | VimTeX info           |
 | `<localleader>lk` | Stop compilation      |
+| `<localleader>lt` | Open TOC              |
 | `<localleader>lT` | Toggle TOC            |
 | `<localleader>ld` | Package documentation |
 
@@ -201,7 +202,9 @@ _My Neovim setup for academic writing_
 
 | Key          | Action                    |
 | ------------ | ------------------------- |
+| `<leader>lm` | Open Mason                |
 | `<leader>lu` | Mason update              |
+| `<leader>ll` | Mason log                 |
 | `<leader>ts` | Toggle spell check        |
 | `<leader>tc` | Toggle Copilot            |
 | `<leader>tC` | Toggle Cloak              |
