@@ -14,8 +14,6 @@ return {
 					section_separators = { left = "", right = "" },
 					disabled_filetypes = {
 						statusline = {
-							"snacks_dashboard",
-							"snacks_picker_input",
 							"NvimTree",
 							"Avante",
 							"AvanteInput",
