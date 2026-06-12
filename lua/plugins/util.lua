@@ -290,11 +290,7 @@ return {
 					sorter = "case_sensitive",
 				},
 				view = {
-					width = {
-						min = 20,
-						max = 30,
-						padding = 2,
-					},
+					width = 30,
 					signcolumn = "no",
 				},
 				renderer = {
