@@ -75,7 +75,9 @@ return {
 				-- LSP GROUP --
 
 				{ "<leader>l", group = "LSP", icon = "󰅴" },
+				{ "<leader>lm", "<cmd>Mason<cr>", desc = "Open Mason", mode = "n" },
 				{ "<leader>lu", "<cmd>MasonUpdate<cr>", desc = "Mason Update", mode = "n" },
+				{ "<leader>ll", "<cmd>MasonLog<cr>", desc = "Mason Log", mode = "n" },
 
 				-- BUFFER GROUP
 
