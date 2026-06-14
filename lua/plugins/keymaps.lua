@@ -125,14 +125,6 @@ return {
 					desc = "Lint",
 					mode = "n",
 				},
-				{
-					"<leader>td",
-					function()
-						local current = vim.diagnostic.config().virtual_text
-						vim.diagnostic.config({ virtual_text = not current })
-					end,
-					desc = "Toggle LSP virtual text",
-				},
 
 				-- DIAGNOSTICS GROUP --
 
@@ -142,6 +134,14 @@ return {
 				{ "<leader>ds", "<cmd>Trouble symbols toggle focus=false<cr>", desc = "Symbols (Trouble)" },
 				{ "<leader>dq", "<cmd>Trouble qflist toggle<cr>", desc = "Quickfix List (Trouble)" },
 				{ "<leader>dd", vim.diagnostic.open_float, desc = "Open diagnostic under cursor" },
+				{
+					"<leader>dt",
+					function()
+						local current = vim.diagnostic.config().virtual_text
+						vim.diagnostic.config({ virtual_text = not current })
+					end,
+					desc = "Toggle virtual text",
+				},
 
 				-- LATEX GROUP --
 
