@@ -15,7 +15,7 @@ return {
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 		},
 		config = function()
-			require("mason-lspconfig").setup({
+			require("mason-tool-installer").setup({
 				ensure_installed = {
 					"jsonls",
 					"ltex_plus",
@@ -26,12 +26,9 @@ return {
 					"html",
 					"cssls",
 					"vtsls",
+					"nomad",
+					"firefox-debug-adapter",
 					"emmet_language_server",
-				},
-			})
-
-			require("mason-tool-installer").setup({
-				ensure_installed = {
 					"prettier",
 					"prettierd",
 					"eslint_d",
