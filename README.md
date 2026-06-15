@@ -210,17 +210,17 @@ _My Neovim setup for academic writing_
 | `<leader>tC` | Toggle Cloak              |
 | `<leader>tf` | Format                    |
 | `<leader>tl` | Lint                      |
-| `<leader>td` | Toggle LSP virtual text   |
 
 ### Diagnostics
 
-| Key          | Action                  |
-| ------------ | ----------------------- |
-| `<leader>dp` | Project Diagnostics     |
-| `<leader>db` | Buffer Diagnostics      |
-| `<leader>ds` | Symbols (Trouble)       |
-| `<leader>dq` | Quickfix List (Trouble) |
-| `<leader>dd` | Open diagnostic under cursor |
+| Key          | Action                        |
+| ------------ | ----------------------------- |
+| `<leader>dp` | Project Diagnostics           |
+| `<leader>db` | Buffer Diagnostics            |
+| `<leader>ds` | Symbols (Trouble)             |
+| `<leader>dq` | Quickfix List (Trouble)       |
+| `<leader>dd` | Open diagnostic under cursor  |
+| `<leader>dt` | Toggle virtual text           |
 
 ---
 
