@@ -197,6 +197,7 @@ return {
 				{ "<leader>az", "<cmd>lua require('avante.api').zen_mode()<cr>", desc = "Toggle Zen Mode" },
 				{ "<leader>a?", "<cmd>AvanteModels<cr>", desc = "Select Model" },
 				{ "<leader>am", desc = "Select ACP Mode" },
+				{ "<leader>aM", desc = "Select ACP Model" },
 				{
 					"<leader>a+",
 					function()
