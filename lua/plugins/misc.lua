@@ -15,6 +15,18 @@ return {
 	{
 		"mfussenegger/nvim-lint",
 		config = function()
+			local chktex = require("lint").linters.chktex
+
+			chktex.args = {
+				"-v0",
+				"-I0",
+				"-s",
+				":",
+				"-f",
+				"%l%b%c%b%d%b%k%b%n%b%m%b%b%b",
+				"-n18",
+			}
+
 			require("lint").linters_by_ft = {
 				tex = { "chktex" },
 				html = { "htmlhint" },
