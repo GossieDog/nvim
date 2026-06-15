@@ -254,9 +254,6 @@ return {
 						transparent = false,
 						blend = 99,
 					},
-					wo = {
-						signcolumn = "no", -- Explicitly disable sign column
-					},
 				},
 				on_open = function()
 					vim.fn.system("tmux set status off")
