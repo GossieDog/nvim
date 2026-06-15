@@ -45,6 +45,7 @@ return {
 					"stylua",
 					"tree-sitter-cli",
 				},
+				auto_update = true,
 			})
 		end,
 	},
