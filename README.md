@@ -14,7 +14,7 @@ _My Neovim setup for academic writing_
 
 ### Academic & LaTeX
 
-- **VimTeX** — Full LaTeX build system integration with Zathura PDF viewer and forward/inverse search
+- **VimTeX** — Full LaTeX build system integration with Zathura PDF viewer and forward/inverse search. Ability to toggle context menu PDF viewer to Okular for highlight and annotation support.
 - **Bibliography management** — Zotero integration via Telescope-BibTeX for inline citation search and insertion
 - **Template system** — Pre-configured APA, MLA, and Chicago paper templates with proper document structure
 - **Word counting** — Section-by-section word count via VimTeX
@@ -114,6 +114,7 @@ _My Neovim setup for academic writing_
 | `<localleader>lt` | Open TOC              |
 | `<localleader>lT` | Toggle TOC            |
 | `<localleader>ld` | Package documentation |
+| `<localleader>lp` | Toggle Okular context viewer |
 
 ### Templates
 
@@ -281,6 +282,7 @@ nvim/
 | Texlive                                       | LaTeX compilation                   |
 | Zotero + Better BibTeX plugin                 | Citations                           |
 | Zathura                                       | PDF preview                         |
+| Okular                                        | PDF viewer with support for highlights and annotations             |
 | Pandoc                                        | Document conversion                 |
 | ripgrep, fd                                   | Fast file searching                 |
 | aspell                                        | Word suggestions                    |
