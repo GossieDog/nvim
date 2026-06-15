@@ -99,6 +99,15 @@ return {
 			-- 	vim.bo.swapfile = false
 			-- 	vim.api.nvim_buf_set_lines(0, 0, -1, false, output)
 			-- end, {})
+			vim.api.nvim_create_user_command("VimtexContextToggle", function()
+				if vim.g.vimtex_context_pdf_viewer == "zathura" then
+					vim.g.vimtex_context_pdf_viewer = "okular"
+					print("Context PDF viewer: okular")
+				else
+					vim.g.vimtex_context_pdf_viewer = "zathura"
+					print("Context PDF viewer: zathura")
+				end
+			end, {})
 		end,
 	},
 	{

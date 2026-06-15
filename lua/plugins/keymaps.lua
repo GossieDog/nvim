@@ -170,6 +170,7 @@ return {
 				{ "<localleader>lX", desc = "Reload State" },
 				{ "<localleader>ld", "<cmd>VimtexDocPackage<cr>", desc = "Package Documentation", mode = "n" },
 				{ "<localleader>lw", "<cmd>VimtexCountWords!<CR>", desc = "Word Count" },
+				{ "<localleader>lp", "<cmd>VimtexContextToggle<CR>", desc = "Toggle Context Menu PDF Viewer" },
 
 				-- SESSION GROUP --
 
