@@ -29,7 +29,6 @@ return {
 					mode = "n",
 					icon = "",
 				},
-				{ "<leader>c", "[s1z=`]", desc = "Fix Spelling", mode = "n", icon = "󰓆" },
 				{ "<leader>z", "<cmd>lua Snacks.zen()<cr>", desc = "Toggle Zen Mode", mode = "n" },
 
 				-- FIND GROUP --
