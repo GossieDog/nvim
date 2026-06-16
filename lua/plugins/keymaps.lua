@@ -1,4 +1,4 @@
--- Code adopted fron https://github.com/lervag/vimtex/issues/2294
+-- Code for PdfAnnots adopted fron https://github.com/lervag/vimtex/issues/2294
 local function PdfAnnots()
 	local ok, pdf = pcall(vim.api.nvim_eval, "vimtex#context#get().handler.get_actions().entry.file")
 	if not ok then
