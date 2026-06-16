@@ -23,7 +23,7 @@ _My Neovim setup for academic writing_
 
 ### AI Assistance
 
-- **Avante** — Conversational AI assistant supporting Claude Sonnet, DeepSeek, and Moonshot; context-aware with buffer and repository awareness
+- **Avante** — Conversational AI assistant supporting Claude, GPT, and DeepSeek; context-aware with buffer and repository awareness
 - **GitHub Copilot** — Inline code completion in manual trigger mode
 
 ### Development
@@ -75,7 +75,6 @@ _My Neovim setup for academic writing_
 | `<leader>q` | Quit                 |
 | `<leader>z` | Toggle Zen Mode      |
 | `<leader>C` | Browse colorschemes  |
-| `<leader>c` | Fix spelling         |
 
 ### Find & Navigate
 
@@ -127,29 +126,6 @@ _My Neovim setup for academic writing_
 | `<localleader>la` | Context menu          |
 | `<localleader>lp` | Toggle Okular context viewer |
 | `<localleader>ln` | View PDF annotations        |
-
-### Templates
-
-| Key           | Template                   |
-| ------------- | -------------------------- |
-| `<leader>Ta`  | APA paper                  |
-| `<leader>TA`  | APA paper (standalone)     |
-| `<leader>Tm`  | MLA paper                  |
-| `<leader>TM`  | MLA paper (standalone)     |
-| `<leader>Tc`  | Chicago paper              |
-| `<leader>TC`  | Chicago paper (standalone) |
-| `<leader>Tn`  | Notes                      |
-| `<leader>TN`  | Notes (standalone)         |
-| `<leader>Ts`  | Studying                   |
-| `<leader>Tb`  | APA barebones              |
-| `<leader>Tf`  | APA figures and tables     |
-| `<leader>TWR` | Resume                     |
-| `<leader>TWr` | Resume (complete)          |
-| `<leader>TWc` | Cover letter               |
-| `<leader>TWl` | References                 |
-| `<leader>TWt` | Thank you letter           |
-| `<leader>TOr` | Recipe                     |
-| `<leader>TOl` | Letter                     |
 
 ### Export (Pandoc)
 
@@ -246,10 +222,13 @@ _My Neovim setup for academic writing_
 ```
 nvim/
 ├── init.lua                    # Entry point
+├── after/
+│   └── ftplugin/
+│       └── tex.lua             # LaTeX filetype keymaps and PDF annotations
 ├── lua/
 │   ├── config/
 │   │   ├── lazy.lua            # Plugin manager bootstrap
-│   │   ├── options.lua         # Core Neovim settings (Used LazyVim deafults and Gilles Castel's spell check keymap)
+│   │   ├── options.lua         # Core Neovim settings
 │   │   └── icons.lua           # Icons
 │   ├── plugins/                # Plugin configuration files
 │   │   ├── ai.lua
@@ -262,7 +241,7 @@ nvim/
 │   │   └── util.lua
 │   └── snippets/               # Custom LuaSnip snippets
 │       ├── tex.lua
-        └── lua.lua
+│       └── lua.lua
 ├── screenshots/                # Documentation screenshots
 ├── spell/                      # Custom spell dictionaries
 │   ├── en.utf-8.add
@@ -272,7 +251,6 @@ nvim/
     ├── MLA-*.tex
     ├── Chicago-*.tex
     ├── Notes*.tex
-    ├── Resume.tex
     ├── Resume.tex
     ├── Cover-Letter.tex
     ├── Letter.tex
@@ -309,7 +287,7 @@ nvim/
 **1. Back up your existing configuration:**
 
 ```bash
-mv ~/.config/nvim ~/.config/nvim.backup
+mv ~/.config/nvim ~/.config/nvim.bak
 ```
 
 **2. Clone this repository:**
@@ -332,11 +310,11 @@ Mason will automatically install lsp servers and tools. Treesitter will automati
 
 - [ ] Open Neovim and wait for Lazy.nvim to finish installing plugins
 - [ ] Run `:Mason` and confirm everything is installed.
-- [ ] Run checkhealth
-- [ ] Start a keep updated auto-export for your whole Zotero libaray using the BetterBibTeX for Zotero plugin.
+- [ ] Run `:checkhealth`
+- [ ] Start a keep updated auto-export for your whole Zotero library using the BetterBibTeX for Zotero plugin.
 - [ ] Update the bibliography path in the Telescope-BibTeX configuration
 - [ ] Run `:Copilot auth` if using GitHub Copilot
-- [ ] Set up API keys for Avante (`ANTHROPIC_API_KEY`, `DEEPSEEK_API_KEY`, `MOONSHOT_API_KEY`)
+- [ ] Set up API keys for Avante (`ANTHROPIC_API_KEY`, `OPENAI_API_KEY', 'DEEPSEEK_API_KEY`)
 - [ ] Install vim-tmux-navigator in tmux with tpm (or manually)
 
 - [ ] Add any additional plugins in the plugins directory.
