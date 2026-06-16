@@ -73,7 +73,6 @@ _My Neovim setup for academic writing_
 | `<leader>r` | Restart              |
 | `<leader>e` | Toggle file explorer |
 | `<leader>q` | Quit                 |
-| `<leader>,` | Return to dashboard  |
 | `<leader>z` | Toggle Zen Mode      |
 | `<leader>C` | Browse colorschemes  |
 | `<leader>c` | Fix spelling         |
@@ -103,17 +102,29 @@ _My Neovim setup for academic writing_
 | Key   | Action                |
 | ----- | --------------------- |
 | `<localleader>ll` | Build document        |
+| `<localleader>lL` | Build selected        |
 | `<localleader>lv` | View PDF              |
 | `<localleader>lw` | Word count            |
 | `<localleader>le` | Show errors           |
 | `<localleader>lc` | Clean auxiliary files |
 | `<localleader>lC` | Clean full            |
 | `<localleader>lg` | VimTeX status         |
+| `<localleader>lG` | VimTeX status all     |
 | `<localleader>li` | VimTeX info           |
+| `<localleader>lI` | VimTeX info full      |
 | `<localleader>lk` | Stop compilation      |
+| `<localleader>lK` | Stop all              |
 | `<localleader>lt` | Open TOC              |
 | `<localleader>lT` | Toggle TOC            |
 | `<localleader>ld` | Package documentation |
+| `<localleader>lm` | Maps list             |
+| `<localleader>lo` | Build output          |
+| `<localleader>lq` | Log                   |
+| `<localleader>ls` | Toggle main           |
+| `<localleader>lS` | Build SS              |
+| `<localleader>lx` | Reload                |
+| `<localleader>lX` | Reload state          |
+| `<localleader>la` | Context menu          |
 | `<localleader>lp` | Toggle Okular context viewer |
 | `<localleader>ln` | View PDF annotations        |
 
@@ -164,6 +175,7 @@ _My Neovim setup for academic writing_
 | `<leader>af` | Focus                     |
 | `<leader>ah` | Select history            |
 | `<leader>am` | Select ACP Mode           |
+| `<leader>aM` | Select ACP Model          |
 | `<leader>an` | Create new chat           |
 | `<leader>ar` | Refresh                   |
 | `<leader>as` | Toggle suggestion         |
@@ -212,6 +224,7 @@ _My Neovim setup for academic writing_
 | `<leader>tC` | Toggle Cloak              |
 | `<leader>tf` | Format                    |
 | `<leader>tl` | Lint                      |
+| `<leader>tt` | Inspect Treesitter Tree   |
 
 ### Diagnostics
 
