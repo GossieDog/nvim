@@ -16,6 +16,7 @@ local function PdfAnnots()
 end
 vim.keymap.set("n", "<leader>ta", PdfAnnots, { desc = "Pull Annotations" })
 
+-- Which Key
 local wk = require("which-key")
 
 wk.add({
