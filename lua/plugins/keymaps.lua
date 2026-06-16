@@ -125,6 +125,7 @@ return {
 					desc = "Lint",
 					mode = "n",
 				},
+				{ "<leader>tt", "<cmd>InspectTree<CR>", desc = "Inspect Treesitter Tree" },
 
 				-- DIAGNOSTICS GROUP --
 
