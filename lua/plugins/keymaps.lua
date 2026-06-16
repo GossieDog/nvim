@@ -5,7 +5,18 @@ local function PdfAnnots()
 		vim.notify("No file found")
 		return
 	end
-	local content = vim.fn.systemlist(string.format('pdfannots "%s"', pdf))
+	-- local content = vim.fn.systemlist(string.format('pdfannots "%s"', pdf))
+	local files = vim.split(pdf, ";", { plain = true })
+
+	local pdfs = vim.tbl_filter(function(f)
+		return f:match("%.pdf$")
+	end, files)
+
+	local cmd = { "pdfannots" }
+	vim.list_extend(cmd, pdfs)
+
+	local content = vim.fn.systemlist(cmd)
+
 	vim.cmd.new()
 	vim.api.nvim_win_set_height(0, 15)
 	vim.bo.buftype = "nofile"
