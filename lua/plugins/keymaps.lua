@@ -15,7 +15,8 @@ local function PdfAnnots()
 	local cmd = { "pdfannots" }
 	vim.list_extend(cmd, pdfs)
 
-	local content = vim.fn.systemlist(cmd)
+	local raw_content = vim.fn.system(cmd)
+	local content = vim.split(raw_content, "\n", { plain = true })
 
 	vim.cmd.new()
 	vim.api.nvim_win_set_height(0, 15)
