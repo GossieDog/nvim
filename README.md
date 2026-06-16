@@ -115,6 +115,7 @@ _My Neovim setup for academic writing_
 | `<localleader>lT` | Toggle TOC            |
 | `<localleader>ld` | Package documentation |
 | `<localleader>lp` | Toggle Okular context viewer |
+| `<localleader>ln` | View PDF annotations        |
 
 ### Templates
 
@@ -287,6 +288,7 @@ nvim/
 | ripgrep, fd                                   | Fast file searching                 |
 | aspell                                        | Word suggestions                    |
 | espeak-ng and ffmpeg (optional)               | Mp3 conversion                      |
+| pdfannots                                     | PDF annotation extraction           |
 | Rust (optional)                               | Better performance for some plugins |
 
 ### Steps
