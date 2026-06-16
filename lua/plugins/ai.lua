@@ -29,13 +29,13 @@ return {
 						max_tokens = 20480,
 					},
 				},
-				moonshot = {
-					endpoint = "https://api.moonshot.ai/v1",
-					model = "kimi-k2-0711-preview",
-					timeout = 30000, -- Timeout in milliseconds
+				openai = {
+					model = "gpt-4o",
+					timeout = 30000,
+					context_window = 128000,
 					extra_request_body = {
 						temperature = 0.75,
-						max_tokens = 32768,
+						max_completion_tokens = 16384,
 					},
 				},
 				deepseek = {
