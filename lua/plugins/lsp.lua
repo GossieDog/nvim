@@ -74,9 +74,6 @@ return {
 					},
 				},
 			})
-			vim.lsp.config("marksman", {})
-			vim.lsp.config("sqls", {})
-			vim.lsp.config("texlab", {})
 
 			vim.lsp.enable({
 				"jsonls",
