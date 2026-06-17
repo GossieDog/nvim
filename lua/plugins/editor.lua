@@ -75,30 +75,6 @@ return {
 			}
 		end,
 		config = function()
-			-- vim.api.nvim_create_autocmd("FileType", {
-			-- 	pattern = "tex",
-			-- 	callback = function()
-			-- 		vim.opt_local.spell = true
-			-- 		vim.opt_local.spelllang = { "en_us" }
-			-- 		vim.keymap.set(
-			-- 			"n",
-			-- 			"<localleader>lw",
-			-- 			"<cmd>VimtexCountWords!<cr>",
-			-- 			{ buffer = true, desc = "VimTeX Count Words" }
-			-- 		)
-			-- 		vim.keymap.set("n", "<localleader>lt", function()
-			-- 			return require("vimtex.snacks").toc()
-			-- 		end, { buffer = true, desc = "Open TOC", remap = false })
-			-- 	end,
-			-- })
-			-- vim.api.nvim_create_user_command("TexCountSection", function()
-			-- 	local output = vim.fn.systemlist("texcount -sub=section " .. vim.fn.expand("%"))
-			-- 	vim.cmd("new")
-			-- 	vim.bo.buftype = "nofile"
-			-- 	vim.bo.bufhidden = "wipe"
-			-- 	vim.bo.swapfile = false
-			-- 	vim.api.nvim_buf_set_lines(0, 0, -1, false, output)
-			-- end, {})
 			vim.api.nvim_create_user_command("VimtexContextToggle", function()
 				if vim.g.vimtex_context_pdf_viewer == "zathura" then
 					vim.g.vimtex_context_pdf_viewer = "okular"
