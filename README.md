@@ -272,14 +272,14 @@ nvim/
 | Python 3.8+                                   | Code formatting tools               |
 | Java 17+                                      | LTeX grammar checking server        |
 | Texlive                                       | LaTeX compilation                   |
-| Zotero + Better BibTeX plugin                 | Citations                           |
 | Zathura                                       | PDF preview                         |
 | Okular                                        | PDF viewer with support for highlights and annotations             |
 | Pandoc                                        | Document conversion                 |
 | ripgrep, fd                                   | Fast file searching                 |
 | aspell                                        | Word suggestions                    |
-| espeak-ng and ffmpeg (optional)               | Mp3 conversion                      |
 | pdfannots                                     | PDF annotation extraction           |
+| Zotero + Better BibTeX plugin                 | Citations                           |
+| espeak-ng and ffmpeg (optional)               | Mp3 conversion                      |
 | Rust (optional)                               | Better performance for some plugins |
 
 ### Steps
