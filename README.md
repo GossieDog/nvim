@@ -265,7 +265,7 @@ nvim/
 | Dependency                                    | Purpose                             |
 | --------------------------------------------- | ----------------------------------- |
 | Neovim 0.12+                                  | Required                            |
-| Git                                           | Plugin management                   |
+| Git                                           | Plugin management and version control                   |
 | Hack Nerd Font                                | Icons                               |
 | Kitty, Wezterm, Alacritty, Ghostty, or iTerm2 | For image support                   |
 | Node.js 18+                                   | LSP server support                  |
