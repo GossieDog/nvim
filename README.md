@@ -41,7 +41,7 @@ _My Neovim setup for academic writing_
 - **Which-Key** — Discoverable keymap guide with organized command groups
 - **Snacks dashboard** — Custom start screen with session shortcuts
 - **Lualine** — Status line
-- **Bufferline** - Shows open buffers
+- **Bufferline** — Shows open buffers
 - **Zen Mode** — Distraction-free writing environment
 
 ---
