@@ -57,7 +57,7 @@ wk.add({
 	{ "<localleader>ld", "<cmd>VimtexDocPackage<cr>", desc = "Package Documentation", mode = "n" },
 	{ "<localleader>lw", "<cmd>VimtexCountWords!<CR>", desc = "Word Count" },
 	{ "<localleader>lp", PdfAnnots, desc = "Pull Annotations" },
-	{ "<localleader>lP", "<cmd>VimtexContextToggle", desc = "Toggle Context Menu PDF Viewer" },
+	{ "<localleader>lP", "<cmd>VimtexContextToggle<cr>", desc = "Toggle Context Menu PDF Viewer" },
 
 	-- TEMPLATE GROUP --
 
