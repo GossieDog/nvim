@@ -308,7 +308,9 @@ Mason will automatically install lsp servers and tools. Treesitter will automati
 
 ### Post-Install Checklist
 
-- [ ] Open Neovim and wait for Lazy.nvim to finish installing plugins
+- [ ] Open Neovim and wait for Lazy.nvim to finish installing plugins, treesitter to install parsers, and Mason to install tools.
+- [ ] Quit Neovim by hitting `q` and reopen with `Nvim`.
+- [ ] Update plugins by hitting `L` to open Lazy and then `U` to update.
 - [ ] Run `:Mason` and confirm everything is installed.
 - [ ] Run `:checkhealth`
 - [ ] Start a keep updated auto-export for your whole Zotero library using the BetterBibTeX for Zotero plugin.
