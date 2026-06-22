@@ -41,6 +41,7 @@ return {
 					"shfmt",
 					"stylua",
 					"tree-sitter-cli",
+					"tailwindcss",
 				},
 				auto_update = true,
 			})
@@ -86,6 +87,7 @@ return {
 				"cssls",
 				"vtsls",
 				"emmet_language_server",
+				"tailwindcss",
 			})
 		end,
 	},
