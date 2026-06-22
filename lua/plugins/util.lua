@@ -94,7 +94,11 @@ return {
 			-- C-k: Toggle signature help (if signature.enabled = true)
 			--
 			-- See :h blink-cmp-config-keymap for defining your own keymap
-			keymap = { preset = "default" },
+			keymap = {
+				preset = "default",
+				["<C-j>"] = { "select_next", "fallback" },
+				["<C-k>"] = { "select_prev", "fallback" },
+			},
 
 			appearance = {
 				-- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
@@ -128,12 +132,7 @@ return {
 				},
 			},
 			cmdline = {
-				keymap = {
-					-- recommended, as the default keymap will only show and select the next item
-					["<Tab>"] = { "show", "accept" },
-					["<Up>"] = { "select_prev", "fallback" },
-					["<Down>"] = { "select_next", "fallback" },
-				},
+				keymap = { preset = "inherit" },
 				completion = {
 					menu = {
 						auto_show = true,
