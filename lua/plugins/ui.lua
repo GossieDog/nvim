@@ -249,7 +249,19 @@ return {
 					relative_number = false,
 				},
 				win = {
-					width = 85,
+					width = function()
+						-- Fetch the actual column count of your terminal window
+						local total_cols = vim.o.columns
+
+						-- Adjust 120 based on your monitor's fullscreen column width (check with :lua print(vim.o.columns))
+						if total_cols > 180 then
+							-- Term is fullscreen or very wide -> Use a static character limit
+							return 90
+						else
+							-- Term is split next to another window (E.g. Zathura) -> Scale to 95% of the terminal width
+							return 0.95
+						end
+					end,
 					backdrop = {
 						transparent = false,
 						blend = 99,
