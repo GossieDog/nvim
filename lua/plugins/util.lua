@@ -370,6 +370,20 @@ return {
 			vim.keymap.set({ "x", "o" }, "as", function()
 				require("nvim-treesitter-textobjects.select").select_textobject("@local.scope", "locals")
 			end)
+			-- HTML/CSS: attribute (e.g. class="foo", color: red;)
+			vim.keymap.set({ "x", "o" }, "aa", function()
+				require("nvim-treesitter-textobjects.select").select_textobject("@attribute.outer", "textobjects")
+			end)
+			vim.keymap.set({ "x", "o" }, "ia", function()
+				require("nvim-treesitter-textobjects.select").select_textobject("@attribute.inner", "textobjects")
+			end)
+			-- CSS: a single declaration value (e.g. just `red` in `color: red;`)
+			vim.keymap.set({ "x", "o" }, "av", function()
+				require("nvim-treesitter-textobjects.select").select_textobject("@assignment.outer", "textobjects")
+			end)
+			vim.keymap.set({ "x", "o" }, "iv", function()
+				require("nvim-treesitter-textobjects.select").select_textobject("@assignment.inner", "textobjects")
+			end)
 		end,
 	},
 	{
