@@ -88,6 +88,12 @@ return {
 				{ "<leader>bf", "<cmd>BufferLinePick<cr>", desc = "Pick Buffer", mode = "n" },
 				{ "<leader>br", "<cmd>BufferLineCloseRight <cr>", desc = "Close Right Buffers", mode = "n" },
 				{ "<leader>bl", "<cmd>BufferLineCloseLeft<cr>", desc = "Close Left Buffers", mode = "n" },
+				{
+					"<leader>bb",
+					"<cmd>enew | setlocal buftype=nofile | setlocal bufhidden=wipe | setlocal noswapfile | setlocal filetype=markdown<cr>",
+					desc = "Open Scratch Buffer",
+					mode = "n",
+				},
 
 				{ "<Tab>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer", mode = "n" },
 				{ "<S-Tab>", "<cmd>BufferLineCyclePrev<cr>", desc = "Previous Buffer", mode = "n" },
