@@ -256,7 +256,7 @@ return {
 						-- Adjust 120 based on your monitor's fullscreen column width (check with :lua print(vim.o.columns))
 						if total_cols > 180 then
 							-- Term is fullscreen or very wide -> Use a static character limit
-							return 90
+							return 100
 						else
 							-- Term is split next to another window (E.g. Zathura) -> Scale to 95% of the terminal width
 							return 0.95
