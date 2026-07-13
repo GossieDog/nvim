@@ -31,4 +31,8 @@ return {
 		"folke/tokyonight.nvim",
 		lazy = true,
 	},
+	{
+		"e-ink-colorscheme/e-ink.nvim",
+		lazy = true,
+	},
 }
