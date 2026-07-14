@@ -4,8 +4,6 @@
 ![Editor](screenshots/Neovim-Editor.png)
 ![Which-Key](screenshots/Neovim-Which-Key.png)
 
-_My Neovim setup for academic writing_
-
 <div align="center">
 
 [![Neovim](https://img.shields.io/badge/Neovim-57A143?style=for-the-badge&logo=neovim&logoColor=white&label=Editor)](https://neovim.io/)
