@@ -72,10 +72,10 @@ opt.sessionoptions:append("globals")
 vim.keymap.set("i", "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", { noremap = true })
 
 -- CTRL arrows for window resizing
-vim.keymap.set("n", "<C-Up>", "<cmd>resize +10<CR>")
-vim.keymap.set("n", "<C-Down>", "<cmd>resize -10<CR>")
-vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +10<CR>")
-vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -10<CR>")
+vim.keymap.set("n", "<C-Up>", "<cmd>resize +5<CR>")
+vim.keymap.set("n", "<C-Down>", "<cmd>resize -5<CR>")
+vim.keymap.set("n", "<C-Right>", "<cmd>vertical resize +5<CR>")
+vim.keymap.set("n", "<C-Left>", "<cmd>vertical resize -5<CR>")
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
