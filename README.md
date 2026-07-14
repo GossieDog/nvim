@@ -49,7 +49,12 @@
 - **Bufferline** — Shows open buffers
 - **Zen Mode** — Distraction-free writing environment
 
-## Plugin Ecosystem
+## General Information
+
+<details>
+<summary>Click to expand</summary>
+
+### Plugin Ecosystem
 
 | Category           | Plugins                                                                                 |
 | ------------------ | --------------------------------------------------------------------------------------- |
@@ -62,8 +67,6 @@
 | UI                 | lualine, bufferline, noice, snacks                                                      |
 | Util               | telescope, blink-cmp, luasnip, nvim-tree, nvim-treesitter, nvim-treesitter-textobjects, vim-tmux-navigator, undotree |
 | Misc               | neovim-session-manager, nvim-lint, cloak, vim-dadbod                                    |
-
-## General Information
 
 ### Directory Structure
 
@@ -129,6 +132,8 @@ nvim/
 | Zotero + Better BibTeX plugin                 | Citations                           |
 | espeak-ng and ffmpeg (optional)               | Mp3 conversion                      |
 | Rust (optional)                               | Better performance for some plugins |
+
+</details>
 
 ## Installation
 
