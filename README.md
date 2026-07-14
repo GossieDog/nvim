@@ -56,7 +56,7 @@ _My Neovim setup for academic writing_
 | Util               | telescope, blink-cmp, luasnip, nvim-tree, nvim-treesitter, nvim-treesitter-textobjects, vim-tmux-navigator, undotree |
 | Misc               | neovim-session-manager, nvim-lint, cloak, vim-dadbod                                    |
 
-## Installation
+## General Information
 
 ### Directory Structure
 
@@ -123,6 +123,8 @@ nvim/
 | espeak-ng and ffmpeg (optional)               | Mp3 conversion                      |
 | Rust (optional)                               | Better performance for some plugins |
 
+## Installation
+
 ### Dependencies
 
 - Install [Zotero](https://www.zotero.org/) and [Better BibTeX for Zotero](https://retorque.re/zotero-better-bibtex/).
@@ -130,6 +132,9 @@ nvim/
 - Follow the install instructions for your system below.
 
 #### Ubuntu / Debian
+
+<details>
+<summary>Click to expand</summary>
 
 ##### Core packages
 
@@ -162,7 +167,12 @@ nvim/
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
+</details>
+
 #### Fedora
+
+<details>
+<summary>Click to expand</summary>
 
 ##### Core packages
 
@@ -196,7 +206,12 @@ nvim/
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
+</details>
+
 #### Arch / Manjaro
+
+<details>
+<summary>Click to expand</summary>
 
 ##### Core packages
 
@@ -226,10 +241,15 @@ nvim/
   sudo pacman -S --noconfirm rust
 ```
 
+</details>
+
 #### macOS
->
+
+<details>
+<summary>Click to expand</summary>
+
 > **Important!** Homebrew is required for these install instructions. If you do not have homebrew, it can be downloaded at [brew.sh](https://brew.sh/).
->
+
 ##### Core packages
 
 ```bash
@@ -246,7 +266,7 @@ nvim/
 ```
 
 > If you prefer, MacTeX can be installed instead of TeX Live with `brew install --cask mactex`.
->
+
 ##### PDF viewer
 
 ```bash
@@ -278,6 +298,8 @@ nvim/
 ```bash
   brew install rust
 ```
+
+</details>
 
 ### Neovim Config
 
