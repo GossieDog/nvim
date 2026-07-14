@@ -6,6 +6,15 @@
 
 _My Neovim setup for academic writing_
 
+<div align="center">
+
+[![Neovim](https://img.shields.io/badge/Neovim-57A143?style=for-the-badge&logo=neovim&logoColor=white&label=Editor)](https://neovim.io/)
+[![LaTeX](https://img.shields.io/badge/LaTeX-008080?style=for-the-badge&logo=latex&logoColor=white&label=Typesetting)](https://www.latex-project.org/)
+[![Zotero](https://img.shields.io/badge/Zotero-CC2936?style=for-the-badge&logo=zotero&logoColor=white&label=Citations)](https://www.zotero.org/)
+[![Repo Size](https://img.shields.io/github/repo-size/GossieDog/nvim?style=for-the-badge&label=Repo%20Size&color=a277ff)](https://github.com/GossieDog/nvim)
+
+</div>
+
 **[Writing Workflow](https://www.youtube.com/watch?v=avbT4fAC3R4) · [Note-Taking](https://www.youtube.com/watch?v=zayVF1j9gBg)**
 
 ## Features
