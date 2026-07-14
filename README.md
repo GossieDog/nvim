@@ -1,9 +1,5 @@
 # Neovim
 
-![Dashboard](screenshots/Neovim.png)
-![Editor](screenshots/Neovim-Editor.png)
-![Which-Key](screenshots/Neovim-Which-Key.png)
-
 <div align="center">
 
 [![Neovim](https://img.shields.io/badge/Neovim-57A143?style=for-the-badge&logo=neovim&logoColor=white&label=Editor)](https://neovim.io/)
@@ -12,6 +8,10 @@
 [![Repo Size](https://img.shields.io/github/repo-size/GossieDog/nvim?style=for-the-badge&label=Repo%20Size&color=a277ff)](https://github.com/GossieDog/nvim)
 
 </div>
+
+![Dashboard](screenshots/Neovim.png)
+![Editor](screenshots/Neovim-Editor.png)
+![Which-Key](screenshots/Neovim-Which-Key.png)
 
 **[Writing Workflow](https://www.youtube.com/watch?v=avbT4fAC3R4) · [Note-Taking](https://www.youtube.com/watch?v=zayVF1j9gBg)**
 
