@@ -56,6 +56,7 @@ return {
 						-- user defined mappings
 						mappings = {
 							i = {
+								["<C-y>"] = bibtex_actions.key_append("%s"), -- format is determined by filetype if the user has not set it explictly
 								["<CR>"] = bibtex_actions.key_append("%s"), -- format is determined by filetype if the user has not set it explictly
 								["<C-e>"] = bibtex_actions.entry_append,
 								["<C-c>"] = bibtex_actions.citation_append("{{author}} ({{year}}), {{title}}."),
