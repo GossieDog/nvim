@@ -65,7 +65,7 @@
 | Keymaps            | which-key                                                                               |
 | LSP                | mason, mason-lsp-config, mason-tool-installer, nvim-lspconfig                           |
 | UI                 | lualine, bufferline, noice, snacks                                                      |
-| Util               | telescope, blink-cmp, luasnip, nvim-tree, nvim-treesitter, nvim-treesitter-textobjects, vim-tmux-navigator, undotree |
+| Util               | telescope, blink-cmp, luasnip, nvim-tree, nvim-treesitter, nvim-treesitter-textobjects, vim-tmux-navigator, undotree, todo-comments |
 | Misc               | neovim-session-manager, nvim-lint, cloak, vim-dadbod                                    |
 
 ### Directory Structure
