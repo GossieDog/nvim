@@ -433,7 +433,7 @@ ls.add_snippets("tex", {
 		i(5, "label"),
 		t({ "}", "\\end{figure}" }),
 	}),
-	s("fig", {
+	s("apafig", {
 		t("\\begin{figure}["),
 		i(1, "t"),
 		t({ "]", "\t\\caption{" }),
@@ -441,7 +441,7 @@ ls.add_snippets("tex", {
 		t("}\\label{fig:"),
 		i(3, "label"),
 		t({ "}", "\t\\includegraphics[width=" }),
-		i(4, "0.8"),
+		i(4, "0.9"),
 		t("\\linewidth]{"),
 		i(5, "file"),
 		t({ "}", "\t\\figurenote{" }),
@@ -578,3 +578,5 @@ ls.add_snippets("tex", {
 	-- Multiple citations
 	s({ trig = " cites", wordTrig = false }, { t("~\\autocites{"), i(1, "key1"), t("}{"), i(2, "key2"), t("}") }),
 })
+
+-- TODO: Add apa figure snippet
