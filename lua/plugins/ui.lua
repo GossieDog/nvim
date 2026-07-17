@@ -181,19 +181,6 @@ return {
                                                                          ]],
 					keys = {
 						{ icon = "", key = "f", desc = "Find File", action = ":Telescope find_files" },
-						{ icon = "󰦨", key = "g", desc = "Find Text", action = ":Telescope live_grep" },
-						{
-							icon = "",
-							key = "r",
-							desc = "Recent Files",
-							action = ":Telescope oldfiles",
-						},
-						{
-							icon = "",
-							key = "c",
-							desc = "Config",
-							action = ":Telescope find_files cwd=~/.config/nvim",
-						},
 						{
 							icon = "",
 							key = "t",
