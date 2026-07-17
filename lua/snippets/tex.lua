@@ -435,7 +435,7 @@ ls.add_snippets("tex", {
 	}),
 	s("apafig", {
 		t("\\begin{figure}["),
-		i(1, "t"),
+		i(1, "thbp"),
 		t({ "]", "\t\\caption{" }),
 		i(2, "caption"),
 		t("}\\label{fig:"),
