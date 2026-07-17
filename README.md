@@ -398,6 +398,42 @@ Replace the paths in `global_files` and `bibtex_file` with the one from your Zot
     },
 ```
 
+Replace the paths used for Pandoc bibliography conversion in `~/.config/nvim/lua/plugins/keymaps.lua`.
+
+```lua
+    { "<leader>p", group = "Pandoc", icon = "󰈙" },
+    {
+     "<leader>pd",
+     "<cmd>!pandoc %:p -o %:p:r.docx --citeproc --bibliography=/the/path/to/your/bib/file<cr>",
+     desc = "Docx",
+     icon = "",
+    },
+    {
+     "<leader>pm",
+     "<cmd>!pandoc %:p -o %:p:r.md --citeproc --bibliography=/the/path/to/your/bib/file<cr>",
+     desc = "Markdown",
+     icon = "",
+    },
+    {
+     "<leader>pt",
+     "<cmd>!pandoc %:p -o %:p:r.tex --citeproc --bibliography=/the/path/to/your/bib/file<cr>",
+     desc = "LaTeX",
+     icon = "",
+    },
+    {
+     "<leader>pT",
+     "<cmd>!pandoc %:p -o %:p:r.txt --citeproc --bibliography=/the/path/to/your/bib/file && espeak-ng -f %:p:r.txt --stdout | ffmpeg -i - -codec:a libmp3lame -qscale:a 2 %:p:r.mp3<cr>",
+     desc = "Text + MP3",
+     icon = "",
+    },
+    {
+     "<leader>pp",
+     "<cmd>!pandoc %:p -o %:p:r.pdf --citeproc --bibliography=/the/path/to/your/bib/file<cr>",
+     desc = "PDF",
+     icon = "󰈦",
+    },
+```
+
 Finally, follow [these](https://www.zotero.org/download/) instructions to add the Zotero Connector extension to your browser.
 
 ### Creating a Session
