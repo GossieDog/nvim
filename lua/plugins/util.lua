@@ -417,4 +417,20 @@ return {
 			vim.opt.undofile = true
 		end,
 	},
+	{
+		"folke/todo-comments.nvim",
+		-- event = { "BufRead", "BufNewFile" },
+		dependencies = { "nvim-lua/plenary.nvim" },
+		opts = {
+			highlight = {
+				pattern = [[.*<(KEYWORDS)\s*:]], -- pattern or table of patterns, used for highlighting (vim regex)
+				-- pattern = [[.*<(KEYWORDS)]], -- exclude the colon
+				exclude = { "tex" }, -- list of file types to exclude highlighting
+			},
+			search = {
+				pattern = [[\b(KEYWORDS):]], -- ripgrep regex
+				-- pattern = [[\b(KEYWORDS)\b]], -- match without the extra colon. You'll likely get false positives
+			},
+		},
+	},
 }

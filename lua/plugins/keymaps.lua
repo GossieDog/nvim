@@ -58,6 +58,7 @@ return {
 				},
 				{ "<leader>ft", "<cmd>Telescope live_grep<cr>", desc = "Text", mode = "n" },
 				{ "<leader>fs", "<cmd>Telescope lsp_document_symbols<cr>", desc = "Symbols", mode = "n" },
+				{ "<leader>fT", "<cmd>TodoTelescope<cr>", desc = "Todos", mode = "n" },
 
 				-- GIT GROUP --
 
@@ -142,13 +143,14 @@ return {
 				{ "<leader>dq", "<cmd>Trouble qflist toggle<cr>", desc = "Quickfix List (Trouble)" },
 				{ "<leader>dd", vim.diagnostic.open_float, desc = "Open diagnostic under cursor" },
 				{
-					"<leader>dt",
+					"<leader>dT",
 					function()
 						local current = vim.diagnostic.config().virtual_text
 						vim.diagnostic.config({ virtual_text = not current })
 					end,
 					desc = "Toggle virtual text",
 				},
+				{ "<leader>dt", "<cmd>Trouble todo<cr>", desc = "Todos (Trouble)" },
 
 				-- SESSION GROUP --
 
