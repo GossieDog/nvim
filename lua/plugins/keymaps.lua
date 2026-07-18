@@ -13,13 +13,6 @@ return {
 
 				-- SINGLE KEY --
 
-				{
-					"<leader>r",
-					"<cmd>restart<cr>",
-					desc = "Restart",
-					mode = "n",
-					icon = "󰜉",
-				},
 				{ "<leader>e", "<cmd>NvimTreeToggle<cr>", desc = "Toggle NvimTree" },
 				{ "<leader>q", "<cmd>wa! | qa!<CR>", desc = "Quit", mode = "n" },
 				{
