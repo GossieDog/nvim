@@ -43,6 +43,7 @@ return {
 				},
 				auto_update = true,
 			})
+			require("mason-lspconfig").setup()
 		end,
 	},
 	{
