@@ -1,13 +1,11 @@
 return {
 	{
 		"mason-org/mason.nvim",
-		config = function()
-			require("mason").setup({
-				firewall = {
-					enabled = true,
-				},
-			})
-		end,
+		opts = {
+			firewall = {
+				enabled = true,
+			},
+		},
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",

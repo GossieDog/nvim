@@ -2,7 +2,6 @@ return {
 	{
 		"folke/flash.nvim",
 		event = "VeryLazy",
-		vscode = true,
 		---@type Flash.Config
 		opts = {
 			modes = {
@@ -32,26 +31,24 @@ return {
 	},
 	{
 		"stevearc/conform.nvim",
-		config = function()
-			require("conform").setup({
-				formatters_by_ft = {
-					lua = { "stylua" },
-					javascript = { "prettierd", "prettier", stop_after_first = true },
-					typescript = { "prettierd", "prettier", stop_after_first = true },
-					tex = { "latexindent" },
-					markdown = { "markdownlint-cli2", "markdown-toc" },
-					html = { "prettierd", "prettier", stop_after_first = true },
-					css = { "prettierd", "prettier", stop_after_first = true },
-					yaml = { "prettierd", "prettier", stop_after_first = true },
-				},
-				format_on_save = {
-					-- These options will be passed to conform.format()
-					lsp_format = "fallback",
-					async = false,
-					timeout_ms = 500,
-				},
-			})
-		end,
+		opts = {
+			formatters_by_ft = {
+				lua = { "stylua" },
+				javascript = { "prettierd", "prettier", stop_after_first = true },
+				typescript = { "prettierd", "prettier", stop_after_first = true },
+				tex = { "latexindent" },
+				markdown = { "markdownlint-cli2", "markdown-toc" },
+				html = { "prettierd", "prettier", stop_after_first = true },
+				css = { "prettierd", "prettier", stop_after_first = true },
+				yaml = { "prettierd", "prettier", stop_after_first = true },
+			},
+			format_on_save = {
+				-- These options will be passed to conform.format()
+				lsp_format = "fallback",
+				async = false,
+				timeout_ms = 500,
+			},
+		},
 	},
 	{
 		"lervag/vimtex",
@@ -92,32 +89,30 @@ return {
 		"folke/trouble.nvim",
 		cmd = { "Trouble" },
 		dependencies = { "nvim-tree/nvim-web-devicons" },
-		config = function()
-			require("trouble").setup({
-				modes = {
-					diagnostics = {
-						mode = "diagnostics",
-						filter = {
-							severity = {
-								vim.diagnostic.severity.ERROR,
-								vim.diagnostic.severity.WARN,
-								vim.diagnostic.severity.INFO,
-								-- vim.diagnostic.severity.HINT,
-							},
+		opts = {
+			modes = {
+				diagnostics = {
+					mode = "diagnostics",
+					filter = {
+						severity = {
+							vim.diagnostic.severity.ERROR,
+							vim.diagnostic.severity.WARN,
+							vim.diagnostic.severity.INFO,
+							-- vim.diagnostic.severity.HINT,
 						},
-						-- preview = {
-						-- 	type = "split",
-						-- 	relative = "editor",
-						-- 	position = "right",
-						-- 	size = 0.3,
-						-- 	wo = {
-						-- 		wrap = true,
-						-- 	},
-						-- },
 					},
+					-- preview = {
+					-- 	type = "split",
+					-- 	relative = "editor",
+					-- 	position = "right",
+					-- 	size = 0.3,
+					-- 	wo = {
+					-- 		wrap = true,
+					-- 	},
+					-- },
 				},
-			})
-		end,
+			},
+		},
 	},
 	{
 		"nvim-mini/mini.nvim",
