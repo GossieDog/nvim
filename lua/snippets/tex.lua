@@ -448,8 +448,8 @@ ls.add_snippets("tex", {
 		i(6, "note"),
 		t({ "}", "\\end{figure}" }),
 	}),
-	s("incfig", {
-		t({ "\\begin{figure}[htbp]", "\t\\centering", "\t\\incfig{" }),
+	s("inkfig", {
+		t({ "\\begin{figure}[htbp]", "\t\\centering", "\t\\inkfig{" }),
 		i(1, "file"),
 		t({ "}", "\t\\caption{" }),
 		i(2, "caption"),
