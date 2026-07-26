@@ -101,7 +101,7 @@ vim.diagnostic.config({
 
 -- Spell check autocmd
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = { "tex", "markdown", "html" },
+	pattern = { "tex", "markdown", "html", "mail" },
 	callback = function()
 		vim.opt_local.spell = true
 	end,
