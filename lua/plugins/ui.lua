@@ -194,7 +194,6 @@ return {
 							action = ":Lazy",
 							enabled = package.loaded.lazy ~= nil,
 						},
-						{ icon = "", key = "h", desc = "Check Health", action = ":checkhealth" },
 						{ icon = "󰈆", key = "q", desc = "Quit", action = ":qa" },
 					},
 				},
