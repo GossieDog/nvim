@@ -159,12 +159,26 @@ nvim/
 
 ##### Hack Nerd Font
 
+Download the Hack Nerd Font `.zip` file from the [Nerd Font website](https://www.nerdfonts.com/font-downloads) and make the font directory.
+
 ```bash
-  mkdir -p ~/.local/share/fonts
-  cd ~/.local/share/fonts
-  curl -fLo "Hack Regular Nerd Font Complete.ttf" \
-    https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/Hack/Regular/HackNerdFont-Regular.ttf
-  fc-cache -fv
+mkdir -p ~/.local/share/fonts/HackFont/_meta
+```
+
+Move the `.zip` file to the font directory and unzip.
+
+```bash
+mv Hack.zip ~/.local/share/fonts/HackFont/Hack.zip
+cd ~/.local/share/fonts/HackFont/
+unzip Hack.zip
+mv LICENSE.md README.md _meta/
+rm Hack.zip
+```
+
+Reload font cache.
+
+```bash
+fc-cache -fv ~/.local/share/fonts
 ```
 
 ##### pdfannots
@@ -198,12 +212,26 @@ nvim/
 
 ##### Hack Nerd Font
 
+Download the Hack Nerd Font `.zip` file from the [Nerd Font website](https://www.nerdfonts.com/font-downloads) and make the font directory.
+
 ```bash
-  mkdir -p ~/.local/share/fonts
-  cd ~/.local/share/fonts
-  curl -fLo "Hack Regular Nerd Font Complete.ttf" \
-    https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/Hack/Regular/HackNerdFont-Regular.ttf
-  fc-cache -fv
+mkdir -p ~/.local/share/fonts/HackFont/_meta
+```
+
+Move the `.zip` file to the font directory and unzip.
+
+```bash
+mv Hack.zip ~/.local/share/fonts/HackFont/Hack.zip
+cd ~/.local/share/fonts/HackFont/
+unzip Hack.zip
+mv LICENSE.md README.md _meta/
+rm Hack.zip
+```
+
+Reload font cache.
+
+```bash
+fc-cache -fv ~/.local/share/fonts
 ```
 
 ##### pdfannots
