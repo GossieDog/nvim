@@ -122,6 +122,7 @@ nvim/
 | Node.js 18+                                   | LSP server support                  |
 | Python 3.8+                                   | Code formatting tools               |
 | Java 17+                                      | LTeX grammar checking server        |
+| lua and luarocks | For luacheck |
 | Texlive                                       | LaTeX compilation                   |
 | Zathura                                       | PDF preview                         |
 | Okular                                        | PDF viewer with support for highlights and annotations             |
@@ -154,7 +155,8 @@ nvim/
   sudo apt install -y \
     neovim git nodejs npm python3 python3-pip \
     default-jdk texlive-full zathura okular pandoc \
-    ripgrep fd-find aspell espeak-ng ffmpeg curl
+    ripgrep fd-find aspell espeak-ng ffmpeg curl \
+    lua luarocks
 ```
 
 ##### Hack Nerd Font
@@ -207,7 +209,8 @@ fc-cache -fv ~/.local/share/fonts
     neovim git nodejs python3 python3-pip \
     java-17-openjdk texlive-scheme-full zathura \
     okular pandoc ripgrep fd-find aspell \
-    espeak-ng ffmpeg curl
+    espeak-ng ffmpeg curl \
+    lua luarocks
 ```
 
 ##### Hack Nerd Font
@@ -260,7 +263,8 @@ fc-cache -fv ~/.local/share/fonts
     neovim git nodejs npm python python-pip \
     jdk17-openjdk texlive-most zathura zathura-pdf-mupdf \
     okular pandoc ripgrep fd aspell \
-    espeak-ng ffmpeg curl
+    espeak-ng ffmpeg curl \
+    lua luarocks
 ```
 
 ##### Hack Nerd Font
@@ -296,7 +300,8 @@ fc-cache -fv ~/.local/share/fonts
   brew install \
     neovim git node python java \
     pandoc ripgrep fd aspell \
-    espeak-ng ffmpeg
+    espeak-ng ffmpeg \
+    lua luarocks
 ```
 
 ##### TeX Live
