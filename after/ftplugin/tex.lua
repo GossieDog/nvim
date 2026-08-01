@@ -151,7 +151,7 @@ wk.add({
 	},
 	{
 		"<leader>TWr",
-		"<cmd>read ~/Documents/Co-Op/Resume/Eric-Fan-Resume.tex<CR>",
+		"<cmd>read ~/Documents/SFU-Co-Op/Resume/Eric-Fan-Resume.tex<CR>",
 		desc = "Resume Complete",
 		mode = "n",
 		icon = "󰈙",
