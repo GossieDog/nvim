@@ -200,9 +200,9 @@ return {
 
 				-- Setup completion by filetype
 				per_filetype = {
-					text = { "lsp", "path", "dictionary" },
-					markdown = { "lsp", "path", "thesaurus" },
-					tex = { "lsp", "snippets", "dictionary", "thesaurus", "path" },
+					text = { "lsp", "path", "dictionary", "thesaurus" },
+					markdown = { "lsp", "path", "dictionary", "thesaurus" },
+					tex = { "lsp", "snippets", "path", "dictionary", "thesaurus" },
 				},
 			},
 
