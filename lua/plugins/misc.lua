@@ -25,6 +25,7 @@ return {
 				"-f",
 				"%l%b%c%b%d%b%k%b%n%b%m%b%b%b",
 				"-n18",
+				"-n32",
 			}
 
 			require("lint").linters_by_ft = {
