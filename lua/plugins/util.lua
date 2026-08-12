@@ -134,7 +134,7 @@ return {
 						scrollbar = false,
 					},
 					auto_show = true,
-					auto_show_delay_ms = 500,
+					auto_show_delay_ms = 1000,
 				},
 			},
 			cmdline = {
@@ -175,7 +175,7 @@ return {
 
 							-- The depth of similar words to recurse when collecting synonyms. 1 is similar words,
 							-- 2 is similar words of similar words, etc. Increasing this may slow results.
-							similarity_depth = 2,
+							similarity_depth = 1,
 						},
 					},
 
@@ -187,7 +187,7 @@ return {
 						opts = {
 							-- The number of characters required to trigger completion.
 							-- Set this higher if completion is slow, 3 is default.
-							dictionary_search_threshold = 3,
+							dictionary_search_threshold = 4,
 
 							-- See above
 							score_offset = 0,
