@@ -201,6 +201,7 @@ return {
 			indent = { enabled = true },
 			input = { enabled = true },
 			picker = { enabled = true },
+			lazygit = { enabled = true },
 			notifier = {
 				enabled = true,
 				timeout = 3000,
@@ -248,7 +249,6 @@ return {
 					vim.fn.system("tmux set status on")
 				end,
 			},
-			lazygit = { enabled = true },
 		},
 	},
 }
