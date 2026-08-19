@@ -96,6 +96,7 @@ ls.add_snippets("tex", {
 		i(5, { "label" }),
 		t({ "}", "\\end{figure}" }),
 	}),
+
 	s("inkfig", {
 		t({ "\\begin{figure}[htbp]", "\t\\centering", "\t\\inkfig{" }),
 		i(1, "file"),
@@ -109,21 +110,28 @@ ls.add_snippets("tex", {
 	-- =========================================================
 	-- TABLES
 	-- =========================================================
-	s("tabu", {
+
+	s("papertable", { -- Works for APA, MLA, and Chicago
 		t("\\begin{table}["),
-		i(1, "htbp"),
-		t({ "]", "\t\\centering", "\t\\caption{" }),
-		i(2, "caption"),
-		t("}\\label{tab:"),
+		i(1, "t"),
+		t({ "]", "\t\\caption{" }),
+		i(2, "Example Table Title"),
+		t({ "}\\label{tab:" }),
 		i(3, "label"),
-		t({ "}", "\t\\begin{tabu}{" }),
-		i(4, "*{4}{X[c]}"),
-		t({ "}", "\t\t\\toprule", "\t\t" }),
-		i(5, "headers"),
-		t({ " \\\\", "\t\t\\midrule", "\t\t" }),
-		i(6),
-		t({ " \\\\", "\t\t\\bottomrule", "\t\\end{tabu}", "\t\\tablenote{" }),
-		i(7, "note"),
+		t({
+			"}",
+			"\t\\begin{tabu}{*{4}{X[c]}}",
+			"\t\t\\toprule",
+			"\t\t\\textbf{Names} & \\textbf{Age} & \\textbf{Height} & \\textbf{Weight (lbs)} \\\\",
+			"\t\t\\midrule",
+			"\t\tCarter         & 20           & 6'8             & 90                    \\\\",
+			"\t\tAbby           & 32           & 5'4             & 100                   \\\\",
+			"\t\tMax            & 25           & 6'1             & 100                   \\\\",
+			"\t\t\\bottomrule",
+			"\t\\end{tabu}",
+			"\t\\tablenote{",
+		}),
+		i(4, "table note"),
 		t({ "}", "\\end{table}" }),
 	}),
 
