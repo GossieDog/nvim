@@ -96,6 +96,19 @@ ls.add_snippets("tex", {
 		i(5, { "label" }),
 		t({ "}", "\\end{figure}" }),
 	}),
+	s("mlafig", {
+		t("\\begin{figure}["),
+		i(1, "tb"),
+		t({ "]", "\t\\includegraphics[width=" }),
+		i(2, "0.9"),
+		t("\\linewidth]{"),
+		i(3, "file"),
+		t({ "}", "\t\\caption{" }),
+		i(4, "caption"),
+		t({ "}\\label{fig:" }),
+		i(5, { "label" }),
+		t({ "}", "\\end{figure}" }),
+	}),
 
 	s("inkfig", {
 		t({ "\\begin{figure}[htbp]", "\t\\centering", "\t\\inkfig{" }),
@@ -113,7 +126,7 @@ ls.add_snippets("tex", {
 
 	s("papertable", { -- Works for APA, MLA, and Chicago
 		t("\\begin{table}["),
-		i(1, "t"),
+		i(1, "tb"),
 		t({ "]", "\t\\caption{" }),
 		i(2, "Example Table Title"),
 		t({ "}\\label{tab:" }),
