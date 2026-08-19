@@ -77,13 +77,6 @@ wk.add({
 		icon = "󰈙",
 	},
 	{
-		"<leader>Tf",
-		"<cmd>read ~/.config/nvim/templates/APA-Figures-and-Tables.tex<CR>",
-		desc = "APA Figures and Tables",
-		mode = "n",
-		icon = "󰈙",
-	},
-	{
 		"<leader>Tn",
 		"<cmd>read ~/.config/nvim/templates/Notes.tex<CR>",
 		desc = "Notes",
