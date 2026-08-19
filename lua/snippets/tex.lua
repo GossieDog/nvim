@@ -128,7 +128,7 @@ ls.add_snippets("tex", {
 		t("\\begin{table}["),
 		i(1, "tb"),
 		t({ "]", "\t\\caption{" }),
-		i(2, "Example Table Title"),
+		i(2, "caption"),
 		t({ "}\\label{tab:" }),
 		i(3, "label"),
 		t({
