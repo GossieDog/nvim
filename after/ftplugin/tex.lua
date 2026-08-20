@@ -70,23 +70,9 @@ wk.add({
 		icon = "󰈙",
 	},
 	{
-		"<leader>TA",
-		"<cmd>read ~/.config/nvim/templates/APA-Paper-Standalone.tex<CR>",
-		desc = "APA Paper Standalone",
-		mode = "n",
-		icon = "󰈙",
-	},
-	{
 		"<leader>Tn",
 		"<cmd>read ~/.config/nvim/templates/Notes.tex<CR>",
 		desc = "Notes",
-		mode = "n",
-		icon = "󰈙",
-	},
-	{
-		"<leader>TN",
-		"<cmd>read ~/.config/nvim/templates/Notes-Standalone.tex<CR>",
-		desc = "Notes Standalone",
 		mode = "n",
 		icon = "󰈙",
 	},
@@ -98,24 +84,9 @@ wk.add({
 		icon = "󰈙",
 	},
 	{
-		"<leader>TC",
-		"<cmd>read ~/.config/nvim/templates/Chicago-Paper-Standalone.tex<CR>",
-		desc = "Chicago Paper Standalone",
-		mode = "n",
-		icon = "󰈙",
-	},
-
-	{
 		"<leader>Tm",
 		"<cmd>read ~/.config/nvim/templates/MLA-Paper.tex<CR>",
 		desc = "MLA Paper",
-		mode = "n",
-		icon = "󰈙",
-	},
-	{
-		"<leader>TM",
-		"<cmd>read ~/.config/nvim/templates/MLA-Paper-Standalone.tex<CR>",
-		desc = "MLA Paper Standalone",
 		mode = "n",
 		icon = "󰈙",
 	},
@@ -170,6 +141,7 @@ wk.add({
 		mode = "n",
 		icon = "󰈙",
 	},
+
 	{ "<leader>TO", group = "Other" },
 	{
 		"<leader>TOr",
