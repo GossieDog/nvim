@@ -15,40 +15,6 @@
 
 **[Writing Workflow](https://www.youtube.com/watch?v=avbT4fAC3R4) · [Note-Taking](https://www.youtube.com/watch?v=zayVF1j9gBg)**
 
-## Features
-
-### Academic & LaTeX
-
-- **VimTeX** — Full LaTeX build system integration with Zathura PDF viewer and forward/inverse search. Ability to toggle context menu PDF viewer to Okular for highlight and annotation support.
-- **Bibliography management** — Zotero integration via Telescope-BibTeX for inline citation search and insertion
-- **Template system** — Pre-configured APA, MLA, and Chicago paper templates with proper document structure
-- **Word counting** — Section-by-section word count via VimTeX
-- **Spell checking** — Enhanced academic spell checking with custom dictionary support
-- **Pandoc integration** — One-command export to DOCX, Markdown, plain text, and MP3 audio
-
-### AI Assistance
-
-- **Avante** — Conversational AI assistant supporting Claude, GPT, and DeepSeek; context-aware with buffer and repository awareness
-- **GitHub Copilot** — Inline code completion in manual trigger mode
-
-### Development
-
-- **LSP** — Comprehensive language server support via Mason: TeXLab (LaTeX), LTeX+ (grammar), Lua LS (Lua), Marksman (Markdown), SQLS (SQL), JSON LS, HTML LS, CSS LS, VTSLS (TypeScript/JavaScript)
-- **Blink.cmp** — Fast completion engine with fuzzy matching and dictionary/thesaurus, lsp, and snippet sources
-- **Treesitter** — Accurate syntax highlighting and structural navigation
-- **Conform.nvim** — Format-on-save with multiple formatters: Stylua (Lua), Prettier/Prettierd (HTML/CSS/JS), LaTeXIndent (LaTeX), MarkdownLint-CLI2 + Markdown-TOC (Markdown)
-- **Trouble** — Pretty list for showing diagnostics, references, telescope results, quickfix and location lists
-- **Linting** — Real-time linting with ChkTeX (LaTeX), ESLint (JavaScript), HTMLHint (HTML), Stylelint (CSS), Luacheck (Lua), MarkdownLint (Markdown)
-
-### Interface & Productivity
-
-- **Gruvbox** — Primary colorscheme
-- **Which-Key** — Discoverable keymap guide with organized command groups
-- **Snacks dashboard** — Custom start screen with session shortcuts
-- **Lualine** — Status line
-- **Bufferline** — Shows open buffers
-- **Zen Mode** — Distraction-free writing environment
-
 ## General Information
 
 <details>
