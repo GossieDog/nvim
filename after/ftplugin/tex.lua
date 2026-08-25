@@ -104,13 +104,6 @@ wk.add({
 		mode = "n",
 		icon = "󰈙",
 	},
-	{
-		"<leader>Tb",
-		"<cmd>read ~/.config/nvim/templates/APA-Barebones.tex<CR>",
-		desc = "APA Barebones",
-		mode = "n",
-		icon = "󰈙",
-	},
 
 	{ "<leader>TW", group = "Work" },
 	{
