@@ -91,7 +91,7 @@ wk.add({
 		icon = "󰈙",
 	},
 	{
-		"<leader>Ti",
+		"<leader>TN",
 		"<cmd>read ~/.config/nvim/templates/Notes-and-Instructions.tex<CR>",
 		desc = "Notes and Instructions",
 		mode = "n",
