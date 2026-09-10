@@ -210,6 +210,16 @@ ls.add_snippets("tex", {
 		t("\\end{mdframed}"),
 	}),
 
+	s("vocab", {
+		i(1, "term"),
+		t("\\marginnote{"),
+		f(function(args)
+			return args[1][1]:lower()
+		end, { 1 }),
+		t("}:\\ "),
+		i(2, "definition"),
+	}),
+
 	-- =========================================================
 	-- Todonotes
 	-- =========================================================
