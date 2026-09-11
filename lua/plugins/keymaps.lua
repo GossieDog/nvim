@@ -172,6 +172,7 @@ return {
 				{ "<leader>af", "<cmd>AvanteFocus<cr>", desc = "Focus" },
 				{ "<leader>ah", "<cmd>AvanteHistory<cr>", desc = "Select History" },
 				{ "<leader>an", "<cmd>AvanteChatNew<cr>", desc = "Create New Chat" },
+				{ "<leader>ap", "<cmd>AvanteSwitchProvider<cr>", desc = "Select Provider" },
 				{ "<leader>ar", "<cmd>AvanteRefresh<cr>", desc = "Refresh" },
 				{ "<leader>aR", "<cmd>AvanteShowRepoMap<cr>", desc = "Display Repo Map" },
 				{ "<leader>as", desc = "Toggle Suggestion" },
