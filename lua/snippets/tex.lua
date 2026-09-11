@@ -194,7 +194,14 @@ ls.add_snippets("tex", {
 		t("\\end{mdframed}"),
 	}),
 	s("mdlearn", {
-		t("\\begin{mdframed}[frametitle=Learning Objectives]"),
+		t("\\begin{mdframed}[style=learningobjectives]"),
+		t({ "", "\t" }),
+		i(1, "text"),
+		t({ "", "" }),
+		t("\\end{mdframed}"),
+	}),
+	s("mdquestion", {
+		t("\\begin{mdframed}[style=discussionquestions]"),
 		t({ "", "\t" }),
 		i(1, "text"),
 		t({ "", "" }),
