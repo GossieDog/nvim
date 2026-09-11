@@ -99,7 +99,7 @@ ls.add_snippets("tex", {
 	s("notesfig", {
 		t("\\begin{figure}["),
 		i(1, "tb"),
-		t({ "]", "\t\\includegraphics[width=" }),
+		t({ "]", "\t\\centering", "\t\\includegraphics[width=" }),
 		i(2, "0.9"),
 		t("\\linewidth]{"),
 		i(3, "file"),
@@ -152,7 +152,14 @@ ls.add_snippets("tex", {
 		i(1, "tb"),
 		t({
 			"]",
-			"\t\\begin{tabu}{*{4}{X[c]}}",
+			"\t\\centering",
+			"\t\\begin{tabu}{*{",
+		}),
+		i(2, "4"),
+		t("}{X["),
+		i(3, "c"),
+		t({
+			"]}}",
 			"\t\t\\toprule",
 			"\t\t\\textbf{Names} & \\textbf{Age} & \\textbf{Height} & \\textbf{Weight (lbs)} \\\\",
 			"\t\t\\midrule",
@@ -163,9 +170,9 @@ ls.add_snippets("tex", {
 			"\t\\end{tabu}",
 			"\t\\caption{",
 		}),
-		i(2, "caption"),
+		i(4, "caption"),
 		t({ "}\\label{tab:" }),
-		i(3, "label"),
+		i(5, "label"),
 		t({ "}", "\\end{table}" }),
 	}),
 
