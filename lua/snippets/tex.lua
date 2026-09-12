@@ -224,7 +224,7 @@ ls.add_snippets("tex", {
 		t("\\end{mdframed}"),
 	}),
 
-	s("vocab", {
+	s("term", {
 		i(1, "term"),
 		t("\\marginnote{"),
 		f(function(args)
