@@ -217,10 +217,8 @@ ls.add_snippets("tex", {
 	s("mdtitle", {
 		t("\\begin{mdframed}[frametitle="),
 		i(1, "title"),
-		t(", frametitlebackgroundcolor="),
-		i(2, "black!20!white"),
-		t({ "]", "\t" }),
-		i(3, "text"),
+		t({ ", style=mdtitle]", "\t" }),
+		i(2, "text"),
 		t({ "", "" }),
 		t("\\end{mdframed}"),
 	}),
