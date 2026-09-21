@@ -1,5 +1,6 @@
 -- CTRL l spell correction keymap (From Gilles Castel's setup)
-vim.keymap.set("i", "<C-l>", "<c-g>u<Esc>[s1z=`]a<c-g>u", { noremap = true })
+vim.keymap.set("i", "<C-h>", "<c-g>u<Esc>[s1z=`]a<c-g>u", { noremap = true })
+vim.keymap.set("i", "<C-l>", "<c-g>u<Esc>]s1z=`]a<c-g>u", { noremap = true })
 
 -- CTRL arrows for window resizing
 vim.keymap.set("n", "<C-Up>", "<cmd>resize +5<CR>")
