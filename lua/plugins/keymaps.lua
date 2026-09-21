@@ -48,7 +48,7 @@ return {
 				{ "<leader>fg", "<cmd>Telescope git_commits<cr>", desc = "Git History" },
 				{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "Help" },
 				{ "<leader>fk", "<cmd>Telescope keymaps<cr>", desc = "Keymaps" },
-				{ "<leader>fy", "<cmd>YankyRingHistory<cr>", desc = "Yank History" },
+				{ "<leader>fy", "<cmd>Telescope yank_history<cr>", desc = "Yank History" },
 				{ "<leader>fd", "<cmd>Telescope diagnostics<cr>", desc = "Diagnostics", mode = "n" },
 				{ "<leader>fr", "<cmd>Telescope oldfiles<cr>", desc = "Recent File", mode = "n" },
 				{ "<leader>fu", "<cmd>lua require('telescope').extensions.undo.undo()<cr>", desc = "Undo", mode = "n" },
