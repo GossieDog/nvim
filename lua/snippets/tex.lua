@@ -187,7 +187,7 @@ ls.add_snippets("tex", {
 		t("\\end{mdframed}"),
 	}),
 	s("mdsum", {
-		t("\\begin{mdframed}[frametitle=Summary]"),
+		t("\\begin{mdframed}[frametitle={Summary}]"),
 		t({ "", "\t" }),
 		i(1, "text"),
 		t({ "", "" }),
@@ -208,16 +208,16 @@ ls.add_snippets("tex", {
 		t("\\end{mdframed}"),
 	}),
 	s("mdread", {
-		t("\\begin{mdframed}[frametitle=Reading Assignment]"),
+		t("\\begin{mdframed}[frametitle={Reading Assignment}]"),
 		t({ "", "\t" }),
 		i(1, "text"),
 		t({ "", "" }),
 		t("\\end{mdframed}"),
 	}),
 	s("mdtitle", {
-		t("\\begin{mdframed}[frametitle="),
+		t("\\begin{mdframed}[frametitle={"),
 		i(1, "title"),
-		t({ ", style=mdtitle]", "\t" }),
+		t({ "}, style=mdtitle]", "\t" }),
 		i(2, "text"),
 		t({ "", "" }),
 		t("\\end{mdframed}"),
