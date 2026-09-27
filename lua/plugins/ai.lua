@@ -81,8 +81,8 @@ return {
 				auto_trigger = false,
 				keymap = {
 					accept = "<C-y>",
-					next = "<C-j>",
-					prev = "<C-k>",
+					next = "<C-n>",
+					prev = "<C-p>",
 					dismiss = "Esc",
 				},
 			},
