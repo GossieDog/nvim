@@ -8,7 +8,6 @@ return {
 			{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 			"nvim-telescope/telescope-bibtex.nvim",
 			"debugloop/telescope-undo.nvim",
-			"gbprod/yanky.nvim",
 		},
 		config = function()
 			local bibtex_actions = require("telescope-bibtex.actions")
@@ -69,7 +68,6 @@ return {
 			require("telescope").load_extension("fzf")
 			require("telescope").load_extension("bibtex")
 			require("telescope").load_extension("undo")
-			require("telescope").load_extension("yank_history")
 		end,
 	},
 	{
