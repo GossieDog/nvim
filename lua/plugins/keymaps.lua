@@ -32,7 +32,14 @@ return {
 					mode = "n",
 					icon = "",
 				},
-				{ "<leader>z", "<cmd>lua Snacks.zen()<cr>", desc = "Toggle Zen Mode", mode = "n" },
+				{
+					"<leader>z",
+					function()
+						Snacks.zen()
+					end,
+					desc = "Toggle Zen Mode",
+					mode = "n",
+				},
 
 				-- FIND GROUP --
 
