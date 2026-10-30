@@ -18,7 +18,7 @@ return {
 			},
 			instructions_file = "avante.md",
 			-- for example
-			provider = "claude",
+			provider = "copilot",
 			providers = {
 				claude = {
 					endpoint = "https://api.anthropic.com",
