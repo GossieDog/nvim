@@ -182,35 +182,35 @@ ls.add_snippets("tex", {
 	s("mdframed", {
 		t("\\begin{mdframed}"),
 		t({ "", "\t" }),
-		i(1, "text"),
+		i(1),
 		t({ "", "" }),
 		t("\\end{mdframed}"),
 	}),
 	s("mdsum", {
 		t("\\begin{mdframed}[frametitle={Summary}]"),
 		t({ "", "\t" }),
-		i(1, "text"),
+		i(1),
 		t({ "", "" }),
 		t("\\end{mdframed}"),
 	}),
 	s("mdlearn", {
 		t("\\begin{mdframed}[style=learningobjectives]"),
 		t({ "", "\t" }),
-		i(1, "text"),
+		i(1),
 		t({ "", "" }),
 		t("\\end{mdframed}"),
 	}),
 	s("mdquestion", {
 		t("\\begin{mdframed}[style=discussionquestions]"),
 		t({ "", "\t" }),
-		i(1, "text"),
+		i(1),
 		t({ "", "" }),
 		t("\\end{mdframed}"),
 	}),
 	s("mdread", {
 		t("\\begin{mdframed}[frametitle={Reading Assignment}]"),
 		t({ "", "\t" }),
-		i(1, "text"),
+		i(1),
 		t({ "", "" }),
 		t("\\end{mdframed}"),
 	}),
@@ -218,7 +218,7 @@ ls.add_snippets("tex", {
 		t("\\begin{mdframed}[frametitle={"),
 		i(1, "title"),
 		t({ "}, style=mdtitle]", "\t" }),
-		i(2, "text"),
+		i(2),
 		t({ "", "" }),
 		t("\\end{mdframed}"),
 	}),
@@ -235,8 +235,14 @@ ls.add_snippets("tex", {
 
 	s("quote", {
 		t({ "\\begin{quote}", "\t" }),
-		i(1, "text"),
+		i(1),
 		t({ "", "\\end{quote}" }),
+	}),
+
+	s("document", {
+		t({ "\\begin{document}", "\t" }),
+		i(0),
+		t({ "", "\\end{document}" }),
 	}),
 
 	-- =========================================================
