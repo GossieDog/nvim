@@ -178,7 +178,7 @@ return {
 				{ "<leader>aC", "<cmd>AvanteChat<cr>", desc = "Start Chat" },
 				{ "<leader>ad", "<cmd>lua require('avante.api').toggle_debug()<cr>", desc = "Toggle Debug" },
 				{ "<leader>af", "<cmd>AvanteFocus<cr>", desc = "Focus" },
-				{ "<leader>ah", "<cmd>AvanteHistory<cr>", desc = "Select History" },
+				{ "<leader>ah", "<cmd>Avante resume<cr>", desc = "Select History" },
 				{ "<leader>an", "<cmd>AvanteChatNew<cr>", desc = "Create New Chat" },
 				{ "<leader>ap", "<cmd>AvanteSwitchProvider<cr>", desc = "Select Provider" },
 				{ "<leader>ar", "<cmd>AvanteRefresh<cr>", desc = "Refresh" },
