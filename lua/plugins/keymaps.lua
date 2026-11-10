@@ -185,7 +185,7 @@ return {
 				{ "<leader>aR", "<cmd>AvanteShowRepoMap<cr>", desc = "Display Repo Map" },
 				{ "<leader>as", desc = "Toggle Suggestion" },
 				{ "<leader>aS", "<cmd>AvanteStop<cr>", desc = "Stop" },
-				{ "<leader>at", "<cmd>AvanteToggle<cr>", desc = "Toggle" },
+				{ "<leader>at", "<cmd>Avante toggle<cr>", desc = "Toggle" },
 				{ "<leader>az", "<cmd>lua require('avante.api').zen_mode()<cr>", desc = "Toggle Zen Mode" },
 				{ "<leader>a?", "<cmd>AvanteModels<cr>", desc = "Select Model" },
 				{ "<leader>am", desc = "Select ACP Mode" },
