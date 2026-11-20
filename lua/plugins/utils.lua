@@ -77,6 +77,7 @@ return {
 			{ "L3MON4D3/LuaSnip", version = "v2.*" },
 			"rafamadriz/friendly-snippets",
 			"archie-judd/blink-cmp-words",
+			"Kaiser-Yang/blink-cmp-avante",
 		},
 		event = { "InsertEnter", "CmdlineEnter" },
 
@@ -150,8 +151,17 @@ return {
 			-- elsewhere in your config, without redefining it, due to `opts_extend`
 			snippets = { preset = "luasnip" },
 			sources = {
-				default = { "lsp", "path", "snippets", "buffer" },
+				default = { "avante", "lsp", "path", "snippets", "buffer" },
 				providers = {
+
+					-- Use the avante source
+					avante = {
+						module = "blink-cmp-avante",
+						name = "Avante",
+						opts = {
+							-- options for blink-cmp-avante
+						},
+					},
 
 					-- Use the thesaurus source
 					thesaurus = {

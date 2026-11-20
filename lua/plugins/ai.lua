@@ -56,6 +56,7 @@ return {
 			"MunifTanjim/nui.nvim",
 			{ "ColinKennedy/mega.cmdparse", dependencies = { "ColinKennedy/mega.logging" } },
 			--- The below dependencies are optional,
+			"Kaiser-Yang/blink-cmp-avante",
 			"nvim-telescope/telescope.nvim", -- for file_selector provider telescope
 			"folke/snacks.nvim", -- for input provider snacks
 			"nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
