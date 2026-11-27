@@ -70,6 +70,13 @@ wk.add({
 		icon = "󰈙",
 	},
 	{
+		"<leader>TA",
+		"<cmd>read ~/.config/nvim/templates/Assignment.tex<CR>",
+		desc = "Assignment",
+		mode = "n",
+		icon = "󰈙",
+	},
+	{
 		"<leader>Tn",
 		"<cmd>read ~/.config/nvim/templates/Notes.tex<CR>",
 		desc = "Notes",
