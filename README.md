@@ -332,7 +332,7 @@ Launch Neovim
 nvim
 ```
 
-Upon start, Lazy will automatically install plugins, Mason will automatically install lisps, formatters, and linter's, and Treesitter will automatically install parsers.
+Upon start, Lazy will automatically install plugins, Mason will automatically install lsps, formatters, and linters, and Treesitter will automatically install parsers.
 Open Lazy with `:Lazy` or `L` and then update plugins with `U`.
 Run `:checkhealth`.
 
